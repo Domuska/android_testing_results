@@ -13,18 +13,14 @@ function Benchmark-Command ([ScriptBlock]$Expression, [int]$Samples = 1) {
 .EXAMPLE
   Benchmark-Command { ping -n 1 google.com } 3
 #>
+  #change file tag name below, it is added to beginning of file name
   $test_name = "uiautomator_amaze"
   $file_path = "c:\users\Tomi\testAutomation\measurements\"
   [int]$Run = 1
   $Start_time = Get-Date
-  #$filename = "$($test_name)$($start_time)"
   $filename = "$test_name-$(get-date -f yyy-MM-dd_hh_mm_ss).txt"
-  echo $filename
-  $full_file_path = "$file_path$filename"
-  echo $full_file_path
-  #$full_file_path = "$file_path$test_name-$(get-date -f yyy-MM-dd_hh_mm_ss).txt"
-  #NUL > filename
   #echo $filename
+  $full_file_path = "$file_path$filename"
   #echo $full_file_path
   New-Item $full_file_path
   
@@ -37,6 +33,7 @@ function Benchmark-Command ([ScriptBlock]$Expression, [int]$Samples = 1) {
     "run time:  $($sw.Elapsed.TotalSeconds)" | Out-File "$($full_file_path)" -Append
 	"Command printout: " | Out-File "$($full_file_path)" -Append
     $($printout) | Out-File "$($full_file_path)" -Append
+	
 	"`n######################################################`n" | Out-File "$($full_file_path)" -Append 
     $sw.Reset()
     $Samples--
@@ -44,8 +41,9 @@ function Benchmark-Command ([ScriptBlock]$Expression, [int]$Samples = 1) {
   }
   while ($Samples -gt 0)
   $End_time = Get-Date
+  #add the file to git, push with comment
   git add $filename
-  git commit -m "results from $Start_time to $End_time"
+  git commit -m "results from $test_name - $Start_time to $End_time"
   git push
 }
 
