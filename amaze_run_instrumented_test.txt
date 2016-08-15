@@ -8,6 +8,7 @@ adb shell am instrument -w -e class com.amaze.filemanager.test.PermissionGranter
 TAI jos ajetaan gradlella:
 
 https://afterecho.uk/blog/granting-marshmallow-permissions-for-testing-flavoured-builds.html
+gradle connectedPlayDebugAndroidTest --stacktrace --info
 gradle connectedPlayDebugAndroidTest --stacktrace
 
 
@@ -19,6 +20,8 @@ TAI
 projektin juuresta, muista ottaa .apk talteen johonkin muualle kuin mihin studio sen generoi, clean tekee sen uusiksi
 
 gradle clean testPlayDebugUnitTest
+tai ehkä ennemminkin vain, jos recordiscriptissä kutsutaan gradle clean
+gradle testPlayDebugUnitTest
 
 
 
@@ -30,3 +33,7 @@ FAILURE: Build failed with an exception.
 * What went wrong:
 Execution failed for task ':connectedPlayDebugAndroidTest'.
 > There were failing tests. See the report at: file:///C:/Users/Tomi/Projects/amazeFileManager/AmazeFileManager/build/reports/androidTests/connected/flavors/PLAY/index.html
+
+TAI 
+
+\build\reports\tests\playDebug appium testeillä
