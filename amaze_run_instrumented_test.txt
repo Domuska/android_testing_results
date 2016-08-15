@@ -1,0 +1,32 @@
+koko testisetti:
+adb shell am instrument -w com.amaze.filemanager.test/android.support.test.runner.AndroidJUnitRunner
+
+1 testi (eka pitää antaa kys. yhen testin polku ja sen jälkeen koko testisuiten polku)
+adb shell am instrument -w -e class com.amaze.filemanager.test.PermissionGranter com.amaze.filemanager.test/android.support.test.runner.AndroidJUnitRunner
+
+
+TAI jos ajetaan gradlella:
+
+https://afterecho.uk/blog/granting-marshmallow-permissions-for-testing-flavoured-builds.html
+gradle connectedPlayDebugAndroidTest --stacktrace
+
+
+appium:
+C:\Users\Tomi\Appium_tests\appium_test_things\intellij_maven_project>mvn -Dtest=com.amaze.filemanager.test.* test
+
+TAI
+
+projektin juuresta, muista ottaa .apk talteen johonkin muualle kuin mihin studio sen generoi, clean tekee sen uusiksi
+
+gradle clean testPlayDebugUnitTest
+
+
+
+
+jos gradlella joku testi failaa, se pullauttaa hienon rabordin:
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':connectedPlayDebugAndroidTest'.
+> There were failing tests. See the report at: file:///C:/Users/Tomi/Projects/amazeFileManager/AmazeFileManager/build/reports/androidTests/connected/flavors/PLAY/index.html
