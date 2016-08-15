@@ -15,19 +15,18 @@ function Benchmark-Command ([ScriptBlock]$Expression, [int]$Samples = 1) {
   Benchmark-Command { ping -n 1 google.com } 3
 #>
 
-
-  #change file tag name below, it is added to beginning of file name
-  $test_name = "uiautomator_amaze"
+  #tag name, used at start of result file name and as git branch
+  $test_name = "espresso_tests"
   
-  
-  
+  #the script output file path
   $file_path = "c:\users\Tomi\testAutomation\measurements\"
+  
+  #run number, incremented later
   [int]$Run = 1
+  
   $Start_time = Get-Date -f yyy-MM-dd_hh_mm_ss
   #the raw file path, no extension
   $filename = "$test_name-$(get-date -f yyy-MM-dd_hh_mm_ss)"
-  #$filename_txt = "$test_name-$(get-date -f yyy-MM-dd_hh_mm_ss).txt"
-  #$filename_csv = "$test_name-$(get-date -f yyy-MM-dd_hh_mm_ss).csv"
   #echo $filename
   #in current directory
   $full_file_path_txt = "$file_path$filename\$filename.txt"
@@ -37,7 +36,17 @@ function Benchmark-Command ([ScriptBlock]$Expression, [int]$Samples = 1) {
   #create a new directory with the name 
   New-Item "$file_path$filename" -type directory
   
+  #navigate to the application folder
+  cd c:\users\Tomi\Projects\amazeFileManager\AmazeFileManager  
+  git checkout $test_name
+  gradle compilePlayDebugSources
+  
+  #start the test runs
   do {
+	#install application and run uiautomator script to grant permissions before testing
+	gradle installPlayDebug
+	adb shell am instrument -w -e class com.amaze.filemanager.test.PermissionGranter com.amaze.filemanager.test/android.support.test.runner.AndroidJUnitRunner
+	
     $sw = New-Object Diagnostics.Stopwatch
     $sw.Start()
     $printout = & $Expression 2>&1
@@ -48,10 +57,9 @@ function Benchmark-Command ([ScriptBlock]$Expression, [int]$Samples = 1) {
 	"Command printout: " | Out-File "$($full_file_path_txt)" -Append
     $($printout) | Out-File "$($full_file_path_txt)" -Append
 	"`n######################################################`n" | Out-File "$($full_file_path_txt)" -Append 
-	#write to .txt that has tab separators between fields
+	
+	#write to .csv that has ; as separator between fields
 	"$($Run);$($sw.Elapsed.TotalSeconds);$($printout)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
-	#"," | Out-File "$($full_file_path_csv)" -Append
-	#$sw.Elapsed.TotalSeconds | Out-File "$($full_file_path_csv)" -Append
 	
     $sw.Reset()
     $Samples--
@@ -59,10 +67,12 @@ function Benchmark-Command ([ScriptBlock]$Expression, [int]$Samples = 1) {
   }
   while ($Samples -gt 0)
   $End_time = Get-Date -f yyy-MM-dd_hh_mm_ss
+  #navigate back to the test result folder
+  cd $file_path
   #add the file to git, push with comment
-  git add $filename
-  git commit -m "results from $test_name - $Start_time to $End_time"
-  git push
+  #git add $filename
+  #git commit -m "results from $test_name - $Start_time to $End_time"
+  #git push
 }
 
 #Export-ModuleMember Benchmark-Command
