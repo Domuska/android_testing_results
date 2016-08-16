@@ -12,12 +12,12 @@ gradle connectedPlayDebugAndroidTest --stacktrace --info
 gradle connectedPlayDebugAndroidTest --stacktrace
 
 
-appium:
+appium mavenilla:
 C:\Users\Tomi\Appium_tests\appium_test_things\intellij_maven_project>mvn -Dtest=com.amaze.filemanager.test.* test
 
 TAI
 
-projektin juuresta, muista ottaa .apk talteen johonkin muualle kuin mihin studio sen generoi, clean tekee sen uusiksi
+gradlella, projektin juuresta, muista ottaa .apk talteen johonkin muualle kuin mihin studio sen generoi, clean tekee sen uusiksi
 
 gradle clean testPlayDebugUnitTest
 tai ehkä ennemminkin vain, jos recordiscriptissä kutsutaan gradle clean
@@ -26,13 +26,17 @@ gradle testPlayDebugUnitTest
 
 
 
-jos gradlella joku testi failaa, se pullauttaa hienon rabordin:
+gradlen raborddi on saatavilla kansa:
 
 FAILURE: Build failed with an exception.
 
 * What went wrong:
 Execution failed for task ':connectedPlayDebugAndroidTest'.
 > There were failing tests. See the report at: file:///C:/Users/Tomi/Projects/amazeFileManager/AmazeFileManager/build/reports/androidTests/connected/flavors/PLAY/index.html
+
+XML löytyy täältä:
+C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\outputs\androidTest-results\connected\flavors\PLAY
+
 
 TAI 
 
