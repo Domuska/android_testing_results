@@ -1,0 +1,93 @@
+1;463.4057313;"C:\Users\Tomi\.sign\signing.properties" not found Incremental java compilation is an incubating feature. :app:preBuild UP-TO-DATE :app:preAlphaDebugBuild UP-TO-DATE :app:checkAlphaDebugManifest :app:preAlphaReleaseBuild UP-TO-DATE :app:preAmazonDebugBuild UP-TO-DATE :app:preAmazonReleaseBuild UP-TO-DATE :app:preBetaDebugBuild UP-TO-DATE :app:preBetaReleaseBuild UP-TO-DATE :app:preCustomDebugBuild UP-TO-DATE :app:preCustomReleaseBuild UP-TO-DATE :app:preDevDebugBuild UP-TO-DATE :app:preDevReleaseBuild UP-TO-DATE :app:preFdroidDebugBuild UP-TO-DATE :app:preFdroidReleaseBuild UP-TO-DATE :app:preProdDebugBuild UP-TO-DATE :app:preProdReleaseBuild UP-TO-DATE :app:preReleasesprodDebugBuild UP-TO-DATE :app:preReleasesprodReleaseBuild UP-TO-DATE :app:prepareComAndroidSupportAnimatedVectorDrawable2400Library UP-TO-DATE :app:prepareComAndroidSupportAppcompatV72400Library UP-TO-DATE :app:prepareComAndroidSupportCardviewV72400Library UP-TO-DATE :app:prepareComAndroidSupportDesign2400Library UP-TO-DATE :app:prepareComAndroidSupportPaletteV72400Library UP-TO-DATE :app:prepareComAndroidSupportPercent2400Library UP-TO-DATE :app:prepareComAndroidSupportPreferenceV142400Library UP-TO-DATE :app:prepareComAndroidSupportPreferenceV72400Library UP-TO-DATE :app:prepareComAndroidSupportRecyclerviewV72400Library UP-TO-DATE :app:prepareComAndroidSupportSupportV42400Library UP-TO-DATE :app:prepareComAndroidSupportSupportVectorDrawable2400Library UP-TO-DATE :app:prepareComFacebookFrescoAnimatedBase0100Library UP-TO-DATE :app:prepareComFacebookFrescoAnimatedGif0100Library UP-TO-DATE :app:prepareComFacebookFrescoDrawee0100Library UP-TO-DATE :app:prepareComFacebookFrescoFbcore0100Library UP-TO-DATE :app:prepareComFacebookFrescoFresco0100Library UP-TO-DATE :app:prepareComFacebookFrescoImagepipeline0100Library UP-TO-DATE :app:prepareComFacebookFrescoImagepipelineBase0100Library UP-TO-DATE :app:prepareComFacebookFrescoImagepipelineOkhttp30100Library UP-TO-DATE :app:prepareComGithubRyanjohn1Onboarding103Library UP-TO-DATE :app:prepareComJakewhartonButterknife801Library UP-TO-DATE :app:prepareComMapboxMapboxsdkMapboxAndroidSdk401Library UP-TO-DATE :app:prepareNetHockeyappAndroidHockeySDK401Library UP-TO-DATE :app:prepareAlphaDebugDependencies :app:compileAlphaDebugAidl UP-TO-DATE :app:compileAlphaDebugRenderscript UP-TO-DATE :app:generateAlphaDebugBuildConfig UP-TO-DATE :app:mergeAlphaDebugShaders UP-TO-DATE :app:compileAlphaDebugShaders UP-TO-DATE :app:generateAlphaDebugAssets UP-TO-DATE :app:mergeAlphaDebugAssets UP-TO-DATE :app:generateAlphaDebugResValues UP-TO-DATE :app:generateAlphaDebugResources UP-TO-DATE :app:mergeAlphaDebugResources UP-TO-DATE :app:processAlphaDebugManifest UP-TO-DATE :app:processAlphaDebugResources UP-TO-DATE :app:generateAlphaDebugSources UP-TO-DATE :app:incrementalAlphaDebugJavaCompilationSafeguard UP-TO-DATE :app:compileAlphaDebugJavaWithJavac UP-TO-DATE :app:compileAlphaDebugNdk UP-TO-DATE :app:compileAlphaDebugSources UP-TO-DATE :app:prePackageMarkerForAlphaDebug :app:transformClassesWithDexForAlphaDebug UP-TO-DATE :app:mergeAlphaDebugJniLibFolders UP-TO-DATE :app:transformNative_libsWithMergeJniLibsForAlphaDebug UP-TO-DATE :app:processAlphaDebugJavaRes UP-TO-DATE :app:transformResourcesWithMergeJavaResForAlphaDebug UP-TO-DATE :app:validateDebugSigning :app:packageAlphaDebug UP-TO-DATE :app:zipalignAlphaDebug UP-TO-DATE :app:assembleAlphaDebug UP-TO-DATE :app:preAlphaDebugAndroidTestBuild UP-TO-DATE :app:preAmazonDebugAndroidTestBuild UP-TO-DATE :app:preBetaDebugAndroidTestBuild UP-TO-DATE :app:preCustomDebugAndroidTestBuild UP-TO-DATE :app:preDevDebugAndroidTestBuild UP-TO-DATE :app:preFdroidDebugAndroidTestBuild UP-TO-DATE :app:preProdDebugAndroidTestBuild UP-TO-DATE :app:preReleasesprodDebugAndroidTestBuild UP-TO-DATE :app:prepareComAndroidSupportTestEspressoEspressoContrib222Library UP-TO-DATE :app:prepareComAndroidSupportTestEspressoEspressoCore222Library UP-TO-DATE :app:prepareComAndroidSupportTestEspressoEspressoIdlingResource222Library UP-TO-DATE :app:prepareComAndroidSupportTestEspressoEspressoWeb222Library UP-TO-DATE :app:prepareComAndroidSupportTestExposedInstrumentationApiPublish05Library UP-TO-DATE :app:prepareComAndroidSupportTestRules05Library UP-TO-DATE :app:prepareComAndroidSupportTestRunner05Library UP-TO-DATE :app:prepareAlphaDebugAndroidTestDependencies :app:compileAlphaDebugAndroidTestAidl UP-TO-DATE :app:processAlphaDebugAndroidTestManifest :app:compileAlphaDebugAndroidTestRenderscript UP-TO-DATE :app:generateAlphaDebugAndroidTestBuildConfig UP-TO-DATE :app:mergeAlphaDebugAndroidTestShaders UP-TO-DATE :app:compileAlphaDebugAndroidTestShaders UP-TO-DATE :app:generateAlphaDebugAndroidTestAssets UP-TO-DATE :app:mergeAlphaDebugAndroidTestAssets UP-TO-DATE :app:generateAlphaDebugAndroidTestResValues UP-TO-DATE :app:generateAlphaDebugAndroidTestResources UP-TO-DATE :app:mergeAlphaDebugAndroidTestResources UP-TO-DATE :app:processAlphaDebugAndroidTestResources :app:generateAlphaDebugAndroidTestSources :app:incrementalAlphaDebugAndroidTestJavaCompilationSafeguard UP-TO-DATE Note: C:\Users\Tomi\Projects\wikipedia_3\apps-android-wikipedia\app\src\androidTest\java\org\wikipedia\robotium_test\BaseTestClass.java uses or overrides a deprecated API.
+ Note: Recompile with -Xlint:deprecation for details.
+ :app:compileAlphaDebugAndroidTestJavaWithJavac :app:compileAlphaDebugAndroidTestNdk UP-TO-DATE :app:compileAlphaDebugAndroidTestSources :app:prePackageMarkerForAlphaDebugAndroidTest warning: Ignoring InnerClasses attribute for an anonymous inner class 
+ (org.ccil.cowan.tagsoup.Parser$1) that doesn't come with an 
+ associated EnclosingMethod attribute. This class was probably produced by a 
+compiler that did not target the modern .class file format. The recommended
+ solution is to recompile the class from source, using an up-to-date compiler 
+ and without specifying any "-target" type options. The consequence of ignoring 
+ this warning is that reflective operations on this class will incorrectly 
+ indicate that it is *not* an inner class. 
+ :app:transformClassesWithDexForAlphaDebugAndroidTest Result compacted from 6780.4KiB to 5173.9KiB to save 1606.5KiB Merged dex #1 (63 defs/79.8KiB) Merged dex #2 (2 defs/1.0KiB) Merged dex #3 (22 defs/37.8KiB) Merged dex #4 (108 defs/113.8KiB) Merged dex #5 (27 defs/29.1KiB) Merged dex #6 (2002 defs/2162.6KiB) Merged dex #7 (4 defs/4.1KiB) Merged dex #8 (1772 defs/2379.6KiB) Merged dex #9 (36 defs/23.2KiB) Merged dex #10 (45 defs/38.2KiB) Merged dex #11 (5 defs/2.9KiB) Merged dex #12 (35 defs/54.8KiB) Merged dex #13 (2 defs/15.7KiB) Merged dex #14 (15 defs/4.9KiB) Merged dex #15 (6 defs/1.6KiB) Merged dex #16 (34 defs/8.8KiB) Merged dex #17 (286 defs/238.9KiB) Merged dex #18 (73 defs/146.6KiB) Merged dex #19 (6 defs/11.3KiB) Merged dex #20 (22 defs/135.1KiB) Result is 4565 defs/5173.9KiB. Took 1.9s :app:mergeAlphaDebugAndroidTestJniLibFolders UP-TO-DATE :app:transformNative_libsWithMergeJniLibsForAlphaDebugAndroidTest :app:processAlphaDebugAndroidTestJavaRes UP-TO-DATE :app:transformResourcesWithMergeJavaResForAlphaDebugAndroidTest :app:packageAlphaDebugAndroidTest :app:assembleAlphaDebugAndroidTest :app:connectedAlphaDebugAndroidTest  org.wikipedia.robotium_test.ArticleSearchTests > testSearchArticle_checkTitleShown[Nexus 5X - 6.0] [31mFAILED [0m 	junit.framework.AssertionFailedError: Title does not contain text: Final Fantasy XII, contains instead 	at junit.framework.Assert.fail(Assert.java:50)   org.wikipedia.robotium_test.ArticleTests > testClickLink_fullText_assertPreviewShown[Nexus 5X - 6.0] [31mFAILED [0m 	junit.framework.AssertionFailedError: Text string: 'artificial intelligence' is not found! 	at junit.framework.Assert.fail(Assert.java:50)   org.wikipedia.robotium_test.ArticleTests > testClickLink_partialText_assertPreviewShown[Nexus 5X - 6.0] [31mFAILED [0m 	junit.framework.AssertionFailedError: not implemented 	at junit.framework.Assert.fail(Assert.java:50)   org.wikipedia.robotium_test.ArticleTests > testOpeningAndClosingReferences[Nexus 5X - 6.0] [31mFAILED [0m 	junit.framework.AssertionFailedError: View with id: '2131689870', resource name: 'page_toc_item_text' is not found! 	at junit.framework.Assert.fail(Assert.java:50)   org.wikipedia.robotium_test.ArticleTests > testScrollingToC_clickSubHeading[Nexus 5X - 6.0] [31mFAILED [0m 	junit.framework.AssertionFailedError: View with id: '2131689870', resource name: 'page_toc_item_text' is not found! 	at junit.framework.Assert.fail(Assert.java:50)   org.wikipedia.robotium_test.ArticleTests > testTableOfContents_checkSubTitles[Nexus 5X - 6.0] [31mFAILED [0m 	junit.framework.AssertionFailedError: View with id: '2131689870', resource name: 'page_toc_item_text' is not found! 	at junit.framework.Assert.fail(Assert.java:50)   org.wikipedia.robotium_test.LanguageTests > testChangeLanguageInArticle[Nexus 5X - 6.0] [31mFAILED [0m 	junit.framework.AssertionFailedError: Text string: 'Skotlanti' is not found! 	at junit.framework.Assert.fail(Assert.java:50)   org.wikipedia.robotium_test.LanguageTests > testSearchArticle_changeLanguageInSearch[Nexus 5X - 6.0] [31mFAILED [0m 	junit.framework.AssertionFailedError: Title does not contain text: Scotland, contains instead 	at junit.framework.Assert.fail(Assert.java:50)   org.wikipedia.robotium_test.ReadingListTests > testAddArticleToReadingList[Nexus 5X - 6.0] [31mFAILED [0m 	junit.framework.AssertionFailedError: Text string: 'Got it' is not found! 	at junit.framework.Assert.fail(Assert.java:50)   org.wikipedia.robotium_test.RotationTests > testOpenTab_rotatePhone[Nexus 5X - 6.0] [31mFAILED [0m 	junit.framework.AssertionFailedError: not implemented, clicking links not working 	at junit.framework.Assert.fail(Assert.java:50)   org.wikipedia.robotium_test.RotationTests > testOpenToC_rotatePhone[Nexus 5X - 6.0] [31mFAILED [0m 	junit.framework.AssertionFailedError: View with id: '2131689870', resource name: 'page_toc_item_text' is not found! 	at junit.framework.Assert.fail(Assert.java:50)   org.wikipedia.robotium_test.TabTests > testOpenArticleInNewTab[Nexus 5X - 6.0] [31mFAILED [0m 	junit.framework.AssertionFailedError: clicking on links dun work. 	at junit.framework.Assert.fail(Assert.java:50)   org.wikipedia.robotium_test.TabTests > testOpenMultipleTabs[Nexus 5X - 6.0] [31mFAILED [0m 	junit.framework.AssertionFailedError: Title does not contain text: Final Fantasy XII, contains instead 	at junit.framework.Assert.fail(Assert.java:50)  :app:connectedAlphaDebugAndroidTest FAILED 
+ FAILURE: Build failed with an exception.
+ 
+ * What went wrong:
+ Execution failed for task ':app:connectedAlphaDebugAndroidTest'.
+ >  There were failing tests. See the report at: file:///C:/Users/Tomi/Projects/wikipedia_3/apps-android-wikipedia/app/build/reports/androidTests/connected/flavors/ALPHA/index.html
+ 
+ * Try:
+ Run with  --info  or  --debug  option to get more log output.
+ 
+ * Exception is:
+ org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':app:connectedAlphaDebugAndroidTest'.
+ 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:69)
+ 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:46)
+ 	at org.gradle.api.internal.tasks.execution.PostExecutionAnalysisTaskExecuter.execute(PostExecutionAnalysisTaskExecuter.java:35)
+ 	at org.gradle.api.internal.tasks.execution.SkipUpToDateTaskExecuter.execute(SkipUpToDateTaskExecuter.java:64)
+ 	at org.gradle.api.internal.tasks.execution.ValidatingTaskExecuter.execute(ValidatingTaskExecuter.java:58)
+ 	at org.gradle.api.internal.tasks.execution.SkipEmptySourceFilesTaskExecuter.execute(SkipEmptySourceFilesTaskExecuter.java:52)
+ 	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:52)
+ 	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:53)
+ 	at org.gradle.api.internal.tasks.execution.ExecuteAtMostOnceTaskExecuter.execute(ExecuteAtMostOnceTaskExecuter.java:43)
+ 	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker.execute(DefaultTaskGraphExecuter.java:203)
+ 	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter$EventFiringTaskWorker.execute(DefaultTaskGraphExecuter.java:185)
+ 	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.processTask(AbstractTaskPlanExecutor.java:66)
+ 	at org.gradle.execution.taskgraph.AbstractTaskPlanExecutor$TaskExecutorWorker.run(AbstractTaskPlanExecutor.java:50)
+ 	at org.gradle.execution.taskgraph.DefaultTaskPlanExecutor.process(DefaultTaskPlanExecutor.java:25)
+ 	at org.gradle.execution.taskgraph.DefaultTaskGraphExecuter.execute(DefaultTaskGraphExecuter.java:110)
+ 	at org.gradle.execution.SelectedTaskExecutionAction.execute(SelectedTaskExecutionAction.java:37)
+ 	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:37)
+ 	at org.gradle.execution.DefaultBuildExecuter.access$000(DefaultBuildExecuter.java:23)
+ 	at org.gradle.execution.DefaultBuildExecuter$1.proceed(DefaultBuildExecuter.java:43)
+ 	at org.gradle.execution.DryRunBuildExecutionAction.execute(DryRunBuildExecutionAction.java:32)
+ 	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:37)
+ 	at org.gradle.execution.DefaultBuildExecuter.execute(DefaultBuildExecuter.java:30)
+ 	at org.gradle.initialization.DefaultGradleLauncher$4.run(DefaultGradleLauncher.java:154)
+ 	at org.gradle.internal.Factories$1.create(Factories.java:22)
+ 	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:90)
+ 	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:52)
+ 	at org.gradle.initialization.DefaultGradleLauncher.doBuildStages(DefaultGradleLauncher.java:151)
+ 	at org.gradle.initialization.DefaultGradleLauncher.access$200(DefaultGradleLauncher.java:32)
+ 	at org.gradle.initialization.DefaultGradleLauncher$1.create(DefaultGradleLauncher.java:99)
+ 	at org.gradle.initialization.DefaultGradleLauncher$1.create(DefaultGradleLauncher.java:93)
+ 	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:90)
+ 	at org.gradle.internal.progress.DefaultBuildOperationExecutor.run(DefaultBuildOperationExecutor.java:62)
+ 	at org.gradle.initialization.DefaultGradleLauncher.doBuild(DefaultGradleLauncher.java:93)
+ 	at org.gradle.initialization.DefaultGradleLauncher.run(DefaultGradleLauncher.java:82)
+ 	at org.gradle.launcher.exec.InProcessBuildActionExecuter$DefaultBuildController.run(InProcessBuildActionExecuter.java:94)
+ 	at org.gradle.tooling.internal.provider.ExecuteBuildActionRunner.run(ExecuteBuildActionRunner.java:28)
+ 	at org.gradle.launcher.exec.ChainingBuildActionRunner.run(ChainingBuildActionRunner.java:35)
+ 	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:43)
+ 	at org.gradle.launcher.exec.InProcessBuildActionExecuter.execute(InProcessBuildActionExecuter.java:28)
+ 	at org.gradle.launcher.exec.ContinuousBuildActionExecuter.execute(ContinuousBuildActionExecuter.java:78)
+ 	at org.gradle.launcher.exec.ContinuousBuildActionExecuter.execute(ContinuousBuildActionExecuter.java:48)
+ 	at org.gradle.launcher.exec.DaemonUsageSuggestingBuildActionExecuter.execute(DaemonUsageSuggestingBuildActionExecuter.java:51)
+ 	at org.gradle.launcher.exec.DaemonUsageSuggestingBuildActionExecuter.execute(DaemonUsageSuggestingBuildActionExecuter.java:28)
+ 	at org.gradle.launcher.cli.RunBuildAction.run(RunBuildAction.java:43)
+ 	at org.gradle.internal.Actions$RunnableActionAdapter.execute(Actions.java:170)
+ 	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:237)
+ 	at org.gradle.launcher.cli.CommandLineActionFactory$ParseAndBuildAction.execute(CommandLineActionFactory.java:210)
+ 	at org.gradle.launcher.cli.JavaRuntimeValidationAction.execute(JavaRuntimeValidationAction.java:35)
+ 	at org.gradle.launcher.cli.JavaRuntimeValidationAction.execute(JavaRuntimeValidationAction.java:24)
+ 	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:206)
+ 	at org.gradle.launcher.cli.CommandLineActionFactory$WithLogging.execute(CommandLineActionFactory.java:169)
+ 	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:33)
+ 	at org.gradle.launcher.cli.ExceptionReportingAction.execute(ExceptionReportingAction.java:22)
+ 	at org.gradle.launcher.Main.doAction(Main.java:33)
+ 	at org.gradle.launcher.bootstrap.EntryPoint.run(EntryPoint.java:45)
+ 	at org.gradle.launcher.bootstrap.ProcessBootstrap.runNoExit(ProcessBootstrap.java:54)
+ 	at org.gradle.launcher.bootstrap.ProcessBootstrap.run(ProcessBootstrap.java:35)
+ 	at org.gradle.launcher.GradleMain.main(GradleMain.java:23)
+ Caused by: org.gradle.api.GradleException: There were failing tests. See the report at: file:///C:/Users/Tomi/Projects/wikipedia_3/apps-android-wikipedia/app/build/reports/androidTests/connected/flavors/ALPHA/index.html
+ 	at com.android.build.gradle.internal.tasks.DeviceProviderInstrumentTestTask.runTests(DeviceProviderInstrumentTestTask.java:148)
+ 	at org.gradle.internal.reflect.JavaMethod.invoke(JavaMethod.java:75)
+ 	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.doExecute(AnnotationProcessingTaskFactory.java:227)
+ 	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.execute(AnnotationProcessingTaskFactory.java:220)
+ 	at org.gradle.api.internal.project.taskfactory.AnnotationProcessingTaskFactory$StandardTaskAction.execute(AnnotationProcessingTaskFactory.java:209)
+ 	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:585)
+ 	at org.gradle.api.internal.AbstractTask$TaskActionWrapper.execute(AbstractTask.java:568)
+ 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeAction(ExecuteActionsTaskExecuter.java:80)
+ 	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeActions(ExecuteActionsTaskExecuter.java:61)
+ 	... 57 more
+ 
+  BUILD FAILED  Total time: 7 mins 42.36 secs
