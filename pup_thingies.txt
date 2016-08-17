@@ -11,3 +11,6 @@ pup -f "C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\reports\t
 
 lopullinen komento:
 .\pup -f "C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\reports\tests\playDebug\index.html" '.counter:contains(\"m\") text{}'
+
+parempi tapa tehdä tämä:
+pup -f "C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\reports\tests\playDebug\index.html" '.infoBox[id=\"failures\"] .counter text{}'

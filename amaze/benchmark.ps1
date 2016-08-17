@@ -85,8 +85,9 @@ function bm-amaze-instrumentation ([ScriptBlock]$Expression, [int]$Samples = 1, 
 	#write to .csv that has ; as separator between fields
 	#"$($Run);$($sw.Elapsed.TotalSeconds);$($printout)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
 	#use pup program (credit to https://github.com/ericchiang/pup) to get execution time from gradle test report
-	$runTime = pup -f "$($project_path)\build\reports\androidTests\connected\flavors\PLAY\index.html" '.counter:contains(\"s\") text{}'
-	"$($Run);$($runTime)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+	$runTime = pup -f "$($project_path)\build\reports\androidTests\connected\flavors\PLAY\index.html" '.infoBox[id=\"duration\"] .counter text{}'
+	$failures = pup -f "$($project_path)\build\reports\androidTests\connected\flavors\PLAY\index.html" '.infoBox[id=\"failures\"] .counter text{}'
+	"$($Run);$($runTime);$($failures)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
 	
 	echo "copying gradle output file"
 	#copy the html document
@@ -197,8 +198,9 @@ function bm-amaze-appium ([ScriptBlock]$Expression, [int]$Samples = 1, [string]$
 	#write run number, test execution time to .csv that has ; as separator between fields
 	#"$($Run);$($sw.Elapsed.TotalSeconds);$($printout)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
 	#use pup program (credit to https://github.com/ericchiang/pup) to get execution time from gradle test report
-	$runTime = pup -f "$($project_path)\build\reports\tests\playDebug\index.html" '.counter:contains(\"s\") text{}'
-	"$($Run);$($runTime)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+	$runTime = pup -f "C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\reports\tests\playDebug\index.html" '.infoBox[id=\"duration\"] .counter text{}'
+	$failures = pup -f "C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\reports\tests\playDebug\index.html" '.infoBox[id=\"failures\"] .counter text{}'
+	"$($Run);$($runTime);$($failures)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
 	
 	echo "copying gradle output file"
 	xcopy "$($project_path)\build\reports\tests\playDebug" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
