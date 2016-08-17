@@ -1,0 +1,13 @@
+https://github.com/ericchiang/pup
+
+pup -f C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\reports\tests\playDebug\index.html JA JOKU KOMENTO :)
+
+esim.
+pup -f C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\reports\tests\playDebug\index.html ".infoBox"
+
+
+pup -f "C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\reports\tests\playDebug\index.html" ".counter text{}"
+
+
+lopullinen komento:
+.\pup -f "C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\reports\tests\playDebug\index.html" '.counter:contains(\"m\") text{}'

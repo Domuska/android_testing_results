@@ -83,13 +83,16 @@ function bm-amaze-instrumentation ([ScriptBlock]$Expression, [int]$Samples = 1, 
 	"`n######################################################`n" | Out-File "$($full_file_path_txt)" -Append 
 	
 	#write to .csv that has ; as separator between fields
-	"$($Run);$($sw.Elapsed.TotalSeconds);$($printout)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+	#"$($Run);$($sw.Elapsed.TotalSeconds);$($printout)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+	#use pup program (credit to https://github.com/ericchiang/pup) to get execution time from gradle test report
+	$runTime = pup -f "$($project_path)\build\reports\androidTests\connected\flavors\PLAY\index.html" '.counter:contains(\"s\") text{}'
+	"$($Run);$($runTime)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
 	
 	echo "copying gradle output file"
 	#copy the html document
 	xcopy "$($project_path)\build\reports\androidTests\connected\flavors\PLAY" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
 	#copy the xml output
-	xcopy "$($project_path)\build\outputs\androidTest-results\connected\flavors\PLAY" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
+	xcopy "$($project_path)\build\outputs\androidTest-results\connected\flavors\PLAY" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)\xml" /E /C /H /R /K /O /Y /i
 	
     $sw.Reset()
     $Samples--
@@ -191,13 +194,16 @@ function bm-amaze-appium ([ScriptBlock]$Expression, [int]$Samples = 1, [string]$
     $($printout) | Out-File "$($full_file_path_txt)" -Append
 	"`n######################################################`n" | Out-File "$($full_file_path_txt)" -Append 
 	
-	#write to .csv that has ; as separator between fields
-	"$($Run);$($sw.Elapsed.TotalSeconds);$($printout)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+	#write run number, test execution time to .csv that has ; as separator between fields
+	#"$($Run);$($sw.Elapsed.TotalSeconds);$($printout)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+	#use pup program (credit to https://github.com/ericchiang/pup) to get execution time from gradle test report
+	$runTime = pup -f "$($project_path)\build\reports\tests\playDebug\index.html" '.counter:contains(\"s\") text{}'
+	"$($Run);$($runTime)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
 	
 	echo "copying gradle output file"
 	xcopy "$($project_path)\build\reports\tests\playDebug" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
 	#copy the xml output
-	xcopy "$($project_path)\build\test-results\playDebug" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
+	xcopy "$($project_path)\build\test-results\playDebug" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)\xml" /E /C /H /R /K /O /Y /i
 	
 	#C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\test-results\playDebug
 	

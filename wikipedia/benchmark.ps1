@@ -84,8 +84,9 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
 	"`n######################################################`n" | Out-File "$($full_file_path_txt)" -Append 
 	
 	#write to .csv that has ; as separator between fields
-	"$($Run);$($sw.Elapsed.TotalSeconds)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
-
+	#"$($Run);$($sw.Elapsed.TotalSeconds)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+	$runTime = pup -f "C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\reports\tests\playDebug\index.html" '.counter:contains(\"m\") text{}'
+	"$($Run);$($runTime)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
 	echo "copying gradle output file"
 	xcopy "$($project_path)\app\build\reports\androidTests\connected\flavors\ALPHA" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
 	
@@ -101,9 +102,9 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
   echo "Adding files to git"
   #add the file to git, push with comment
   #git add $gradle_report_folder
-  git add $filename
-  git commit -m "results from $test_name - $Start_time to $End_time"
-  git push
+  #git add $filename
+  #git commit -m "results from $test_name - $Start_time to $End_time"
+  #git push
 }
 
 function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [string]$testName) {
