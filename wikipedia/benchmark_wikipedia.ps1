@@ -8,7 +8,7 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
   Hat tip to StackOverflow. http://stackoverflow.com/questions/3513650-a-commands-execution-in-powershell
   
   Remember to do dotexe stuff before running the test script:
-  . "C:\Users\Tomi\testAutomation\measurements\wikipedia\benchmark.ps1"
+  . "C:\Users\Tomi\testAutomation\measurements\wikipedia\benchmark_wikipedia.ps1"
   
   
 .EXAMPLE
@@ -18,6 +18,10 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
 	-file_path
 		-testName-run_start_time
 			-gradle_report_folder
+				-run_number_1
+				-run_number_2
+				...
+				-run_number_samples
 			-full_file_path.txt
 			-full_file_path.csv
 #>
@@ -84,9 +88,12 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
 	"`n######################################################`n" | Out-File "$($full_file_path_txt)" -Append 
 	
 	#write to .csv that has ; as separator between fields
-	#"$($Run);$($sw.Elapsed.TotalSeconds)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
-	$runTime = pup -f "C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\reports\tests\playDebug\index.html" '.counter:contains(\"m\") text{}'
-	"$($Run);$($runTime)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+	#"$($Run);$($sw.Elapsed.TotalSeconds);$($printout)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+	#use pup program (credit to https://github.com/ericchiang/pup) to get execution time from gradle test report
+	$runTime = pup -f "$($project_path)\app\build\reports\androidTests\connected\flavors\PLAY\index.html" '.infoBox[id=\"duration\"] .counter text{}'
+	$failures = pup -f "$($project_path)\app\build\reports\androidTests\connected\flavors\PLAY\index.html" '.infoBox[id=\"failures\"] .counter text{}'
+	"$($Run);$($runTime);$($failures)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+	
 	echo "copying gradle output file"
 	xcopy "$($project_path)\app\build\reports\androidTests\connected\flavors\ALPHA" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
 	
@@ -101,10 +108,9 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
   
   echo "Adding files to git"
   #add the file to git, push with comment
-  #git add $gradle_report_folder
-  #git add $filename
-  #git commit -m "results from $test_name - $Start_time to $End_time"
-  #git push
+  git add $filename
+  git commit -m "results from $test_name - $Start_time to $End_time"
+  git push
 }
 
 function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [string]$testName) {
@@ -114,7 +120,7 @@ function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [strin
   Hat tip to StackOverflow. http://stackoverflow.com/questions/3513650-a-commands-execution-in-powershell
   
   Remember to do dotexe stuff before running the test script:
-  . "C:\Users\Tomi\testAutomation\measurements\wikipedia\benchmark_appium.ps1"
+  . "C:\Users\Tomi\testAutomation\measurements\wikipedia\benchmark_wikipedia.ps1"
   
   
 .EXAMPLE
@@ -124,6 +130,10 @@ function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [strin
 	-file_path
 		-testName-run_start_time
 			-gradle_report_folder
+				-run_number_1
+				-run_number_2
+				...
+				-run_number_samples
 			-full_file_path.txt
 			-full_file_path.csv
 #>
@@ -177,12 +187,15 @@ function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [strin
     $($printout) | Out-File "$($full_file_path_txt)" -Append
 	"`n######################################################`n" | Out-File "$($full_file_path_txt)" -Append 
 	
-	#write to .csv that has ; as separator between fields
-	"$($Run);$($sw.Elapsed.TotalSeconds)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+	#write run number, test execution time to .csv that has ; as separator between fields
+	#"$($Run);$($sw.Elapsed.TotalSeconds);$($printout)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+	#use pup program (credit to https://github.com/ericchiang/pup) to get execution time from gradle test report
+	$runTime = pup -f "$($project_path)\build\reports\tests\playDebug\index.html" '.infoBox[id=\"duration\"] .counter text{}'
+	$failures = pup -f "$($project_path)\build\reports\tests\playDebug\index.html" '.infoBox[id=\"failures\"] .counter text{}'
+	"$($Run);$($runTime);$($failures)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
 
 	echo "copying gradle output file"
 	xcopy "$($project_path)\app\build\reports\tests\alphaDebug" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
-	#build\reports\tests\playDebug
 	
     $sw.Reset()
     $Samples--
@@ -195,7 +208,6 @@ function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [strin
   
   echo "Adding files to git"
   #add the file to git, push with comment
-  #git add $gradle_report_folder
   git add $filename
   git commit -m "results from $test_name - $Start_time to $End_time"
   git push
