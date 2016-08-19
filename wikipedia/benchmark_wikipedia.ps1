@@ -54,29 +54,18 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
   cd $project_path
   git checkout $test_name
   #gradle assembleAlphaDebug
-  "WIKIPEDIA TEST RUN REPORT`n`n" | Out-File "$($full_file_path_txt)" -Append
+  "WIKIPEDIA TEST RUN REPORT, branch $test_name`n`n" | Out-File "$($full_file_path_txt)" -Append
+  #headers for the csv
+  "runNumber;runTime;failures;totalRunTime" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
   
   #start the test runs
   do {
-	# install application and run uiautomator script to grant permissions before testing
-	# we have to install it like this for some reason, if it is installed just by gradle installPlayDebug, it is
-	# not shown up in instrumentation for some reason, and we can't run the last command to actually run the automation script
-	#echo "installing play-debug.apk, androidTest.apk"
-	#adb push C:\Users\Tomi\Projects\wikipedia_3\apps-android-wikipedia\app\build\outputs\apk\app-alpha-debug.apk /data/local/tmp/org.wikipedia.alpha
-	#adb shell pm install -r "/data/local/tmp/org.wikipedia.alpha"
-	#adb push C:\Users\Tomi\Projects\wikipedia_3\apps-android-wikipedia\app\build\outputs\apk\app-alpha-debug-androidTest-unaligned.apk /data/local/tmp/org.wikipedia.alpha
-	#adb shell pm install -r "/data/local/tmp/org.wikipedia.alpha"
-	#echo "running test granter uiautomator script"
-	#adb shell am instrument -w -e class com.amaze.filemanager.test.PermissionGranter com.amaze.filemanager.test/android.support.test.runner.AndroidJUnitRunner
-	
 	#create new stopwatch to record time the test takes
     $sw = New-Object Diagnostics.Stopwatch
-	
+	$sw.Start()
 	echo "running gradle clean"
 	gradle clean
-
-	echo "starting test suite run number $Run"
-    $sw.Start()
+	echo "starting test suite run number $Run / $Samples"
     $printout = & $Expression 2>&1
     $sw.Stop()
 	
@@ -92,7 +81,7 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
 	#use pup program (credit to https://github.com/ericchiang/pup) to get execution time from gradle test report
 	$runTime = pup -f "$($project_path)\app\build\reports\androidTests\connected\flavors\PLAY\index.html" '.infoBox[id=\"duration\"] .counter text{}'
 	$failures = pup -f "$($project_path)\app\build\reports\androidTests\connected\flavors\PLAY\index.html" '.infoBox[id=\"failures\"] .counter text{}'
-	"$($Run);$($runTime);$($failures)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+	"$($Run);$($runTime);$($failures);$($sw.Elapsed.TotalSeconds)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
 	
 	echo "copying gradle output file"
 	xcopy "$($project_path)\app\build\reports\androidTests\connected\flavors\ALPHA" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
@@ -165,18 +154,19 @@ function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [strin
   #navigate to the application folder
   cd $project_path
   git checkout $test_name
-  "WIKIPEDIA TEST RUN REPORT`n`n" | Out-File "$($full_file_path_txt)" -Append
+  "WIKIPEDIA TEST RUN REPORT, branch $test_name`n`n" | Out-File "$($full_file_path_txt)" -Append
+  #headers for the csv
+  "runNumber;runTime;failures;totalRunTime" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
   
   #start the test runs
   do {
-	#create new stopwatch to record time the test takes
+	#create new stopwatch to record time the whole test execution takes
     $sw = New-Object Diagnostics.Stopwatch
-	
+	$sw.Start()
 	echo "running gradle clean"
 	gradle clean
 
-	echo "starting test suite run number $Run"
-    $sw.Start()
+	echo "starting test suite run number $Run / $Samples"
     $printout = & $Expression 2>&1
     $sw.Stop()
 	
@@ -192,7 +182,7 @@ function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [strin
 	#use pup program (credit to https://github.com/ericchiang/pup) to get execution time from gradle test report
 	$runTime = pup -f "$($project_path)\build\reports\tests\playDebug\index.html" '.infoBox[id=\"duration\"] .counter text{}'
 	$failures = pup -f "$($project_path)\build\reports\tests\playDebug\index.html" '.infoBox[id=\"failures\"] .counter text{}'
-	"$($Run);$($runTime);$($failures)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+	"$($Run);$($runTime);$($failures);$($sw.Elapsed.TotalSeconds)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
 
 	echo "copying gradle output file"
 	xcopy "$($project_path)\app\build\reports\tests\alphaDebug" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i

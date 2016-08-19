@@ -14,3 +14,4 @@ lopullinen komento:
 
 parempi tapa tehdä tämä:
 pup -f "C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\reports\tests\playDebug\index.html" '.infoBox[id=\"failures\"] .counter text{}'
+pup -f "C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\reports\tests\playDebug\index.html" '.infoBox[id=\"duration\"] .counter text{}'

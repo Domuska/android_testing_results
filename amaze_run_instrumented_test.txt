@@ -5,6 +5,20 @@ adb shell am instrument -w com.amaze.filemanager.test/android.support.test.runne
 adb shell am instrument -w -e class com.amaze.filemanager.test.PermissionGranter com.amaze.filemanager.test/android.support.test.runner.AndroidJUnitRunner
 
 
+säätöä että saataisiin listener testin suoritukseen mukaan:
+TOIMII:
+adb shell am instrument -w -e listener com.amaze.filemanager.test.Utilities.MyListener -e class com.amaze.filemanager.test.TestClasses.BookMarkTests com.amaze.filemanager.test/android.support.test.runner.AndroidJUnitRunner
+
+adb shell am instrument -w -e listener com.amaze.filemanager.test.Utilities com.amaze.filemanager.test/android.support.test.runner.AndroidJUnitRunner
+
+ja gradlella listener mukaan:
+gradle connectedPlayDebugAndroidTest -Pandroid.testInstrumentationRunnerArguments.class='com.amaze.filemanager.test.TestClasses.BookMarkTests'
+
+uiautomator, screenshottien ottaminen:
+http://stackoverflow.com/questions/17797324/command-line-arguments-to-android-instrument-test-using-gradle
+
+
+
 TAI jos ajetaan gradlella:
 
 https://afterecho.uk/blog/granting-marshmallow-permissions-for-testing-flavoured-builds.html
@@ -22,6 +36,7 @@ gradlella, projektin juuresta, muista ottaa .apk talteen johonkin muualle kuin m
 gradle clean testPlayDebugUnitTest
 tai ehkä ennemminkin vain, jos recordiscriptissä kutsutaan gradle clean
 gradle testPlayDebugUnitTest
+
 
 
 

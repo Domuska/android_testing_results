@@ -55,27 +55,36 @@ function bm-amaze-instrumentation ([ScriptBlock]$Expression, [int]$Samples = 1, 
   cd $project_path
   git checkout $test_name
   #gradle compilePlayDebugSources
-  gradle assemblePlayDebug
-  "AMAZE TEST RUN REPORT`n`n" | Out-File "$($full_file_path_txt)" -Append
+  #gradle assemblePlayDebug
+  "AMAZE TEST RUN REPORT, branch $test_name`n`n" | Out-File "$($full_file_path_txt)" -Append
+  #headers for the csv
+  "runNumber;runTime;failures;totalRunTime" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
   
   #start the test runs
   do {
+	#create new stopwatch to record time the test takes
+    $sw = New-Object Diagnostics.Stopwatch
+    $sw.Start()
 	# install application and run uiautomator script to grant permissions before testing
 	# we have to install it like this for some reason, if it is installed just by gradle installPlayDebug, it is
 	# not shown up in instrumentation for some reason, and we can't run the last command to actually run the automation script
-	echo "installing play-debug.apk, androidTest.apk"
-	adb push C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\outputs\apk\AmazeFileManager-play-debug.apk /data/local/tmp/com.amaze.filemanager
-	adb shell pm install -r "/data/local/tmp/com.amaze.filemanager"
-	adb push C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\outputs\apk\AmazeFileManager-play-debug-androidTest-unaligned.apk /data/local/tmp/com.amaze.filemanager.test
-	adb shell pm install -r "/data/local/tmp/com.amaze.filemanager.test"
-	echo "running test granter uiautomator script"
-	adb shell am instrument -w -e class com.amaze.filemanager.test.PermissionGranter com.amaze.filemanager.test/android.support.test.runner.AndroidJUnitRunner
 	
-	#create new stopwatch to record time the test takes
-    $sw = New-Object Diagnostics.Stopwatch
-
-	echo "starting test suite run number $Run"
-    $sw.Start()
+	#echo "installing play-debug.apk, androidTest.apk"
+	#adb push C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\outputs\apk\AmazeFileManager-play-debug.apk /data/local/tmp/com.amaze.filemanager
+	#adb shell pm install -r "/data/local/tmp/com.amaze.filemanager"
+	#adb push C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\outputs\apk\AmazeFileManager-play-debug-androidTest-unaligned.apk /data/local/tmp/com.amaze.filemanager.test
+	#adb shell pm install -r "/data/local/tmp/com.amaze.filemanager.test"
+	#echo "running test granter uiautomator script"
+	#adb shell am instrument -w -e class com.amaze.filemanager.test.PermissionGranter com.amaze.filemanager.test/android.support.test.runner.AndroidJUnitRunner
+	
+	#before running the tests we have to install the app and grant permissions once,
+	#they cannot be granted at a reasonable point during connectedPlayDebugAndroidTest
+	gradle installPlayDebug
+	adb shell pm grant com.amaze.filemanager android.permission.WRITE_EXTERNAL_STORAGE
+	adb shell pm grant com.amaze.filemanager android.permission.READ_EXTERNAL_STORAGE
+	
+	
+	echo "starting test suite run number $Run / $Samples"
     $printout = & $Expression 2>&1
     $sw.Stop()
 	
@@ -91,7 +100,7 @@ function bm-amaze-instrumentation ([ScriptBlock]$Expression, [int]$Samples = 1, 
 	#use pup program (credit to https://github.com/ericchiang/pup) to get execution time from gradle test report
 	$runTime = pup -f "$($project_path)\build\reports\androidTests\connected\flavors\PLAY\index.html" '.infoBox[id=\"duration\"] .counter text{}'
 	$failures = pup -f "$($project_path)\build\reports\androidTests\connected\flavors\PLAY\index.html" '.infoBox[id=\"failures\"] .counter text{}'
-	"$($Run);$($runTime);$($failures)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+	"$($Run);$($runTime);$($failures);$($sw.Elapsed.TotalSeconds)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
 	
 	echo "copying gradle output file"
 	#copy the html document
@@ -169,30 +178,37 @@ function bm-amaze-appium ([ScriptBlock]$Expression, [int]$Samples = 1, [string]$
   #navigate to the application folder
   cd $project_path
   git checkout $test_name
-  gradle compilePlayDebugSources
-  "AMAZE TEST RUN REPORT`n`n" | Out-File "$($full_file_path_txt)" -Append
+  #gradle compilePlayDebugSources
+  "AMAZE TEST RUN REPORT, branch $test_name`n`n" | Out-File "$($full_file_path_txt)" -Append
+  #headers for the csv
+  "runNumber;runTime;failures;totalRunTime" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
   
   #start the test runs
   do {
+	#create new stopwatch to record time the whole setup and test execution takes
+    $sw = New-Object Diagnostics.Stopwatch
+    $sw.Start()
 	# install application and run uiautomator script to grant permissions before testing
 	# we have to install it like this for some reason, if it is installed just by gradle installPlayDebug, it is
 	# not shown up in instrumentation for some reason, and we can't run the last command to actually run the automation script
-	echo "installing play-debug.apk, androidTest.apk"
-	adb push C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\outputs\apk\AmazeFileManager-play-debug.apk /data/local/tmp/com.amaze.filemanager
+	#echo "installing play-debug.apk, androidTest.apk"
+	#adb push C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\outputs\apk\AmazeFileManager-play-debug.apk /data/local/tmp/com.amaze.filemanager
+	#adb shell pm install -r "/data/local/tmp/com.amaze.filemanager"
+	#adb push C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\outputs\apk\AmazeFileManager-play-debug-androidTest-unaligned.apk /data/local/tmp/com.amaze.filemanager.test
+	#adb shell pm install -r "/data/local/tmp/com.amaze.filemanager.test"
+	#echo "running test granter uiautomator script"
+	#adb shell am instrument -w -e class com.amaze.filemanager.test.PermissionGranter com.amaze.filemanager.test/android.support.test.runner.AndroidJUnitRunner
+	
+	"adb push $($project_path)AmazeFileManager-play-debug.apk /data/local/tmp/com.amaze.filemanager"
 	adb shell pm install -r "/data/local/tmp/com.amaze.filemanager"
-	adb push C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\outputs\apk\AmazeFileManager-play-debug-androidTest-unaligned.apk /data/local/tmp/com.amaze.filemanager.test
-	adb shell pm install -r "/data/local/tmp/com.amaze.filemanager.test"
-	echo "running test granter uiautomator script"
-	adb shell am instrument -w -e class com.amaze.filemanager.test.PermissionGranter com.amaze.filemanager.test/android.support.test.runner.AndroidJUnitRunner
+	adb shell pm grant com.amaze.filemanager android.permission.WRITE_EXTERNAL_STORAGE
+	adb shell pm grant com.amaze.filemanager android.permission.READ_EXTERNAL_STORAGE
 	
 	echo "running gradle clean"
 	gradle clean
 	
-	#create new stopwatch to record time the test takes
-    $sw = New-Object Diagnostics.Stopwatch
 	#run the tests
-	echo "starting test suite run number $Run"
-    $sw.Start()
+	echo "starting test suite run number $Run / $Samples"
     $printout = & $Expression 2>&1
     $sw.Stop()
 	
@@ -205,10 +221,11 @@ function bm-amaze-appium ([ScriptBlock]$Expression, [int]$Samples = 1, [string]$
 	
 	#write run number, test execution time to .csv that has ; as separator between fields
 	#"$($Run);$($sw.Elapsed.TotalSeconds);$($printout)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
-	#use pup program (credit to https://github.com/ericchiang/pup) to get execution time from gradle test report
+	
+	#use pup program (credit to https://github.com/ericchiang/pup) to get execution time, failures from gradle test report
 	$runTime = pup -f "$($project_path)\build\reports\tests\playDebug\index.html" '.infoBox[id=\"duration\"] .counter text{}'
 	$failures = pup -f "$($project_path)\build\reports\tests\playDebug\index.html" '.infoBox[id=\"failures\"] .counter text{}'
-	"$($Run);$($runTime);$($failures)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+	"$($Run);$($runTime);$($failures);$($sw.Elapsed.TotalSeconds)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
 	
 	echo "copying gradle output file"
 	xcopy "$($project_path)\build\reports\tests\playDebug" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
