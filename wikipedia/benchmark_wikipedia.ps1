@@ -12,7 +12,7 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
   
   
 .EXAMPLE
-  Benchmark-Command-Wikipedia { gradle connectedAlphaDebugAndroidTest --stacktrace } 1 espresso_tests
+  bm-wikipedia-instrumentation { gradle connectedAlphaDebugAndroidTest --stacktrace } 1 espresso_tests
   
   Output files will be following:
 	-file_path
@@ -33,7 +33,9 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
   #the script output file path
   $file_path = "c:\users\Tomi\testAutomation\measurements\wikipedia\"
   $project_path = "C:\Users\Tomi\Projects\wikipedia_3\apps-android-wikipedia\"
+  $test_report_path = "app\build\reports\androidTests\connected\flavors\ALPHA"
   $gradle_report_folder = "gradle_reports"
+  $runs_total = $Samples
   
   #run number, incremented later
   [int]$Run = 1
@@ -63,10 +65,9 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
 	#create new stopwatch to record time the test takes
     $sw = New-Object Diagnostics.Stopwatch
 	$sw.Start()
-	echo "running gradle clean"
-	gradle clean
-	echo "starting test suite run number $Run / $Samples"
-    $printout = & $Expression 2>&1
+	echo "starting test suite run number $Run / $runs_total"
+	$printout = & $Expression 2>&1
+	
     $sw.Stop()
 	
 	#write results to human-readable .txt
@@ -79,12 +80,14 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
 	#write to .csv that has ; as separator between fields
 	#"$($Run);$($sw.Elapsed.TotalSeconds);$($printout)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
 	#use pup program (credit to https://github.com/ericchiang/pup) to get execution time from gradle test report
-	$runTime = pup -f "$($project_path)\app\build\reports\androidTests\connected\flavors\PLAY\index.html" '.infoBox[id=\"duration\"] .counter text{}'
-	$failures = pup -f "$($project_path)\app\build\reports\androidTests\connected\flavors\PLAY\index.html" '.infoBox[id=\"failures\"] .counter text{}'
+	$runTime = pup -f "$($project_path)$($test_report_path)\index.html" '.infoBox[id=\"duration\"] .counter text{}'
+	$failures = pup -f "$($project_path)$($test_report_path)\index.html" '.infoBox[id=\"failures\"] .counter text{}'
 	"$($Run);$($runTime);$($failures);$($sw.Elapsed.TotalSeconds)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
 	
 	echo "copying gradle output file"
-	xcopy "$($project_path)\app\build\reports\androidTests\connected\flavors\ALPHA" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
+	xcopy "$($project_path)$($test_report_path)" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
+	#copy the xml output
+	xcopy "$($project_path)app\build\outputs\androidTest-results\connected\flavors\ALPHA" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)\xml" /E /C /H /R /K /O /Y /i
 	
     $sw.Reset()
     $Samples--
@@ -134,7 +137,9 @@ function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [strin
   #the script output file path
   $file_path = "c:\users\Tomi\testAutomation\measurements\wikipedia\"
   $project_path = "C:\Users\Tomi\Projects\wikipedia_3\apps-android-wikipedia\"
+  $test_report_path = "app\build\reports\tests\alphaDebug"
   $gradle_report_folder = "gradle_reports"
+  $runs_total = $Samples
   
   #run number, incremented later
   [int]$Run = 1
@@ -166,7 +171,7 @@ function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [strin
 	echo "running gradle clean"
 	gradle clean
 
-	echo "starting test suite run number $Run / $Samples"
+	echo "starting test suite run number $Run / $runs_total"
     $printout = & $Expression 2>&1
     $sw.Stop()
 	
@@ -180,12 +185,14 @@ function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [strin
 	#write run number, test execution time to .csv that has ; as separator between fields
 	#"$($Run);$($sw.Elapsed.TotalSeconds);$($printout)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
 	#use pup program (credit to https://github.com/ericchiang/pup) to get execution time from gradle test report
-	$runTime = pup -f "$($project_path)\build\reports\tests\playDebug\index.html" '.infoBox[id=\"duration\"] .counter text{}'
-	$failures = pup -f "$($project_path)\build\reports\tests\playDebug\index.html" '.infoBox[id=\"failures\"] .counter text{}'
+	$runTime = pup -f "$($project_path)$($test_report_path)\index.html" '.infoBox[id=\"duration\"] .counter text{}'
+	$failures = pup -f "$($project_path)$($test_report_path)\index.html" '.infoBox[id=\"failures\"] .counter text{}'
 	"$($Run);$($runTime);$($failures);$($sw.Elapsed.TotalSeconds)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
 
 	echo "copying gradle output file"
-	xcopy "$($project_path)\app\build\reports\tests\alphaDebug" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
+	xcopy "$($project_path)$($test_report_path)" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
+	#copy the xml output
+	xcopy "$($project_path)app\build\test-results\alphaDebug" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)\xml" /E /C /H /R /K /O /Y /i
 	
     $sw.Reset()
     $Samples--
