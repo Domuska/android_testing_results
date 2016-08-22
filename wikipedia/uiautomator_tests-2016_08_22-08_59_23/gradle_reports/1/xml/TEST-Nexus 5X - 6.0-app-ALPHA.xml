@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="org.wikipedia.uiautomator_tests.ArticleSearchTests" tests="15" failures="1" errors="0" skipped="3" time="342.609" timestamp="2016-08-22T06:06:37" hostname="localhost">
+  <properties>
+    <property name="device" value="Nexus 5X - 6.0" />
+    <property name="flavor" value="ALPHA" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="testSearchArticle_checkRecentsShown" classname="org.wikipedia.uiautomator_tests.ArticleSearchTests" time="43.305" />
+  <testcase name="testSearchArticle_checkTitleShown" classname="org.wikipedia.uiautomator_tests.ArticleSearchTests" time="17.89" />
+  <testcase name="testScrollingToC_clickSubHeading" classname="org.wikipedia.uiautomator_tests.ArticleTests" time="25.496" />
+  <testcase name="testClickLink_partialText_assertPreviewShown" classname="org.wikipedia.uiautomator_tests.ArticleTests" time="0.002">
+    <skipped />
+  </testcase>
+  <testcase name="testOpeningAndClosingReferences" classname="org.wikipedia.uiautomator_tests.ArticleTests" time="0.001">
+    <skipped />
+  </testcase>
+  <testcase name="testClickLink_fullText_assertPreviewShown" classname="org.wikipedia.uiautomator_tests.ArticleTests" time="18.474" />
+  <testcase name="testTableOfContents_checkSubTitles" classname="org.wikipedia.uiautomator_tests.ArticleTests" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testHistory" classname="org.wikipedia.uiautomator_tests.HistoryTests" time="49.754" />
+  <testcase name="testChangeLanguageInSearch" classname="org.wikipedia.uiautomator_tests.LanguageTests" time="32.745" />
+  <testcase name="testChangeLanguageInArticle" classname="org.wikipedia.uiautomator_tests.LanguageTests" time="29.0" />
+  <testcase name="testAddArticleToReadingList" classname="org.wikipedia.uiautomator_tests.ReadingListTests" time="23.004">
+    <failure>java.lang.NullPointerException: Attempt to invoke virtual method 'java.lang.Object android.support.test.uiautomator.UiObject2.wait(android.support.test.uiautomator.SearchCondition, long)' on a null object reference
+at org.wikipedia.uiautomator_tests.Utils.Utils.searchAndOpenArticleWithName(Utils.java:51)
+at org.wikipedia.uiautomator_tests.ReadingListTests.testAddArticleToReadingList(ReadingListTests.java:35)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:262)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</failure>
+  </testcase>
+  <testcase name="testOpenToC_rotatePhone" classname="org.wikipedia.uiautomator_tests.RotationTests" time="21.875" />
+  <testcase name="testOpenTab_rotatePhone" classname="org.wikipedia.uiautomator_tests.RotationTests" time="24.176" />
+  <testcase name="testOpenMultipleTabs" classname="org.wikipedia.uiautomator_tests.TabTests" time="31.395" />
+  <testcase name="testOpenArticleInNewTab" classname="org.wikipedia.uiautomator_tests.TabTests" time="24.437" />
+</testsuite>
