@@ -40,9 +40,9 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
   #run number, incremented later
   [int]$Run = 1
   
-  $Start_time = Get-Date -f yyy_MM_dd-hh_mm_ss
-  #the raw file path, no extension
-  $filename = "$test_name-$(get-date -f yyy_MM_dd-hh_mm_ss)"
+  $Start_time = Get-Date -f yyy_MM_dd-HH_mm_ss
+  #the raw file path, no extension example : uiautomator_tests-2016_08_22-11_00_31
+  $filename = "$test_name-$(get-date -f yyy_MM_dd-HH_mm_ss)"
   #echo $filename
   #in current directory
   $full_file_path_txt = "$file_path$filename\$filename.txt"
@@ -94,7 +94,7 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
     $Run++
   }
   while ($Samples -gt 0)
-  $End_time = Get-Date -f yyy_MM_dd-hh_mm_ss
+  $End_time = Get-Date -f yyy_MM_dd-HH_mm_ss
   #navigate back to the test result folder
   cd $file_path
   
@@ -144,9 +144,9 @@ function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [strin
   #run number, incremented later
   [int]$Run = 1
   
-  $Start_time = Get-Date -f yyy_MM_dd-hh_mm_ss
-  #the raw file path, no extension
-  $filename = "$test_name-$(get-date -f yyy_MM_dd-hh_mm_ss)"
+  $Start_time = Get-Date -f yyy_MM_dd-HH_mm_ss
+  #the raw file path, no extension example : uiautomator_tests-2016_08_22-11_00_31
+  $filename = "$test_name-$(get-date -f yyy_MM_dd-HH_mm_ss)"
   #echo $filename
   #in current directory
   $full_file_path_txt = "$file_path$filename\$filename.txt"
@@ -199,7 +199,7 @@ function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [strin
     $Run++
   }
   while ($Samples -gt 0)
-  $End_time = Get-Date -f yyy_MM_dd-hh_mm_ss
+  $End_time = Get-Date -f yyy_MM_dd-HH_mm_ss
   #navigate back to the test result folder
   cd $file_path
   
