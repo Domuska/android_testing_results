@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.wikipedia.appium.RotationTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-08-23T09:07:04" hostname="TOL025031" time="95.326">
+  <properties/>
+  <testcase name="testOpenToC_rotatePhone" classname="org.wikipedia.appium.RotationTests" time="41.982"/>
+  <testcase name="testOpenTab_rotatePhone" classname="org.wikipedia.appium.RotationTests" time="53.343"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
