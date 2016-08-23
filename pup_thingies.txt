@@ -15,3 +15,21 @@ lopullinen komento:
 parempi tapa tehdä tämä:
 pup -f "C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\reports\tests\playDebug\index.html" '.infoBox[id=\"failures\"] .counter text{}'
 pup -f "C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\reports\tests\playDebug\index.html" '.infoBox[id=\"duration\"] .counter text{}'
+
+
+jos halutaan ottaa (failaavien) testien nimiä tai jotain muuta:
+
+instrumented testit
+
+pup -f "$($project_path)$($test_report_path)\index.html" '.failures a:not(:contains(\"org\")) text{}'
+
+
+appium testit
+failure / ignored teksti (id=tab0 on joko failure tai ignored tai ehkä joskus jotain muutakin, otetaan talteen että voidaan tsekata onko
+se "Failed tests")
+pup -f "C:\Users\Tomi\testAutomation\measurements\wikipedia\appium_tests-2016_08_23-11_02_47\gradle_reports\2\index.html" '.tab[id=\"tab0\""] h2 text{}'
+
+komento jolla otetaan 1. failanneen testin nimi, li:nth-child muuttamalla voi ottaa 2., 3. etc failanneen testin packagenimi,
+ja a:nth-child vaihtamalla 1:ksi saa failanneen testin packagen nimen
+pup -f "C:\Users\Tomi\testAutomation\measurements\wikipedia\appium_tests-2016_08_23-11_02_47\gradle_reports\1\index.html" '.tab[id=\"tab0\""] .linkList li:nth-child(1) a:nth-child(2) text{}'
+
