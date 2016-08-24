@@ -1,0 +1,10 @@
+1;LanguageTests.testChangeLanguageInArticle
+1;LanguageTests.testChangeLanguageInSearch
+1;ReadingListTests.testAddArticleToReadingList
+1;RotationTests.testOpenTab_rotatePhone
+1;RotationTests.testOpenToC_rotatePhone
+1;TabTests.testOpenArticleInNewTab
+1;TabTests.testOpenMultipleTabs
+2;LanguageTests.testChangeLanguageInSearch
+2;ReadingListTests.testAddArticleToReadingList
+2;TabTests.testOpenArticleInNewTab
