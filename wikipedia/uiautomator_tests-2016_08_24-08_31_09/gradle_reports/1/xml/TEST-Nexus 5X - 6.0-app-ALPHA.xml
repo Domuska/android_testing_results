@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="org.wikipedia.uiautomator_tests.ArticleSearchTests" tests="15" failures="2" errors="0" skipped="3" time="251.89" timestamp="2016-08-24T05:36:08" hostname="localhost">
+  <properties>
+    <property name="device" value="Nexus 5X - 6.0" />
+    <property name="flavor" value="ALPHA" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="testSearchArticle_checkRecentsShown" classname="org.wikipedia.uiautomator_tests.ArticleSearchTests" time="34.089" />
+  <testcase name="testSearchArticle_checkTitleShown" classname="org.wikipedia.uiautomator_tests.ArticleSearchTests" time="8.217" />
+  <testcase name="testScrollingToC_clickSubHeading" classname="org.wikipedia.uiautomator_tests.ArticleTests" time="14.312" />
+  <testcase name="testClickLink_partialText_assertPreviewShown" classname="org.wikipedia.uiautomator_tests.ArticleTests" time="0.001">
+    <skipped />
+  </testcase>
+  <testcase name="testOpeningAndClosingReferences" classname="org.wikipedia.uiautomator_tests.ArticleTests" time="0.001">
+    <skipped />
+  </testcase>
+  <testcase name="testClickLink_fullText_assertPreviewShown" classname="org.wikipedia.uiautomator_tests.ArticleTests" time="8.854" />
+  <testcase name="testTableOfContents_checkSubTitles" classname="org.wikipedia.uiautomator_tests.ArticleTests" time="0.002">
+    <skipped />
+  </testcase>
+  <testcase name="testHistory" classname="org.wikipedia.uiautomator_tests.HistoryTests" time="25.425" />
+  <testcase name="testChangeLanguageInSearch" classname="org.wikipedia.uiautomator_tests.LanguageTests" time="29.975" />
+  <testcase name="testChangeLanguageInArticle" classname="org.wikipedia.uiautomator_tests.LanguageTests" time="52.824">
+    <failure>org.junit.runners.model.TestTimedOutException: test timed out after 50000 milliseconds
+at java.lang.Thread.sleep(Native Method)
+at java.lang.Thread.sleep(Thread.java:1031)
+at java.lang.Thread.sleep(Thread.java:985)
+at android.os.SystemClock.sleep(SystemClock.java:120)
+at android.support.test.uiautomator.WaitMixin.wait(WaitMixin.java:48)
+at android.support.test.uiautomator.WaitMixin.wait(WaitMixin.java:34)
+at android.support.test.uiautomator.UiDevice.wait(UiDevice.java:187)
+at org.wikipedia.uiautomator_tests.Utils.Utils.assertArticleTitleContains(Utils.java:30)
+at org.wikipedia.uiautomator_tests.LanguageTests.testChangeLanguageInArticle(LanguageTests.java:61)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at java.lang.Thread.run(Thread.java:818)
+</failure>
+  </testcase>
+  <testcase name="testAddArticleToReadingList" classname="org.wikipedia.uiautomator_tests.ReadingListTests" time="17.039" />
+  <testcase name="testOpenToC_rotatePhone" classname="org.wikipedia.uiautomator_tests.RotationTests" time="12.025" />
+  <testcase name="testOpenTab_rotatePhone" classname="org.wikipedia.uiautomator_tests.RotationTests" time="14.447" />
+  <testcase name="testOpenMultipleTabs" classname="org.wikipedia.uiautomator_tests.TabTests" time="19.052">
+    <failure>java.lang.AssertionError:
+Expected: a string starting with "Final Fantasy XII"
+but: was "Google
+American multinational Internet and technology corporation"
+at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+at org.wikipedia.uiautomator_tests.Utils.Utils.assertArticleTitleContains(Utils.java:34)
+at org.wikipedia.uiautomator_tests.TabTests.testOpenMultipleTabs(TabTests.java:59)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at java.lang.Thread.run(Thread.java:818)
+</failure>
+  </testcase>
+  <testcase name="testOpenArticleInNewTab" classname="org.wikipedia.uiautomator_tests.TabTests" time="14.571" />
+</testsuite>
