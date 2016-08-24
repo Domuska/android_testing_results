@@ -230,8 +230,8 @@ function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [strin
 		$h2Text = pup -f "$($project_path)$($test_report_path)\index.html" '.tab[id=\"tab0\""] h2 text{}'
 		#parse the html in project_path\app\build\outputs\androidTest-results...\index.html, get package name & test name
 		#.tab class with id tab0 (could be "ignored" or "passed", but failures is checked above in for loop) .linklist class li element child number FAILURE_NUMBER, a element child 1 for package, 2 for test name
-		$testPackageName = pup -f "$($project_path)$($test_report_path)\index.html" '.tab[id=\"tab0\""] .linkList li:nth-child($($i)) a:nth-child(1) text{}'
-		$testName = pup -f "$($project_path)$($test_report_path)\index.html" '.tab[id=\"tab0\""] .linkList li:nth-child($($i)) a:nth-child(2) text{}'
+		$testPackageName = pup -f "$($project_path)$($test_report_path)\index.html" ".tab[id=`"tab0`"] .linkList li:nth-child($i) a:nth-child(1) text{}"
+		$testName = pup -f "$($project_path)$($test_report_path)\index.html" ".tab[id=`"tab0`"] .linkList li:nth-child($i) a:nth-child(2) text{}"
 		"$($Run);$($testPackageName).$($testName)" | Out-File "$($full_file_path_test_failures_csv)" -Append -Encoding ascii
 	}
 
