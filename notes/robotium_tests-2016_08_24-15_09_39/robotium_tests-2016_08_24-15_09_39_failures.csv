@@ -1,0 +1,3 @@
+runNumber;failingTestName
+1;Robotium_Faulty_Tests.testAddNewNoteSearchForFaultyNoteName
+1;Robotium_Faulty_Tests.testSearchForElementWithTextShouldFailOnView
