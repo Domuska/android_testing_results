@@ -47,7 +47,7 @@ function bm-notes-instrumentation ([ScriptBlock]$Expression, [int]$Samples = 1, 
   #in current directory
   $full_file_path_txt = "$file_path$filename\$filename.txt"
   $full_file_path_csv = "$file_path$filename\$filename.csv"
-  #echo $full_file_path_txt
+  $full_file_path_test_failures_csv = "$($file_path)$($filename)\$($filename)_failures.csv"
   
   #create a new directory with the name 
   New-Item "$file_path$filename" -type directory
@@ -58,7 +58,9 @@ function bm-notes-instrumentation ([ScriptBlock]$Expression, [int]$Samples = 1, 
   #gradle assembleAlphaDebug
   "NOTES TEST RUN REPORT, branch $test_name`n`n" | Out-File "$($full_file_path_txt)" -Append
   #headers for the csv
-  "runNumber;runTime;failures;totalRunTime" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+  "runNumber;runTime;tests;failures;totalRunTime" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+  #headers to failure .csv
+  "runNumber;failingTestName" | Out-File "$($full_file_path_test_failures_csv)" -Append -Encoding ascii
   
   #start the test runs
   do {
@@ -78,11 +80,41 @@ function bm-notes-instrumentation ([ScriptBlock]$Expression, [int]$Samples = 1, 
 	"`n######################################################`n" | Out-File "$($full_file_path_txt)" -Append 
 	
 	
+	#write to .csv that has ; as separator between fields
+	#"$($Run);$($sw.Elapsed.TotalSeconds);$($printout)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
 	#use pup program (credit to https://github.com/ericchiang/pup) to get execution time from gradle test report
 	$runTime = pup -f "$($project_path)$($test_report_path)\index.html" '.infoBox[id=\"duration\"] .counter text{}'
-	$failures = pup -f "$($project_path)$($test_report_path)\index.html" '.infoBox[id=\"failures\"] .counter text{}'
-	#write to .csv that has ; as separator between fields
-	"$($Run);$($runTime);$($failures);$($sw.Elapsed.TotalSeconds)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+	[int]$failures = pup -f "$($project_path)$($test_report_path)\index.html" '.infoBox[id=\"failures\"] .counter text{}'
+	[int]$failures = pup -f "$($project_path)$($test_report_path)\index.html" '.infoBox[id=\"failures\"] .counter text{}'
+	"$($Run);$($runTime);$($tests);$($failures);$($sw.Elapsed.TotalSeconds)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+	
+	#in failed_classes_tests text is in format
+	#classname
+	#testname
+	#exclude "org", it's in full package name of the app and fields having that are extra fields we dont need
+	$failed_classes_tests = pup -f "$($project_path)$($test_report_path)\index.html" '.failures a:not(:contains(\"org\")) text{}'
+	#convert the variable to a string
+	$failed_classes_tests = "$failed_classes_tests"
+	
+	
+	#take all but last error class.failingTests and write to .csv
+	for($i=1; $i -le $failures-1; $i++){
+			
+		#get position of the 2nd space so we get substring until that point
+		$1_space_position = $failed_classes_tests.IndexOf(" ")
+		$2_space_position = $failed_classes_tests.IndexOf(" ", $1_space_position+1)
+		#get the substring, remove it from the full name
+		$testName = $failed_classes_tests.Substring(0, $2_space_position)
+		$failed_classes_tests = $failed_classes_tests -replace "$($testName) "
+		
+		#replace the space with .
+		$testName = $testName -replace " ", "."
+		"$($Run);$($testName)" | Out-File "$($full_file_path_test_failures_csv)" -Append -Encoding ascii
+		
+	}
+	#handle taking the very last error class.failingTest
+	$testName = $failed_classes_tests -replace " ", "."
+	"$($Run);$($testName)" | Out-File "$($full_file_path_test_failures_csv)" -Append -Encoding ascii
 	
 	echo "copying gradle output file"
 	xcopy "$($project_path)$($test_report_path)" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
@@ -147,10 +179,10 @@ function bm-notes-appium([ScriptBlock]$Expression, [int]$Samples = 1, [string]$t
   $Start_time = Get-Date -f yyy_MM_dd-HH_mm_ss
   #the raw file path, no extension example : uiautomator_tests-2016_08_22-11_00_31
   $filename = "$test_name-$(get-date -f yyy_MM_dd-HH_mm_ss)"
-  #echo $filename
   #in current directory
   $full_file_path_txt = "$file_path$filename\$filename.txt"
   $full_file_path_csv = "$file_path$filename\$filename.csv"
+  $full_file_path_test_failures_csv = "$($file_path)$($filename)\$($filename)_failures.csv"
   #echo $full_file_path_txt
   
   #create a new directory with the name 
@@ -161,7 +193,9 @@ function bm-notes-appium([ScriptBlock]$Expression, [int]$Samples = 1, [string]$t
   git checkout $test_name
   "NOTES TEST RUN REPORT, branch $test_name`n`n" | Out-File "$($full_file_path_txt)" -Append
   #headers for the csv
-  "runNumber;runTime;failures;totalRunTime" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+  "runNumber;runTime;tests;failures;totalRunTime" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+  #headers to failure .csv
+  "runNumber;failingTestName" | Out-File "$($full_file_path_test_failures_csv)" -Append -Encoding ascii
   
   #start the test runs
   do {
@@ -182,12 +216,23 @@ function bm-notes-appium([ScriptBlock]$Expression, [int]$Samples = 1, [string]$t
     $($printout) | Out-File "$($full_file_path_txt)" -Append
 	"`n######################################################`n" | Out-File "$($full_file_path_txt)" -Append 
 	
-	
-	#use pup program (credit to https://github.com/ericchiang/pup) to get execution time from gradle test report
+	#write run number, test execution time to .csv that has ; as separator between fields
+	#use pup program (credit to https://github.com/ericchiang/pup) to get execution time, failures from gradle test report
 	$runTime = pup -f "$($project_path)$($test_report_path)\index.html" '.infoBox[id=\"duration\"] .counter text{}'
+	[int]$tests = pup -f "$($project_path)$($test_report_path)\index.html" '.infoBox[id=\"tests\"] .counter text{}'
 	$failures = pup -f "$($project_path)$($test_report_path)\index.html" '.infoBox[id=\"failures\"] .counter text{}'
-	#write run number, test execution time, failures, total elapsed time to .csv that has ; as separator between fields
-	"$($Run);$($runTime);$($failures);$($sw.Elapsed.TotalSeconds)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+	"$($Run);$($runTime);$($tests);$($failures);$($sw.Elapsed.TotalSeconds)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+	
+	
+	#write to another .csv names of the tests that failures
+	for($i=1; $i -le $failures; $i++){
+		$h2Text = pup -f "$($project_path)$($test_report_path)\index.html" '.tab[id=\"tab0\""] h2 text{}'
+		#parse the html in project_path\app\build\outputs\androidTest-results...\index.html, get package name & test name
+		#.tab class with id tab0 (could be "ignored" or "passed", but failures is checked above in for loop) .linklist class li element child number FAILURE_NUMBER, a element child 1 for package, 2 for test name
+		$testPackageName = pup -f "$($project_path)$($test_report_path)\index.html" ".tab[id=`"tab0`"] .linkList li:nth-child($i) a:nth-child(1) text{}"
+		$testName = pup -f "$($project_path)$($test_report_path)\index.html" ".tab[id=`"tab0`"] .linkList li:nth-child($i) a:nth-child(2) text{}"
+		"$($Run);$($testPackageName).$($testName)" | Out-File "$($full_file_path_test_failures_csv)" -Append -Encoding ascii
+	}
 
 	echo "copying gradle output file"
 	xcopy "$($project_path)$($test_report_path)" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i

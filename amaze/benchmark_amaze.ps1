@@ -49,7 +49,6 @@ function bm-amaze-instrumentation ([ScriptBlock]$Expression, [int]$Samples = 1, 
   $full_file_path_txt = "$file_path$filename\$filename.txt"
   $full_file_path_csv = "$file_path$filename\$filename.csv"
   $full_file_path_test_failures_csv = "$($file_path)$($filename)\$($filename)_failures.csv"
-  #echo $full_file_path_txt
   
   #create a new directory with the name 
   New-Item "$file_path$filename" -type directory
@@ -62,6 +61,8 @@ function bm-amaze-instrumentation ([ScriptBlock]$Expression, [int]$Samples = 1, 
   "AMAZE TEST RUN REPORT, branch $test_name`n`n" | Out-File "$($full_file_path_txt)" -Append
   #headers for the csv
   "runNumber;runTime;tests;failures;totalRunTime" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+  #headers to failure .csv
+  "runNumber;failingTestName" | Out-File "$($full_file_path_test_failures_csv)" -Append -Encoding ascii
   
   #start the test runs
   do {
@@ -103,8 +104,6 @@ function bm-amaze-instrumentation ([ScriptBlock]$Expression, [int]$Samples = 1, 
 	#convert the variable to a string
 	$failed_classes_tests = "$failed_classes_tests"
 	
-	#headers to failure .csv
-	"runNumber;failingTestName" | Out-File "$($full_file_path_test_failures_csv)" -Append -Encoding ascii
 	#take all but last error class.failingTests and write to .csv
 	for($i=1; $i -le $failures-1; $i++){
 			
@@ -206,6 +205,8 @@ function bm-amaze-appium ([ScriptBlock]$Expression, [int]$Samples = 1, [string]$
   "AMAZE TEST RUN REPORT, branch $test_name`n`n" | Out-File "$($full_file_path_txt)" -Append
   #headers for the csv
   "runNumber;runTime;tests;failures;totalRunTime" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+  #headers to failure .csv
+  "runNumber;failingTestName" | Out-File "$($full_file_path_test_failures_csv)" -Append -Encoding ascii
   
   #start the test runs
   do {
@@ -240,15 +241,13 @@ function bm-amaze-appium ([ScriptBlock]$Expression, [int]$Samples = 1, [string]$
 	$failures = pup -f "$($project_path)$($test_report_path)\index.html" '.infoBox[id=\"failures\"] .counter text{}'
 	"$($Run);$($runTime);$($tests);$($failures);$($sw.Elapsed.TotalSeconds)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
 	
-	#headers to failure .csv
-	"runNumber;failingTestName" | Out-File "$($full_file_path_test_failures_csv)" -Append -Encoding ascii
 	#write to another .csv names of the tests that failures
 	for($i=1; $i -le $failures; $i++){
 		$h2Text = pup -f "$($project_path)$($test_report_path)\index.html" '.tab[id=\"tab0\""] h2 text{}'
 		#parse the html in project_path\app\build\outputs\androidTest-results...\index.html, get package name & test name
 		#.tab class with id tab0 (could be "ignored" or "passed", but failures is checked above in for loop) .linklist class li element child number FAILURE_NUMBER, a element child 1 for package, 2 for test name
-		$testPackageName = pup -f "$($project_path)$($test_report_path)\index.html" '.tab[id=\"tab0\""] .linkList li:nth-child($i) a:nth-child(1) text{}'
-		$testName = pup -f "$($project_path)$($test_report_path)\index.html" '.tab[id=\"tab0\""] .linkList li:nth-child($i) a:nth-child(2) text{}'
+		$testPackageName = pup -f "$($project_path)$($test_report_path)\index.html" ".tab[id=`"tab0`"] .linkList li:nth-child($i) a:nth-child(1) text{}"
+		$testName = pup -f "$($project_path)$($test_report_path)\index.html" ".tab[id=`"tab0`"] .linkList li:nth-child($i) a:nth-child(2) text{}"
 		"$($Run);$($testPackageName).$($testName)" | Out-File "$($full_file_path_test_failures_csv)" -Append -Encoding ascii
 	}
 	

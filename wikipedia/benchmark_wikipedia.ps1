@@ -59,6 +59,8 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
   "WIKIPEDIA TEST RUN REPORT, branch $test_name`n`n" | Out-File "$($full_file_path_txt)" -Append
   #headers for the csv
   "runNumber;runTime;tests;failures;totalRunTime" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+  #headers to failure .csv
+  "runNumber;failingTestName" | Out-File "$($full_file_path_test_failures_csv)" -Append -Encoding ascii
   
   #start the test runs
   do {
@@ -94,8 +96,6 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
 	#convert the variable to a string
 	$failed_classes_tests = "$failed_classes_tests"
 	
-	#headers to failure .csv
-	"runNumber;failingTestName" | Out-File "$($full_file_path_test_failures_csv)" -Append -Encoding ascii
 	#take all but last error class.failingTests and write to .csv
 	for($i=1; $i -le $failures-1; $i++){
 			
@@ -195,6 +195,8 @@ function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [strin
   "WIKIPEDIA TEST RUN REPORT, branch $test_name`n`n" | Out-File "$($full_file_path_txt)" -Append
   #headers for the csv
   "runNumber;runTime;tests;failures;totalRunTime" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+  #headers to failure .csv
+  "runNumber;failingTestName" | Out-File "$($full_file_path_test_failures_csv)" -Append -Encoding ascii
   
   #start the test runs
   do {
@@ -223,8 +225,6 @@ function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [strin
 	$failures = pup -f "$($project_path)$($test_report_path)\index.html" '.infoBox[id=\"failures\"] .counter text{}'
 	"$($Run);$($runTime);$($tests);$($failures);$($sw.Elapsed.TotalSeconds)" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
 	
-	#headers to failure .csv
-	"runNumber;failingTestName" | Out-File "$($full_file_path_test_failures_csv)" -Append -Encoding ascii
 	#write to another .csv names of the tests that failures
 	for($i=1; $i -le $failures; $i++){
 		$h2Text = pup -f "$($project_path)$($test_report_path)\index.html" '.tab[id=\"tab0\""] h2 text{}'
