@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.wikipedia.appium.ArticleSearchTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-08-24T08:28:57" hostname="TOL025031" time="139.487">
-  <properties/>
-  <testcase name="testSearchArticle_checkRecentsShown" classname="org.wikipedia.appium.ArticleSearchTests" time="101.46"/>
-  <testcase name="testSearchArticle_checkTitleShown" classname="org.wikipedia.appium.ArticleSearchTests" time="38.027"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
