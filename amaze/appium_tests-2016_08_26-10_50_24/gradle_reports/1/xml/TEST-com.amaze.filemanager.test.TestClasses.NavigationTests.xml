@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.amaze.filemanager.test.TestClasses.NavigationTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-08-26T07:55:42" hostname="TOL025031" time="61.346">
+  <properties/>
+  <testcase name="testSwipingBetweenTwoFolders" classname="com.amaze.filemanager.test.TestClasses.NavigationTests" time="29.425"/>
+  <testcase name="testGridView" classname="com.amaze.filemanager.test.TestClasses.NavigationTests" time="31.92"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

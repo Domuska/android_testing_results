@@ -1,0 +1,4 @@
+runNumber;failingTestName
+1;BookMarkTests.testBookMarking
+1;DrawerRotationTests.testDrawerOpenRotateScreen
+1;EditBookmarksTests.editBookmarkTest
