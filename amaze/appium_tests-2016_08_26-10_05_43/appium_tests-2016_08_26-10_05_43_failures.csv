@@ -1,0 +1,10 @@
+runNumber;failingTestName
+1;BookMarkTests.testBookMarking
+1;DrawerRotationTests.testDrawerOpenRotateScreen
+1;EditBookmarksTests.editBookmarkTest
+1;NavigationTests.testGridView
+2;NavigationTests.testGridView
+3;NavigationTests.testGridView
+3;SetHomeTest.testSetHome
+4;NavigationTests.testGridView
+5;NavigationTests.testGridView
