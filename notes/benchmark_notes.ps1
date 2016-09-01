@@ -58,7 +58,7 @@ function bm-notes-instrumentation ([ScriptBlock]$Expression, [int]$Samples = 1, 
   #gradle assembleAlphaDebug
   "NOTES TEST RUN REPORT, branch $test_name`n`n" | Out-File "$($full_file_path_txt)" -Append
   #headers for the csv
-  "runNumber;runTime_seconds;tests;failures;totalRunTime" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+  "runNumber;runTime_seconds;tests;failures;totalRunTime_seconds" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
   #headers to failure .csv
   "runNumber;failingTestName" | Out-File "$($full_file_path_test_failures_csv)" -Append -Encoding ascii
   
@@ -207,7 +207,7 @@ function bm-notes-appium([ScriptBlock]$Expression, [int]$Samples = 1, [string]$t
   git checkout $test_name
   "NOTES TEST RUN REPORT, branch $test_name`n`n" | Out-File "$($full_file_path_txt)" -Append
   #headers for the csv
-  "runNumber;runTime_seconds;tests;failures;totalRunTime" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
+  "runNumber;runTime_seconds;tests;failures;totalRunTime_seconds" | Out-File "$($full_file_path_csv)" -Append -Encoding ascii
   #headers to failure .csv
   "runNumber;failingTestName" | Out-File "$($full_file_path_test_failures_csv)" -Append -Encoding ascii
   

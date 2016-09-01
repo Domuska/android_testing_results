@@ -1,6 +1,0 @@
-runNumber;failingTestName
-1;BookMarkTests.testBookmarking
-1;DrawerRotationTests.testDrawerOpenRotateScreen
-1;EditBookmarkTests.testEditBookmark
-1;FileAndFolderManipulationTests.testCopyFileToAnotherFolder
-1;FileAndFolderManipulationTests.testCreateNewFileAndDeleteIt

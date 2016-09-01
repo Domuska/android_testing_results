@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.amaze.filemanager.test.TestClasses.FileAndFolderManipulationTests" tests="3" skipped="0" failures="0" errors="0" timestamp="2016-08-26T08:07:13" hostname="TOL025031" time="154.15">
-  <properties/>
-  <testcase name="testCopyFileToAnotherFolder" classname="com.amaze.filemanager.test.TestClasses.FileAndFolderManipulationTests" time="65.99"/>
-  <testcase name="testCreateNewFileAndDeleteIt" classname="com.amaze.filemanager.test.TestClasses.FileAndFolderManipulationTests" time="43.821"/>
-  <testcase name="testCreateNewFolderAndDeleteIt" classname="com.amaze.filemanager.test.TestClasses.FileAndFolderManipulationTests" time="44.338"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
