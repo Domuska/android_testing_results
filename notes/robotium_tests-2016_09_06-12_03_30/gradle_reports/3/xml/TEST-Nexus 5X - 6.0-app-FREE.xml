@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestAddNewNoteShouldShowNameInNotesScreen" tests="11" failures="0" errors="0" skipped="0" time="169.728" timestamp="2016-09-06T09:14:50" hostname="localhost">
+  <properties>
+    <property name="device" value="Nexus 5X - 6.0" />
+    <property name="flavor" value="FREE" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="testAddNewNoteShouldShowNameInNotesScreen" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestAddNewNoteShouldShowNameInNotesScreen" time="6.578" />
+  <testcase name="testAddNewNoteWithDueDateCheckDateIsVisible" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestAddNewNoteWithDueDateCheckDateIsVisible" time="7.119" />
+  <testcase name="testAddNewNoteWithReminderDateAndTime" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestAddNewNoteWithReminderDateAndTime" time="11.078" />
+  <testcase name="testAddNoteToTaskList" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestAddNoteToTaskList" time="8.995" />
+  <testcase name="testAddNotesAndRotateScreen" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestAddNotesAndRotateScreen" time="15.948" />
+  <testcase name="testAddTaskListAndRotateScreen" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestAddTaskListAndRotateScreen" time="6.738" />
+  <testcase name="testAddTaskListCheckItIsAddedToDrawer" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestAddTaskListCheckItIsAddedToDrawer" time="5.409" />
+  <testcase name="testAddTaskListsScrollNavigationDrawer" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestAddTaskListsScrollNavigationDrawer" time="54.054" />
+  <testcase name="testCompletedTasksAreCleared" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestCompletedTasksAreCleared" time="27.454" />
+  <testcase name="testCreateNoteAndDeleteIt" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestCreateNoteAndDeleteIt" time="10.428" />
+  <testcase name="testCreateTaskListAndDeleteIt" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestCreateTaskListAndDeleteIt" time="15.914" />
+</testsuite>
