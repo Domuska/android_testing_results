@@ -1,0 +1,7 @@
+runNumber;failingTestName
+2;ArticleSearchTests.testSearchArticle_checkRecentsShown
+2;HistoryTests.testHistory
+3;ArticleSearchTests.testSearchArticle_checkRecentsShown
+3;HistoryTests.testHistory
+4;ArticleSearchTests.testSearchArticle_checkRecentsShown
+5;ArticleSearchTests.testSearchArticle_checkRecentsShown
