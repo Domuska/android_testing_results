@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="org.wikipedia.espresso_test.ArticleSearchTests" tests="15" failures="0" errors="0" skipped="3" time="115.042" timestamp="2016-09-13T14:23:20" hostname="localhost">
+  <properties>
+    <property name="device" value="Nexus 5X - 6.0" />
+    <property name="flavor" value="ALPHA" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="testSearchArticle_checkRecentsShown" classname="org.wikipedia.espresso_test.ArticleSearchTests" time="18.055" />
+  <testcase name="testSearchArticle_checkTitleShown" classname="org.wikipedia.espresso_test.ArticleSearchTests" time="5.294" />
+  <testcase name="testScrollingToC_clickSubHeading" classname="org.wikipedia.espresso_test.ArticleTests" time="5.784" />
+  <testcase name="testClickLink_partialText_assertPreviewShown" classname="org.wikipedia.espresso_test.ArticleTests" time="0.001">
+    <skipped />
+  </testcase>
+  <testcase name="testOpeningAndClosingReferences" classname="org.wikipedia.espresso_test.ArticleTests" time="0.001">
+    <skipped />
+  </testcase>
+  <testcase name="testClickLink_fullText_assertPreviewShown" classname="org.wikipedia.espresso_test.ArticleTests" time="5.562" />
+  <testcase name="testTableOfContents_checkSubTitles" classname="org.wikipedia.espresso_test.ArticleTests" time="0.001">
+    <skipped />
+  </testcase>
+  <testcase name="testHistory" classname="org.wikipedia.espresso_test.HistoryTests" time="13.554" />
+  <testcase name="testChangeLanguageInSearch" classname="org.wikipedia.espresso_test.LanguageTests" time="11.479" />
+  <testcase name="testChangeLanguageInArticle" classname="org.wikipedia.espresso_test.LanguageTests" time="9.098" />
+  <testcase name="testAddArticleToReadingList" classname="org.wikipedia.espresso_test.ReadingListTests" time="10.073" />
+  <testcase name="testOpenToC_rotatePhone" classname="org.wikipedia.espresso_test.RotationTests" time="5.75" />
+  <testcase name="testOpenTab_rotatePhone" classname="org.wikipedia.espresso_test.RotationTests" time="7.435" />
+  <testcase name="testOpenMultipleTabs" classname="org.wikipedia.espresso_test.TabTests" time="14.032" />
+  <testcase name="testOpenArticleInNewTab" classname="org.wikipedia.espresso_test.TabTests" time="8.529" />
+</testsuite>
