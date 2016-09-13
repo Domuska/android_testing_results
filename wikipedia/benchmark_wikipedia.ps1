@@ -31,7 +31,7 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
   $test_name = $testName
   
   #the script output file path
-  $file_path = "c:\users\Tomi\testAutomation\measurements\wikipedia\"
+  $file_path = "c:\users\Tomi\testAutomation\measurements\wikipedia\wifi\"
   $project_path = "C:\Users\Tomi\Projects\wikipedia_3\apps-android-wikipedia\"
   $test_report_path = "app\build\reports\androidTests\connected\flavors\ALPHA"
   $gradle_report_folder = "gradle_reports"
@@ -178,7 +178,7 @@ function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [strin
   $test_name = $testName
   
   #the script output file path
-  $file_path = "c:\users\Tomi\testAutomation\measurements\wikipedia\"
+  $file_path = "c:\users\Tomi\testAutomation\measurements\wikipedia\wifi\"
   $project_path = "C:\Users\Tomi\Projects\wikipedia_3\apps-android-wikipedia\"
   $test_report_path = "app\build\reports\tests\alphaDebug"
   $gradle_report_folder = "gradle_reports"
