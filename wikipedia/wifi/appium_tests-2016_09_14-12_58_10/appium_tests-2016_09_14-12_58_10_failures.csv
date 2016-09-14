@@ -1,0 +1,15 @@
+runNumber;failingTestName
+1;RotationTests.testOpenTab_rotatePhone
+2;ArticleTests.testScrollingToC_clickSubHeading
+2;ReadingListTests.testAddArticleToReadingList
+3;TabTests.testOpenArticleInNewTab
+5;TabTests.testOpenMultipleTabs
+13;TabTests.testOpenMultipleTabs
+14;ArticleTests.testClickLink_fullText_assertPreviewShown
+15;ArticleSearchTests.testSearchArticle_checkRecentsShown
+18;RotationTests.testOpenTab_rotatePhone
+19;LanguageTests.testChangeLanguageInArticle
+21;TabTests.testOpenArticleInNewTab
+22;ArticleTests.testClickLink_fullText_assertPreviewShown
+25;ArticleSearchTests.testSearchArticle_checkRecentsShown
+25;ArticleTests.testScrollingToC_clickSubHeading
