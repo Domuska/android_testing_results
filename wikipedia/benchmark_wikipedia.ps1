@@ -1,7 +1,7 @@
 # benchmark.psm1
 # Exports: Benchmark-Command
 
-function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples = 1, [string]$testName) {
+function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples = 1, [string]$testName, [string]$network_type) {
 <#
 .SYNOPSIS
   Runs the given script block and returns the execution duration.
@@ -10,20 +10,25 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
   Remember to do dotexe stuff before running the test script:
   . "C:\Users\Tomi\testAutomation\measurements\wikipedia\benchmark_wikipedia.ps1"
   
+  This script presumes that the file structure shown in the file path is already created.
+  It is also presumed that the 4th parameter supplied is a valid folder in the file path (wifi, 4g, 5g or whatever).
+  
   
 .EXAMPLE
-  bm-wikipedia-instrumentation { gradle connectedAlphaDebugAndroidTest --stacktrace } 1 espresso_tests
+  bm-wikipedia-instrumentation { gradle connectedAlphaDebugAndroidTest --stacktrace } 1 espresso_tests wifi
+  If the tests are not using webview, use native as last parameter
   
   Output files will be following:
 	-file_path
-		-testName-run_start_time
-			-gradle_report_folder
-				-run_number_1
-				-run_number_2
-				...
-				-run_number_samples
-			-full_file_path.txt
-			-full_file_path.csv
+		-network_type
+			-testName-run_start_time
+				-gradle_report_folder
+					-run_number_1
+					-run_number_2
+					...
+					-run_number_samples
+				-full_file_path.txt
+				-full_file_path.csv
 #>
 
   echo "STARTING WIKIPEDIA TESTING, USING TEST SUITE $testName"
@@ -31,7 +36,7 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
   $test_name = $testName
   
   #the script output file path
-  $file_path = "c:\users\Tomi\testAutomation\measurements\wikipedia\wifi\"
+  $file_path = "c:\users\Tomi\testAutomation\measurements\wikipedia\$($network_type)\"
   $project_path = "C:\Users\Tomi\Projects\wikipedia_3\apps-android-wikipedia\"
   $test_report_path = "app\build\reports\androidTests\connected\flavors\ALPHA"
   $gradle_report_folder = "gradle_reports"
@@ -49,7 +54,7 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
   $full_file_path_csv = "$file_path$filename\$filename.csv"
   $full_file_path_test_failures_csv = "$($file_path)$($filename)\$($filename)_failures.csv"
   
-  #create a new directory with the name 
+  #create a new directory with the name
   New-Item "$file_path$filename" -type directory
   
   #navigate to the application folder
@@ -148,7 +153,7 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
   git push
 }
 
-function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [string]$testName) {
+function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [string]$testName, [string]$network_type) {
 <#
 .SYNOPSIS
   Runs the given script block and returns the execution duration.
@@ -156,6 +161,9 @@ function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [strin
   
   Remember to do dotexe stuff before running the test script:
   . "C:\Users\Tomi\testAutomation\measurements\wikipedia\benchmark_wikipedia.ps1"
+  
+  This script presumes that the file structure shown in the file path is already created.
+  It is also presumed that the 4th parameter supplied is a valid folder in the file path (wifi, 4g, 5g or whatever).
   
   
 .EXAMPLE
@@ -178,7 +186,7 @@ function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [strin
   $test_name = $testName
   
   #the script output file path
-  $file_path = "c:\users\Tomi\testAutomation\measurements\wikipedia\wifi\"
+  $file_path = "c:\users\Tomi\testAutomation\measurements\wikipedia\$($network_type)\"
   $project_path = "C:\Users\Tomi\Projects\wikipedia_3\apps-android-wikipedia\"
   $test_report_path = "app\build\reports\tests\alphaDebug"
   $gradle_report_folder = "gradle_reports"

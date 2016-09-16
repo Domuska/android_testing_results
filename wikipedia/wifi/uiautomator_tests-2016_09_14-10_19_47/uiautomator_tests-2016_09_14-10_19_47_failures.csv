@@ -1,5 +1,0 @@
-runNumber;failingTestName
-1;ArticleSearchTests.testSearchArticle_checkRecentsShown
-1;ArticleTests.testClickLink_fullText_assertPreviewShown
-1;RotationTests.testOpenTab_rotatePhone
-1;TabTests.testOpenArticleInNewTab

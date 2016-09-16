@@ -1,7 +1,0 @@
-runNumber;failingTestName
-1;ArticleSearchTests.testSearchArticle_checkRecentsShown
-1;RotationTests.testOpenTab_rotatePhone
-2;LanguageTests.testChangeLanguageInSearch
-2;ReadingListTests.testAddArticleToReadingList
-4;LanguageTests.testChangeLanguageInSearch
-4;TabTests.testOpenArticleInNewTab

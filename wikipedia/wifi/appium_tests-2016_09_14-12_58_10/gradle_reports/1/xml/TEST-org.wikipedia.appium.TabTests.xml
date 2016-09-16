@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.wikipedia.appium.TabTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-09-14T10:10:21" hostname="TOL025031" time="125.873">
-  <properties/>
-  <testcase name="testOpenMultipleTabs" classname="org.wikipedia.appium.TabTests" time="74.771"/>
-  <testcase name="testOpenArticleInNewTab" classname="org.wikipedia.appium.TabTests" time="51.102"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
