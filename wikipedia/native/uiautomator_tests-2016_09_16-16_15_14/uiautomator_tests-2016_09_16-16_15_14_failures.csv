@@ -1,0 +1,4 @@
+runNumber;failingTestName
+1;ArticleSearchTests.testSearchArticle_checkRecentsShown
+1;LanguageTests.testChangeLanguageInSearch
+1;ReadingListTests.testAddArticleToReadingList
