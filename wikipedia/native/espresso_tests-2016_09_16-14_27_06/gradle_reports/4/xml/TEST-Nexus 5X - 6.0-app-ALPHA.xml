@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="org.wikipedia.espresso_test.ArticleSearchTests" tests="10" failures="1" errors="0" skipped="0" time="99.149" timestamp="2016-09-16T11:37:11" hostname="localhost">
+  <properties>
+    <property name="device" value="Nexus 5X - 6.0" />
+    <property name="flavor" value="ALPHA" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="testSearchArticle_checkRecentsShown" classname="org.wikipedia.espresso_test.ArticleSearchTests" time="16.677" />
+  <testcase name="testSearchArticle_checkTitleShown" classname="org.wikipedia.espresso_test.ArticleSearchTests" time="6.405" />
+  <testcase name="testScrollingToC_clickSubHeading" classname="org.wikipedia.espresso_test.ArticleTests" time="6.977" />
+  <testcase name="testHistory" classname="org.wikipedia.espresso_test.HistoryTests" time="12.808" />
+  <testcase name="testChangeLanguageInSearch" classname="org.wikipedia.espresso_test.LanguageTests" time="8.442">
+    <failure>android.support.test.espresso.PerformException: Error performing 'load adapter data' on view 'with id: org.wikipedia.alpha:id/search_results_list'.
+at android.support.test.espresso.PerformException$Builder.build(PerformException.java:83)
+at android.support.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:80)
+at android.support.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:56)
+at android.support.test.espresso.ViewInteraction.runSynchronouslyOnUiThread(ViewInteraction.java:184)
+at android.support.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:115)
+at android.support.test.espresso.ViewInteraction.perform(ViewInteraction.java:87)
+at android.support.test.espresso.DataInteraction.load(DataInteraction.java:151)
+at android.support.test.espresso.DataInteraction.perform(DataInteraction.java:128)
+at org.wikipedia.espresso_test.LanguageTests.testChangeLanguageInSearch(LanguageTests.java:60)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
+at android.support.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:270)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:262)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+Caused by: java.lang.RuntimeException: No data found matching: with toString() "Skotlanti" contained values: &lt;[Data: Scotland (class: org.wikipedia.search.SearchResult) token: 0, Data: Scotland_national_football_team (class: org.wikipedia.search.SearchResult) token: 1, Data: Scotland_in_the_High_Middle_Ages (class: org.wikipedia.search.SearchResult) token: 2, Data: Scotland_during_the_Roman_Empire (class: org.wikipedia.search.SearchResult) token: 3, Data: Scotland_in_the_modern_era (class: org.wikipedia.search.SearchResult) token: 4, Data: Scotland_in_the_Middle_Ages (class: org.wikipedia.search.SearchResult) token: 5, Data: Scotland_in_the_Early_Middle_Ages (class: org.wikipedia.search.SearchResult) token: 6, Data: Scotland_national_football_team_manager (class: org.wikipedia.search.SearchResult) token: 7, Data: Scotland_in_the_early_modern_period (class: org.wikipedia.search.SearchResult) token: 8, Data: Scotland_national_rugby_union_team (class: org.wikipedia.search.SearchResult) token: 9, Data: Scotland_in_the_Late_Middle_Ages (class: org.wikipedia.search.SearchResult) token: 10, Data: Scotland_national_rugby_league_team (class: org.wikipedia.search.SearchResult) token: 11, Data: Scotland_(European_Parliament_constituency) (class: org.wikipedia.search.SearchResult) token: 12, Data: Scotland_national_cricket_team (class: org.wikipedia.search.SearchResult) token: 13, Data: Scotland_women's_national_football_team_2000–09_results (class: org.wikipedia.search.SearchResult) token: 14, Data: Scotland_women's_national_football_team (class: org.wikipedia.search.SearchResult) token: 15, Data: Scotland_at_the_2014_Commonwealth_Games (class: org.wikipedia.search.SearchResult) token: 16, Data: Scotland_national_football_team_1872–1914_results (class: org.wikipedia.search.SearchResult) token: 17, Data: Scotland_Yard (class: org.wikipedia.search.SearchResult) token: 18, Data: Scotland_national_under-21_football_team (class: org.wikipedia.search.SearchResult) token: 19]&gt;
+at android.support.test.espresso.action.AdapterDataLoaderAction.perform(AdapterDataLoaderAction.java:96)
+at android.support.test.espresso.ViewInteraction$1.run(ViewInteraction.java:144)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at android.os.Handler.handleCallback(Handler.java:739)
+at android.os.Handler.dispatchMessage(Handler.java:95)
+at android.os.Looper.loop(Looper.java:148)
+at android.app.ActivityThread.main(ActivityThread.java:5417)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)
+</failure>
+  </testcase>
+  <testcase name="testChangeLanguageInArticle" classname="org.wikipedia.espresso_test.LanguageTests" time="9.375" />
+  <testcase name="testAddArticleToReadingList" classname="org.wikipedia.espresso_test.ReadingListTests" time="9.288" />
+  <testcase name="testOpenToC_rotatePhone" classname="org.wikipedia.espresso_test.RotationTests" time="6.158" />
+  <testcase name="testOpenTab_rotatePhone" classname="org.wikipedia.espresso_test.RotationTests" time="8.832" />
+  <testcase name="testOpenMultipleTabs" classname="org.wikipedia.espresso_test.TabTests" time="13.847" />
+</testsuite>
