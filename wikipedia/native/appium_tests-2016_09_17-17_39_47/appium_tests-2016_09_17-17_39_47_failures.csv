@@ -1,0 +1,6 @@
+runNumber;failingTestName
+5;ArticleSearchTests.testSearchArticle_checkRecentsShown
+15;ArticleSearchTests.testSearchArticle_checkRecentsShown
+20;ReadingListTests.testAddArticleToReadingList
+21;ArticleSearchTests.testSearchArticle_checkTitleShown
+21;ArticleTests.testScrollingToC_clickSubHeading
