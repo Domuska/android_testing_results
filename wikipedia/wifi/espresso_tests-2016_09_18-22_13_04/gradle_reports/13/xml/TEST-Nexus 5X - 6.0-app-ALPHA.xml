@@ -1,0 +1,692 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="org.wikipedia.espresso_test.ArticleSearchTests" tests="9" failures="1" errors="0" skipped="0" time="98.043" timestamp="2016-09-18T19:45:06" hostname="localhost">
+  <properties>
+    <property name="device" value="Nexus 5X - 6.0" />
+    <property name="flavor" value="ALPHA" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="testSearchArticle_checkRecentsShown" classname="org.wikipedia.espresso_test.ArticleSearchTests" time="20.589" />
+  <testcase name="testSearchArticle_checkTitleShown" classname="org.wikipedia.espresso_test.ArticleSearchTests" time="5.307" />
+  <testcase name="testScrollingToC_clickSubHeading" classname="org.wikipedia.espresso_test.ArticleTests" time="6.575" />
+  <testcase name="testHistory" classname="org.wikipedia.espresso_test.HistoryTests" time="15.292" />
+  <testcase name="testChangeLanguageInSearch" classname="org.wikipedia.espresso_test.LanguageTests" time="12.462" />
+  <testcase name="testChangeLanguageInArticle" classname="org.wikipedia.espresso_test.LanguageTests" time="9.589" />
+  <testcase name="testAddArticleToReadingList" classname="org.wikipedia.espresso_test.ReadingListTests" time="10.111" />
+  <testcase name="testOpenToC_rotatePhone" classname="org.wikipedia.espresso_test.RotationTests" time="5.638" />
+  <testcase name="testOpenMultipleTabs" classname="org.wikipedia.espresso_test.TabTests" time="12.251">
+    <failure>android.support.test.espresso.AmbiguousViewMatcherException: 'with text: is "Final Fantasy XII"' matches multiple views in the hierarchy.
+Problem views are marked with '****MATCHES****' below.
+
+View Hierarchy:
++&gt;DecorView{id=-1, visibility=VISIBLE, width=1080, height=1920, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++-&gt;LinearLayout{id=-1, visibility=VISIBLE, width=1080, height=1794, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++--&gt;ViewStub{id=16909225, res-name=action_mode_bar_stub, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++--&gt;FrameLayout{id=-1, visibility=VISIBLE, width=1080, height=1794, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1}
+|
++---&gt;FitWindowsFrameLayout{id=2131689568, res-name=action_bar_root, visibility=VISIBLE, width=1080, height=1794, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}
+|
++----&gt;ContentFrameLayout{id=16908290, res-name=content, visibility=VISIBLE, width=1080, height=1794, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1}
+|
++-----&gt;WikiDrawerLayout{id=2131689633, res-name=drawer_layout, visibility=VISIBLE, width=1080, height=1794, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++------&gt;FrameLayout{id=-1, visibility=VISIBLE, width=1080, height=1794, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=4}
+|
++-------&gt;FrameLayout{id=2131689634, res-name=content_fragment_container, visibility=VISIBLE, width=1080, height=1794, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++--------&gt;SwipeRefreshLayout{id=2131689714, res-name=feed_swipe_refresh_layout, visibility=VISIBLE, width=1080, height=1794, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++---------&gt;CoordinatorLayout{id=-1, visibility=VISIBLE, width=1080, height=1794, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++----------&gt;AppBarLayout{id=2131689715, res-name=feed_app_bar_layout, visibility=VISIBLE, width=1080, height=630, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1}
+|
++-----------&gt;CollapsingToolbarLayout{id=-1, visibility=VISIBLE, width=1080, height=630, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=1080, height=630, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++-------------&gt;AppCompatTextView{id=2131689716, res-name=feed_header_text, visibility=VISIBLE, width=500, height=138, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=290.0, y=213.0, text=WIKIPEDIA, input-type=0, ime-target=false, has-links=false}
+|
++-------------&gt;View{id=-1, visibility=VISIBLE, width=126, height=3, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=477.0, y=372.0}
+|
++------------&gt;Toolbar{id=2131689717, res-name=feed_toolbar, visibility=VISIBLE, width=1080, height=147, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=63.0, child-count=3}
+|
++-------------&gt;TextView{id=-1, visibility=VISIBLE, width=178, height=71, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=189.0, y=38.0, text=Explore, input-type=0, ime-target=false, has-links=false}
+|
++-------------&gt;ImageButton{id=-1, desc=Wikipedia Alpha, visibility=VISIBLE, width=147, height=147, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++-------------&gt;ActionMenuView{id=-1, visibility=VISIBLE, width=0, height=147, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=1080.0, y=0.0, child-count=0}
+|
++----------&gt;FeedView{id=2131689718, res-name=fragment_feed_feed, visibility=VISIBLE, width=1080, height=1584, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=409.0, child-count=3}
+|
++-----------&gt;SearchCardView{id=-1, visibility=VISIBLE, width=1044, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=18.0, y=13.0, child-count=1}
+|
++------------&gt;LinearLayout{id=2131689771, res-name=search_container, visibility=VISIBLE, width=1044, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}
+|
++-------------&gt;AppCompatImageView{id=-1, desc=Search Wikipedia, visibility=VISIBLE, width=126, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++-------------&gt;AppCompatTextView{id=-1, visibility=VISIBLE, width=792, height=51, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=126.0, y=37.0, text=Search Wikipedia, input-type=0, ime-target=false, has-links=false}
+|
++-------------&gt;AppCompatImageView{id=2131689956, res-name=voice_search_button, desc=Search Wikipedia, visibility=VISIBLE, width=126, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=918.0, y=0.0}
+|
++-----------&gt;NewsListCardView{id=-1, visibility=VISIBLE, width=1044, height=726, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=18.0, y=165.0, child-count=1}
+|
++------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=1044, height=726, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}
+|
++-------------&gt;CardHeaderView{id=2131689943, res-name=view_horizontal_scrolling_list_card_header, visibility=VISIBLE, width=1044, height=127, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1}
+|
++--------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=1044, height=127, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++---------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=755, height=127, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++----------------&gt;AppCompatImageView{id=2131689932, res-name=view_card_header_image, visibility=VISIBLE, width=63, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=43.0, y=32.0}
+|
++----------------&gt;AppCompatTextView{id=2131689933, res-name=view_card_header_title, visibility=VISIBLE, width=190, height=51, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=127.0, y=38.0, text=In the news, input-type=0, ime-target=false, has-links=false}
+|
++---------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=289, height=105, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=755.0, y=11.0, child-count=2}
+|
++----------------&gt;AppCompatTextView{id=2131689934, res-name=view_card_header_subtitle, visibility=VISIBLE, width=184, height=43, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=31.0, text=Sep 18, 2016, input-type=0, ime-target=false, has-links=false}
+|
++----------------&gt;AppCompatImageView{id=2131689935, res-name=view_list_card_header_menu, visibility=VISIBLE, width=105, height=105, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=184.0, y=0.0}
+|
++-------------&gt;RecyclerView{id=2131689944, res-name=view_horizontal_scrolling_list_card_list, visibility=VISIBLE, width=960, height=599, has-focus=true, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=true, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=127.0, child-count=2}
+|
++--------------&gt;HorizontalScrollingListCardItemView{id=-1, visibility=VISIBLE, width=473, height=546, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=11.0, y=0.0, child-count=1}
+|
++---------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=473, height=546, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++----------------&gt;FaceAndColorDetectImageView{id=2131689941, res-name=horizontal_scroll_list_item_image, visibility=VISIBLE, width=473, height=252, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++----------------&gt;AppCompatTextView{id=2131689942, res-name=horizontal_scroll_list_item_text, visibility=VISIBLE, width=389, height=294, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=286.0, text=Typhoon Meranti affects China, Taiwan and the Philippines, causing at least 30 deaths., input-type=0, ime-target=false, has-links=true}
+|
++--------------&gt;HorizontalScrollingListCardItemView{id=-1, visibility=VISIBLE, width=473, height=546, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=506.0, y=0.0, child-count=1}
+|
++---------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=473, height=546, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++----------------&gt;FaceAndColorDetectImageView{id=2131689941, res-name=horizontal_scroll_list_item_image, visibility=VISIBLE, width=473, height=252, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++----------------&gt;AppCompatTextView{id=2131689942, res-name=horizontal_scroll_list_item_text, visibility=VISIBLE, width=389, height=294, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=286.0, text=The Chess Olympiad concludes with the United States winning the open event and China the women's event., input-type=0, ime-target=false, has-links=true}
+|
++-------------&gt;View{id=2131689945, res-name=view_horizontal_scrolling_list_card_footer, visibility=VISIBLE, width=1044, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=726.0}
+|
++-----------&gt;FeaturedArticleCardView{id=-1, visibility=VISIBLE, width=1044, height=1251, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=18.0, y=917.0, child-count=1}
+|
++------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=1044, height=1251, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=6}
+|
++-------------&gt;CardHeaderView{id=2131689919, res-name=view_featured_article_card_header, visibility=VISIBLE, width=1044, height=127, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1}
+|
++--------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=1044, height=127, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++---------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=755, height=127, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++----------------&gt;AppCompatImageView{id=2131689932, res-name=view_card_header_image, visibility=VISIBLE, width=63, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=43.0, y=32.0}
+|
++----------------&gt;AppCompatTextView{id=2131689933, res-name=view_card_header_title, visibility=VISIBLE, width=259, height=51, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=127.0, y=38.0, text=Featured article, input-type=0, ime-target=false, has-links=false}
+|
++---------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=289, height=105, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=755.0, y=11.0, child-count=2}
+|
++----------------&gt;AppCompatTextView{id=2131689934, res-name=view_card_header_subtitle, visibility=VISIBLE, width=184, height=43, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=31.0, text=Sep 18, 2016, input-type=0, ime-target=false, has-links=false}
+|
++----------------&gt;AppCompatImageView{id=2131689935, res-name=view_list_card_header_menu, visibility=VISIBLE, width=105, height=105, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=184.0, y=0.0}
+|
++-------------&gt;View{id=-1, visibility=VISIBLE, width=1044, height=3, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=127.0}
+|
++-------------&gt;FaceAndColorDetectImageView{id=2131689920, res-name=view_featured_article_card_image, visibility=VISIBLE, width=1044, height=504, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=130.0}
+|
++-------------&gt;View{id=-1, visibility=VISIBLE, width=1044, height=3, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=634.0}
+|
++-------------&gt;LinearLayout{id=2131689921, res-name=view_featured_article_card_text_container, visibility=VISIBLE, width=1044, height=488, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=637.0, child-count=3}
+|
++--------------&gt;AppCompatTextView{id=2131689922, res-name=view_featured_article_card_article_title, visibility=VISIBLE, width=960, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=0.0, text=Baryonyx, input-type=0, ime-target=false, has-links=false}
+|
++--------------&gt;GoneIfEmptyTextView{id=2131689923, res-name=view_featured_article_card_article_subtitle, visibility=VISIBLE, width=960, height=65, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=126.0, text=Genus of reptiles (fossil), input-type=0, ime-target=false, has-links=false}
+|
++--------------&gt;AppCompatTextView{id=2131689924, res-name=view_featured_article_card_extract, visibility=VISIBLE, width=960, height=297, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=191.0, text=Baryonyx () is a genus of theropod dinosaur which lived in the Barremian stage of the early Cretaceous Period, about 130–125 million years ago. The holotype specimen was discovered in 1983 in Surrey, England, and the animal was named Baryonyx walkeri in 1986. The genus name, Baryonyx, means "heavy claw" and alludes to the animal's very large claw on the first finger; the specific name (walkeri) refers to its discoverer, amateur fossil hunter William J. Walker. Fragmentary specimens were later discovered in other parts of the United Kingdom and Iberia. The holotype specimen is one of the most complete theropod skeletons from the UK, and its discovery attracted media attention., input-type=0, ime-target=false, has-links=false}
+|
++-------------&gt;ActionFooterView{id=2131689925, res-name=view_featured_article_card_footer, visibility=VISIBLE, width=1044, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=1125.0, child-count=1}
+|
++--------------&gt;FrameLayout{id=-1, visibility=VISIBLE, width=1044, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++---------------&gt;LinearLayout{id=2131689915, res-name=view_card_action_footer_button, visibility=VISIBLE, width=259, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++----------------&gt;AppCompatImageView{id=2131689916, res-name=view_card_action_footer_button_icon, visibility=VISIBLE, width=63, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=31.0}
+|
++----------------&gt;AppCompatTextView{id=2131689917, res-name=view_card_action_footer_button_text, visibility=VISIBLE, width=91, height=51, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=126.0, y=37.0, text=Save, input-type=0, ime-target=false, has-links=false}
+|
++---------------&gt;AppCompatImageView{id=2131689918, res-name=view_card_action_footer_share_button, desc=Share via, visibility=VISIBLE, width=147, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=897.0, y=0.0}
+|
++---------&gt;CircleImageView{id=-1, visibility=GONE, width=104, height=105, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=488.0, y=-105.0}
+|
++--------&gt;PercentFrameLayout{id=-1, visibility=VISIBLE, width=1080, height=1794, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}
+|
++---------&gt;WikiDrawerLayout{id=2131689738, res-name=page_toc_drawer, visibility=VISIBLE, width=1080, height=1794, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++----------&gt;SwipeRefreshLayoutWithScroll{id=2131689739, res-name=page_refresh_container, visibility=VISIBLE, width=1080, height=1794, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++-----------&gt;CircleImageView{id=-1, visibility=GONE, width=104, height=105, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=488.0, y=-252.0}
+|
++-----------&gt;CoordinatorLayout{id=2131689740, res-name=page_contents_container, visibility=VISIBLE, width=1080, height=1794, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=4}
+|
++------------&gt;ObservableWebView{id=2131689741, res-name=page_web_view, visibility=VISIBLE, width=1080, height=1794, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=0}
+|
++------------&gt;ArticleHeaderView{id=2131689742, res-name=page_header_view, visibility=VISIBLE, width=1080, height=1024, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++-------------&gt;ArticleHeaderImageView{id=2131689907, res-name=view_article_header_image, visibility=VISIBLE, width=1080, height=1024, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++--------------&gt;AppCompatImageView{id=2131689910, res-name=view_article_header_image_placeholder, visibility=VISIBLE, width=1080, height=1024, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++--------------&gt;FaceAndColorDetectImageView{id=2131689911, res-name=view_article_header_image_image, visibility=VISIBLE, width=1080, height=1024, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++-------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=1080, height=856, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=168.0, child-count=3}
+|
++--------------&gt;StatusBarBlankView{id=-1, visibility=VISIBLE, width=1080, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++--------------&gt;AppTextView{id=2131689908, res-name=view_article_header_text, visibility=VISIBLE, width=1080, height=667, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=63.0, text=Google
+American multinational Internet and technology corporation, input-type=0, ime-target=false, has-links=false}
+|
++--------------&gt;ArticleMenuBarView{id=2131689909, res-name=view_article_header_menu_bar, visibility=VISIBLE, width=1080, height=126, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=730.0, child-count=3}
+|
++---------------&gt;AppCompatImageButton{id=2131689912, res-name=view_article_menu_bar_bookmark, desc=Add this article to a reading list, visibility=VISIBLE, width=127, height=126, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=0.0}
+|
++---------------&gt;AppCompatImageButton{id=2131689913, res-name=view_article_menu_bar_share, desc=Share the article link, visibility=VISIBLE, width=127, height=126, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=169.0, y=0.0}
+|
++---------------&gt;AppCompatImageButton{id=2131689914, res-name=view_article_menu_bar_navigate, desc=Navigate to the location of the article, visibility=VISIBLE, width=127, height=126, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=296.0, y=0.0}
+|
++------------&gt;LinearLayout{id=2131689743, res-name=bottom_content_container, visibility=GONE, width=1080, height=1224, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=1619.0, child-count=2}
+|
++-------------&gt;LinearLayout{id=2131689744, res-name=read_more_container, visibility=VISIBLE, width=1080, height=902, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++--------------&gt;ConfigurableTextView{id=2131689745, res-name=read_more_header, visibility=VISIBLE, width=1080, height=125, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=42.0, text=Read more, input-type=0, ime-target=false, has-links=false}
+|
++--------------&gt;ConfigurableListView{id=2131689746, res-name=read_more_list, visibility=VISIBLE, width=1080, height=693, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=167.0, child-count=3}
+|
++---------------&gt;LinearLayout{id=2131689841, res-name=page_list_item_container, visibility=VISIBLE, width=1080, height=231, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++----------------&gt;AppCompatTextView{id=2131689842, res-name=page_list_header_text, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false}
+|
++----------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=996, height=147, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=42.0, child-count=2}
+|
++-----------------&gt;SimpleDraweeView{id=2131689843, res-name=page_list_item_image, visibility=VISIBLE, width=147, height=147, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++-----------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=807, height=108, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=189.0, y=19.0, child-count=2}
+|
++------------------&gt;AppCompatTextView{id=2131689844, res-name=page_list_item_title, visibility=VISIBLE, width=807, height=57, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Ivalice, input-type=0, ime-target=false, has-links=false}
+|
++------------------&gt;GoneIfEmptyTextView{id=2131689845, res-name=page_list_item_description, visibility=VISIBLE, width=626, height=51, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=57.0, text=Fictional place in Final Fantasy Tactics, input-type=0, ime-target=false, has-links=false}
+|
++---------------&gt;LinearLayout{id=2131689841, res-name=page_list_item_container, visibility=VISIBLE, width=1080, height=231, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=231.0, child-count=2}
+|
++----------------&gt;AppCompatTextView{id=2131689842, res-name=page_list_header_text, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false}
+|
++----------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=996, height=147, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=42.0, child-count=2}
+|
++-----------------&gt;SimpleDraweeView{id=2131689843, res-name=page_list_item_image, visibility=VISIBLE, width=147, height=147, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++-----------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=807, height=108, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=189.0, y=19.0, child-count=2}
+|
++------------------&gt;AppCompatTextView{id=2131689844, res-name=page_list_item_title, visibility=VISIBLE, width=807, height=57, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Characters of Final Fantasy XII, input-type=0, ime-target=false, has-links=false}
+|
++------------------&gt;GoneIfEmptyTextView{id=2131689845, res-name=page_list_item_description, visibility=VISIBLE, width=342, height=51, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=57.0, text=Wikimedia list article, input-type=0, ime-target=false, has-links=false}
+|
++---------------&gt;LinearLayout{id=2131689841, res-name=page_list_item_container, visibility=VISIBLE, width=1080, height=235, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=462.0, child-count=2}
+|
++----------------&gt;AppCompatTextView{id=2131689842, res-name=page_list_header_text, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false}
+|
++----------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=996, height=151, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=42.0, child-count=2}
+|
++-----------------&gt;SimpleDraweeView{id=2131689843, res-name=page_list_item_image, visibility=VISIBLE, width=147, height=147, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=2.0}
+|
++-----------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=807, height=151, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=189.0, y=0.0, child-count=2}
+|
++------------------&gt;AppCompatTextView{id=2131689844, res-name=page_list_item_title, visibility=VISIBLE, width=807, height=57, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Final Fantasy, input-type=0, ime-target=false, has-links=false}
+|
++------------------&gt;GoneIfEmptyTextView{id=2131689845, res-name=page_list_item_description, visibility=VISIBLE, width=807, height=94, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=57.0, text=Media franchise centered around fantasy and science-fiction RPGs, input-type=0, ime-target=false, has-links=false}
+|
++-------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=1080, height=322, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=902.0, child-count=4}
+|
++--------------&gt;View{id=-1, visibility=VISIBLE, width=1080, height=21, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++--------------&gt;AppCompatTextView{id=2131689747, res-name=page_external_link, visibility=VISIBLE, width=1080, height=72, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=21.0, text=View page in browser, input-type=0, ime-target=false, has-links=false}
+|
++--------------&gt;AppCompatTextView{id=2131689748, res-name=page_last_updated_text, visibility=VISIBLE, width=634, height=72, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=223.0, y=93.0, text=Last updated September 9 — Talk, input-type=0, ime-target=false, has-links=true}
+|
++--------------&gt;AppCompatTextView{id=2131689749, res-name=page_license_text, visibility=VISIBLE, width=1080, height=115, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=165.0, text=Content is available under CC BY-SA 3.0 unless otherwise noted, input-type=0, ime-target=false, has-links=true}
+|
++------------&gt;FloatingActionButton{id=2131689750, res-name=floating_toc_button, desc=Table of Contents, visibility=VISIBLE, width=105, height=105, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=933.0, y=1647.0}
+|
++----------&gt;FrameLayout{id=-1, visibility=INVISIBLE, width=756, height=1794, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=1080.0, y=0.0, child-count=2}
+|
++-----------&gt;ProgressBar{id=2131689751, res-name=page_toc_in_progress, visibility=GONE, width=200, height=200, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=278.0, y=797.0}
+|
++-----------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=756, height=1794, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++------------&gt;View{id=-1, visibility=VISIBLE, width=8, height=1794, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++------------&gt;FrameLayout{id=-1, visibility=VISIBLE, width=748, height=1794, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=8.0, y=0.0, child-count=1}
+|
++-------------&gt;ConfigurableListView{id=2131689752, res-name=page_toc_list, visibility=VISIBLE, width=748, height=1584, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=210.0, child-count=10}
+|
++--------------&gt;AppCompatTextView{id=-1, visibility=VISIBLE, width=748, height=163, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Google, input-type=0, ime-target=false, has-links=false}
+|
++--------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=748, height=147, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=163.0, child-count=2}
+|
++---------------&gt;View{id=2131689869, res-name=page_toc_filler, visibility=VISIBLE, width=0, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=42.0}
+|
++---------------&gt;AppCompatTextView{id=2131689870, res-name=page_toc_item_text, visibility=VISIBLE, width=580, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=84.0, y=42.0, text=History, input-type=0, ime-target=false, has-links=false}
+|
++--------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=748, height=257, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=310.0, child-count=2}
+|
++---------------&gt;View{id=2131689869, res-name=page_toc_filler, visibility=VISIBLE, width=42, height=173, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=42.0}
+|
++---------------&gt;AppCompatTextView{id=2131689870, res-name=page_toc_item_text, visibility=VISIBLE, width=538, height=173, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=126.0, y=42.0, text=Financing, 1998 and initial public offering, 2004, input-type=0, ime-target=false, has-links=false}
+|
++--------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=748, height=147, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=567.0, child-count=2}
+|
++---------------&gt;View{id=2131689869, res-name=page_toc_filler, visibility=VISIBLE, width=42, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=42.0}
+|
++---------------&gt;AppCompatTextView{id=2131689870, res-name=page_toc_item_text, visibility=VISIBLE, width=538, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=126.0, y=42.0, text=Growth, input-type=0, ime-target=false, has-links=false}
+|
++--------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=748, height=147, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=714.0, child-count=2}
+|
++---------------&gt;View{id=2131689869, res-name=page_toc_filler, visibility=VISIBLE, width=42, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=42.0}
+|
++---------------&gt;AppCompatTextView{id=2131689870, res-name=page_toc_item_text, visibility=VISIBLE, width=538, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=126.0, y=42.0, text=2013 onward, input-type=0, ime-target=false, has-links=false}
+|
++--------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=748, height=202, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=861.0, child-count=2}
+|
++---------------&gt;View{id=2131689869, res-name=page_toc_filler, visibility=VISIBLE, width=42, height=118, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=42.0}
+|
++---------------&gt;AppCompatTextView{id=2131689870, res-name=page_toc_item_text, visibility=VISIBLE, width=538, height=118, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=126.0, y=42.0, text=Acquisitions and partnerships, input-type=0, ime-target=false, has-links=false}
+|
++--------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=748, height=147, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=1063.0, child-count=2}
+|
++---------------&gt;View{id=2131689869, res-name=page_toc_filler, visibility=VISIBLE, width=42, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=42.0}
+|
++---------------&gt;AppCompatTextView{id=2131689870, res-name=page_toc_item_text, visibility=VISIBLE, width=538, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=126.0, y=42.0, text=Google data centers, input-type=0, ime-target=false, has-links=false}
+|
++--------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=748, height=147, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=1210.0, child-count=2}
+|
++---------------&gt;View{id=2131689869, res-name=page_toc_filler, visibility=VISIBLE, width=42, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=42.0}
+|
++---------------&gt;AppCompatTextView{id=2131689870, res-name=page_toc_item_text, visibility=VISIBLE, width=538, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=126.0, y=42.0, text=Alphabet, input-type=0, ime-target=false, has-links=false}
+|
++--------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=748, height=147, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=1357.0, child-count=2}
+|
++---------------&gt;View{id=2131689869, res-name=page_toc_filler, visibility=VISIBLE, width=0, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=42.0}
+|
++---------------&gt;AppCompatTextView{id=2131689870, res-name=page_toc_item_text, visibility=VISIBLE, width=580, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=84.0, y=42.0, text=Products and services, input-type=0, ime-target=false, has-links=false}
+|
++--------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=748, height=147, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=1504.0, child-count=2}
+|
++---------------&gt;View{id=2131689869, res-name=page_toc_filler, visibility=VISIBLE, width=42, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=42.0}
+|
++---------------&gt;AppCompatTextView{id=2131689870, res-name=page_toc_item_text, visibility=VISIBLE, width=538, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=126.0, y=42.0, text=Advertising, input-type=0, ime-target=false, has-links=false}
+|
++---------&gt;WikiErrorView{id=2131689753, res-name=page_error, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1}
+|
++----------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}
+|
++-----------&gt;AppCompatTextView{id=2131689657, res-name=error_text, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false}
+|
++-----------&gt;AppCompatButton{id=2131689658, res-name=retry_button, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false}
+|
++-----------&gt;AppCompatTextView{id=2131689659, res-name=server_message_text, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false}
+|
++---------&gt;Space{id=2131689754, res-name=fragment_page_tool_tip_select_text_target, visibility=INVISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=540.0, y=1578.0}
+|
++-------&gt;FrameLayout{id=2131689635, res-name=tabs_container, visibility=VISIBLE, width=1080, height=1794, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1}
+|
++--------&gt;ListView{id=2131689636, res-name=tabs_list, visibility=VISIBLE, width=918, height=734, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=81.0, y=210.0, child-count=2}
+|
++---------&gt;FrameLayout{id=-1, visibility=VISIBLE, width=918, height=148, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=438.0, child-count=2}
+|
++----------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=918, height=148, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}
+|
++-----------&gt;SimpleDraweeView{id=2131689865, res-name=tab_item_thumbnail, visibility=VISIBLE, width=126, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=11.0, y=11.0}
+|
++-----------&gt;AppCompatTextView{id=2131689866, res-name=tab_item_title, visibility=VISIBLE, width=622, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=148.0, y=42.0, text=Final Fantasy XII, input-type=0, ime-target=false, has-links=false} ****MATCHES****
+|
++-----------&gt;AppCompatImageView{id=2131689867, res-name=tab_item_close, desc=Close tab, visibility=VISIBLE, width=126, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=781.0, y=11.0}
+|
++----------&gt;View{id=2131689868, res-name=tab_item_bottom_gradient, visibility=VISIBLE, width=918, height=8, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=140.0}
+|
++---------&gt;FrameLayout{id=-1, visibility=VISIBLE, width=918, height=148, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=586.0, child-count=2}
+|
++----------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=918, height=148, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}
+|
++-----------&gt;SimpleDraweeView{id=2131689865, res-name=tab_item_thumbnail, visibility=VISIBLE, width=126, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=11.0, y=11.0}
+|
++-----------&gt;AppCompatTextView{id=2131689866, res-name=tab_item_title, visibility=VISIBLE, width=622, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=148.0, y=42.0, text=Google, input-type=0, ime-target=false, has-links=false}
+|
++-----------&gt;AppCompatImageView{id=2131689867, res-name=tab_item_close, desc=Close tab, visibility=VISIBLE, width=126, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=781.0, y=11.0}
+|
++----------&gt;View{id=2131689868, res-name=tab_item_bottom_gradient, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++-------&gt;FrameLayout{id=2131689637, res-name=search_fragment, visibility=GONE, width=1080, height=1794, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++--------&gt;FrameLayout{id=2131689772, res-name=fragment_search_results, visibility=VISIBLE, width=1080, height=1584, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=210.0, child-count=2}
+|
++---------&gt;WikiErrorView{id=2131689778, res-name=search_error_view, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1}
+|
++----------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}
+|
++-----------&gt;AppCompatTextView{id=2131689657, res-name=error_text, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false}
+|
++-----------&gt;AppCompatButton{id=2131689658, res-name=retry_button, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false}
+|
++-----------&gt;AppCompatTextView{id=2131689659, res-name=server_message_text, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false}
+|
++---------&gt;LinearLayout{id=2131689779, res-name=search_results_container, visibility=VISIBLE, width=1080, height=1584, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}
+|
++----------&gt;AppCompatTextView{id=2131689780, res-name=search_suggestion, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false}
+|
++----------&gt;ListView{id=2131689781, res-name=search_results_list, visibility=VISIBLE, width=1080, height=1584, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=7}
+|
++-----------&gt;LinearLayout{id=2131689841, res-name=page_list_item_container, visibility=VISIBLE, width=1080, height=235, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++------------&gt;SimpleDraweeView{id=2131689843, res-name=page_list_item_image, visibility=VISIBLE, width=147, height=147, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=44.0}
+|
++------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=807, height=151, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=231.0, y=42.0, child-count=3}
+|
++-------------&gt;AppCompatTextView{id=2131689844, res-name=page_list_item_title, visibility=VISIBLE, width=807, height=57, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Google, input-type=0, ime-target=false, has-links=false}
+|
++-------------&gt;LinearLayout{id=2131689863, res-name=page_list_item_redirect_container, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++--------------&gt;AppCompatImageView{id=-1, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++--------------&gt;GoneIfEmptyTextView{id=2131689864, res-name=page_list_item_redirect, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false}
+|
++-------------&gt;GoneIfEmptyTextView{id=2131689845, res-name=page_list_item_description, visibility=VISIBLE, width=807, height=94, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=57.0, text=American multinational Internet and technology corporation, input-type=0, ime-target=false, has-links=false}
+|
++-----------&gt;LinearLayout{id=2131689841, res-name=page_list_item_container, visibility=VISIBLE, width=1080, height=231, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=235.0, child-count=2}
+|
++------------&gt;SimpleDraweeView{id=2131689843, res-name=page_list_item_image, visibility=VISIBLE, width=147, height=147, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=42.0}
+|
++------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=807, height=108, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=231.0, y=61.0, child-count=3}
+|
++-------------&gt;AppCompatTextView{id=2131689844, res-name=page_list_item_title, visibility=VISIBLE, width=807, height=57, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Google Chrome, input-type=0, ime-target=false, has-links=false}
+|
++-------------&gt;LinearLayout{id=2131689863, res-name=page_list_item_redirect_container, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++--------------&gt;AppCompatImageView{id=-1, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++--------------&gt;GoneIfEmptyTextView{id=2131689864, res-name=page_list_item_redirect, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false}
+|
++-------------&gt;GoneIfEmptyTextView{id=2131689845, res-name=page_list_item_description, visibility=VISIBLE, width=571, height=51, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=57.0, text=Web browser developed by Google, input-type=0, ime-target=false, has-links=false}
+|
++-----------&gt;LinearLayout{id=2131689841, res-name=page_list_item_container, visibility=VISIBLE, width=1080, height=231, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=466.0, child-count=2}
+|
++------------&gt;SimpleDraweeView{id=2131689843, res-name=page_list_item_image, visibility=VISIBLE, width=147, height=147, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=42.0}
+|
++------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=807, height=108, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=231.0, y=61.0, child-count=3}
+|
++-------------&gt;AppCompatTextView{id=2131689844, res-name=page_list_item_title, visibility=VISIBLE, width=807, height=57, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Google Search, input-type=0, ime-target=false, has-links=false}
+|
++-------------&gt;LinearLayout{id=2131689863, res-name=page_list_item_redirect_container, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++--------------&gt;AppCompatImageView{id=-1, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++--------------&gt;GoneIfEmptyTextView{id=2131689864, res-name=page_list_item_redirect, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false}
+|
++-------------&gt;GoneIfEmptyTextView{id=2131689845, res-name=page_list_item_description, visibility=VISIBLE, width=795, height=51, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=57.0, text=Internet search engine developed by Google, Inc., input-type=0, ime-target=false, has-links=false}
+|
++-----------&gt;LinearLayout{id=2131689841, res-name=page_list_item_container, visibility=VISIBLE, width=1080, height=235, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=697.0, child-count=2}
+|
++------------&gt;SimpleDraweeView{id=2131689843, res-name=page_list_item_image, visibility=VISIBLE, width=147, height=147, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=44.0}
+|
++------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=807, height=151, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=231.0, y=42.0, child-count=3}
+|
++-------------&gt;AppCompatTextView{id=2131689844, res-name=page_list_item_title, visibility=VISIBLE, width=807, height=57, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Google Play, input-type=0, ime-target=false, has-links=false}
+|
++-------------&gt;LinearLayout{id=2131689863, res-name=page_list_item_redirect_container, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++--------------&gt;AppCompatImageView{id=-1, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++--------------&gt;GoneIfEmptyTextView{id=2131689864, res-name=page_list_item_redirect, visibility=VISIBLE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false}
+|
++-------------&gt;GoneIfEmptyTextView{id=2131689845, res-name=page_list_item_description, visibility=VISIBLE, width=807, height=94, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=57.0, text=Digital application distribution platform for Android, input-type=0, ime-target=false, has-links=false}
+|
++-----------&gt;LinearLayout{id=2131689841, res-name=page_list_item_container, visibility=VISIBLE, width=1080, height=231, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=932.0, child-count=2}
+|
++------------&gt;SimpleDraweeView{id=2131689843, res-name=page_list_item_image, visibility=VISIBLE, width=147, height=147, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=42.0}
+|
++------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=807, height=108, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=231.0, y=61.0, child-count=3}
+|
++-------------&gt;AppCompatTextView{id=2131689844, res-name=page_list_item_title, visibility=VISIBLE, width=807, height=57, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Google Earth, input-type=0, ime-target=false, has-links=false}
+|
++-------------&gt;LinearLayout{id=2131689863, res-name=page_list_item_redirect_container, visibility=GONE, width=729, height=51, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=57.0, child-count=2}
+|
++--------------&gt;AppCompatImageView{id=-1, visibility=VISIBLE, width=42, height=42, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++--------------&gt;GoneIfEmptyTextView{id=2131689864, res-name=page_list_item_redirect, visibility=VISIBLE, width=687, height=51, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=0.0, text=Redirected from Final Fantasy XIII (series), input-type=0, ime-target=false, has-links=false}
+|
++-------------&gt;GoneIfEmptyTextView{id=2131689845, res-name=page_list_item_description, visibility=VISIBLE, width=761, height=51, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=57.0, text=Virtual map program developed by Google Inc., input-type=0, ime-target=false, has-links=false}
+|
++-----------&gt;LinearLayout{id=2131689841, res-name=page_list_item_container, visibility=VISIBLE, width=1080, height=231, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=1163.0, child-count=2}
+|
++------------&gt;SimpleDraweeView{id=2131689843, res-name=page_list_item_image, visibility=VISIBLE, width=147, height=147, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=42.0}
+|
++------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=807, height=108, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=231.0, y=61.0, child-count=3}
+|
++-------------&gt;AppCompatTextView{id=2131689844, res-name=page_list_item_title, visibility=VISIBLE, width=807, height=57, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Google Nexus, input-type=0, ime-target=false, has-links=false}
+|
++-------------&gt;LinearLayout{id=2131689863, res-name=page_list_item_redirect_container, visibility=GONE, width=601, height=51, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=57.0, child-count=2}
+|
++--------------&gt;AppCompatImageView{id=-1, visibility=VISIBLE, width=42, height=42, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++--------------&gt;GoneIfEmptyTextView{id=2131689864, res-name=page_list_item_redirect, visibility=VISIBLE, width=559, height=51, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=0.0, text=Redirected from Final Fantasy XIiii, input-type=0, ime-target=false, has-links=false}
+|
++-------------&gt;GoneIfEmptyTextView{id=2131689845, res-name=page_list_item_description, visibility=VISIBLE, width=354, height=51, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=57.0, text=Series mobile phones, input-type=0, ime-target=false, has-links=false}
+|
++-----------&gt;LinearLayout{id=2131689841, res-name=page_list_item_container, visibility=VISIBLE, width=1080, height=235, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=1394.0, child-count=2}
+|
++------------&gt;SimpleDraweeView{id=2131689843, res-name=page_list_item_image, visibility=VISIBLE, width=147, height=147, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=44.0}
+|
++------------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=807, height=151, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=231.0, y=42.0, child-count=3}
+|
++-------------&gt;AppCompatTextView{id=2131689844, res-name=page_list_item_title, visibility=VISIBLE, width=807, height=57, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Google Drive, input-type=0, ime-target=false, has-links=false}
+|
++-------------&gt;LinearLayout{id=2131689863, res-name=page_list_item_redirect_container, visibility=GONE, width=625, height=51, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=57.0, child-count=2}
+|
++--------------&gt;AppCompatImageView{id=-1, visibility=VISIBLE, width=42, height=42, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++--------------&gt;GoneIfEmptyTextView{id=2131689864, res-name=page_list_item_redirect, visibility=VISIBLE, width=583, height=51, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=0.0, text=Redirected from Final Fantasy XIII-3, input-type=0, ime-target=false, has-links=false}
+|
++-------------&gt;GoneIfEmptyTextView{id=2131689845, res-name=page_list_item_description, visibility=VISIBLE, width=807, height=94, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=57.0, text=Cloud storage and file synchronization service from Google Inc., input-type=0, ime-target=false, has-links=false}
+|
++----------&gt;AppCompatTextView{id=2131689782, res-name=search_results_empty, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=No results found, input-type=0, ime-target=false, has-links=false}
+|
++--------&gt;LinearLayout{id=2131689773, res-name=search_panel_recent, visibility=GONE, width=1080, height=1584, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=210.0, child-count=3}
+|
++---------&gt;FrameLayout{id=-1, visibility=VISIBLE, width=1080, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++----------&gt;AppCompatTextView{id=-1, visibility=VISIBLE, width=447, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=Recent searches:, input-type=0, ime-target=false, has-links=false}
+|
++----------&gt;AppCompatImageView{id=2131689775, res-name=recent_searches_delete_button, desc=Clear recent searches, visibility=VISIBLE, width=126, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=954.0, y=0.0}
+|
++---------&gt;View{id=-1, visibility=VISIBLE, width=1080, height=1, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=126.0}
+|
++---------&gt;ListView{id=2131689776, res-name=recent_searches_list, visibility=VISIBLE, width=1080, height=0, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=127.0, child-count=0}
+|
++-------&gt;LinearLayout{id=2131689638, res-name=main_toolbar_container, visibility=VISIBLE, width=1080, height=218, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++--------&gt;LinearLayout{id=2131689639, res-name=main_toolbar_background_container, visibility=VISIBLE, width=1080, height=210, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++---------&gt;StatusBarBlankView{id=2131689640, res-name=empty_status_bar, visibility=VISIBLE, width=1080, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++---------&gt;FrameLayout{id=-1, visibility=VISIBLE, width=1080, height=147, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=63.0, child-count=2}
+|
++----------&gt;Toolbar{id=2131689641, res-name=main_toolbar, visibility=VISIBLE, width=1080, height=147, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}
+|
++-----------&gt;FrameLayout{id=2131689642, res-name=main_toolbar_inner_container, visibility=VISIBLE, width=659, height=147, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=189.0, y=0.0, child-count=2}
+|
++------------&gt;AppCompatTextView{id=2131689643, res-name=main_search_bar_text, visibility=VISIBLE, width=648, height=95, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=26.0, text=Search Wikipedia, input-type=0, ime-target=false, has-links=false}
+|
++------------&gt;LinearLayout{id=2131689644, res-name=search_bar_enabled, visibility=GONE, width=880, height=95, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=26.0, child-count=2}
+|
++-------------&gt;CabSearchView{id=2131689645, res-name=main_search_view, visibility=VISIBLE, width=690, height=95, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=21.0, y=0.0, child-count=1}
+|
++--------------&gt;LinearLayout{id=2131689576, res-name=search_bar, visibility=VISIBLE, width=690, height=95, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}
+|
++---------------&gt;AppCompatTextView{id=2131689577, res-name=search_badge, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false}
+|
++---------------&gt;AppCompatImageView{id=2131689578, res-name=search_button, desc=Search, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++---------------&gt;LinearLayout{id=2131689579, res-name=search_edit_frame, visibility=VISIBLE, width=690, height=95, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}
+|
++----------------&gt;AppCompatImageView{id=2131689580, res-name=search_mag_icon, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++----------------&gt;LinearLayout{id=2131689581, res-name=search_plate, visibility=VISIBLE, width=690, height=95, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++-----------------&gt;SearchAutoComplete{id=2131689582, res-name=search_src_text, visibility=VISIBLE, width=585, height=95, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=true, editor-info=[inputType=0x1 imeOptions=0x18000002 privateImeOptions=null actionLabel=null actionId=0 initialSelStart=0 initialSelEnd=17 initialCapsMode=0x0 hintText=Search Wikipedia label=null packageName=null fieldId=0 fieldName=null extras=null ], x=0.0, y=0.0, text=Final Fantasy XII, hint=Search Wikipedia, input-type=1, ime-target=false, has-links=false} ****MATCHES****
+|
++-----------------&gt;AppCompatImageView{id=2131689583, res-name=search_close_btn, desc=Clear query, visibility=VISIBLE, width=105, height=95, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=585.0, y=0.0}
+|
++----------------&gt;LinearLayout{id=2131689584, res-name=submit_area, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}
+|
++-----------------&gt;AppCompatImageView{id=2131689585, res-name=search_go_btn, desc=Submit query, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++-----------------&gt;AppCompatImageView{id=2131689586, res-name=search_voice_btn, desc=Voice search, visibility=GONE, width=0, height=0, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++-------------&gt;FrameLayout{id=2131689646, res-name=search_lang_button_container, desc=Wikipedia language, visibility=VISIBLE, width=127, height=89, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=732.0, y=0.0, child-count=1}
+|
++--------------&gt;AppCompatTextView{id=2131689647, res-name=search_lang_button, visibility=VISIBLE, width=79, height=79, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=24.0, y=5.0, text=EN, input-type=0, ime-target=false, has-links=false}
+|
++-----------&gt;ImageButton{id=-1, desc=Wikipedia Alpha, visibility=VISIBLE, width=147, height=147, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++-----------&gt;ActionMenuView{id=-1, visibility=VISIBLE, width=232, height=147, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=848.0, y=0.0, child-count=2}
+|
++------------&gt;ActionMenuItemView{id=2131689999, res-name=menu_page_show_tabs, desc=Show tabs, visibility=VISIBLE, width=127, height=126, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=10.0, text=, input-type=0, ime-target=false, has-links=false}
+|
++------------&gt;OverflowMenuButton{id=-1, desc=More options, visibility=VISIBLE, width=105, height=126, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=127.0, y=10.0}
+|
++----------&gt;ProgressBar{id=2131689648, res-name=main_progressbar, visibility=GONE, width=1080, height=42, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=true, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=-19.0}
+|
++--------&gt;View{id=2131689649, res-name=main_toolbar_shadow, visibility=VISIBLE, width=1080, height=8, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=210.0}
+|
++------&gt;NavigationView{id=2131689650, res-name=navdrawer, visibility=INVISIBLE, width=735, height=1794, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=-735.0, y=0.0, child-count=1}
+|
++-------&gt;NavigationMenuView{id=2131689665, res-name=design_navigation_view, visibility=VISIBLE, width=735, height=1794, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=10}
+|
++--------&gt;LinearLayout{id=2131689664, res-name=navigation_header_container, visibility=VISIBLE, width=735, height=505, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=1}
+|
++---------&gt;LinearLayout{id=-1, visibility=VISIBLE, width=735, height=484, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=3}
+|
++----------&gt;StatusBarBlankView{id=-1, visibility=VISIBLE, width=735, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++----------&gt;AppCompatImageView{id=-1, visibility=VISIBLE, width=189, height=189, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=105.0}
+|
++----------&gt;LinearLayout{id=2131689825, res-name=nav_account_container, visibility=VISIBLE, width=735, height=148, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=336.0, child-count=2}
+|
++-----------&gt;AppCompatTextView{id=2131689826, res-name=nav_account_text, visibility=VISIBLE, width=503, height=51, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=48.0, text=Log in to Wikipedia, input-type=0, ime-target=false, has-links=false}
+|
++-----------&gt;AppCompatImageView{id=2131689827, res-name=nav_account_arrow, visibility=INVISIBLE, width=126, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=598.0, y=11.0}
+|
++--------&gt;NavigationMenuItemView{id=-1, visibility=VISIBLE, width=735, height=126, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=505.0, child-count=2}
+|
++---------&gt;AppCompatCheckedTextView{id=2131689666, res-name=design_menu_item_text, visibility=VISIBLE, width=651, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=0.0, text=Overhaul, input-type=0, ime-target=false, has-links=false, is-checked=false}
+|
++---------&gt;FrameLayout{id=2131689668, res-name=design_menu_item_action_area, visibility=VISIBLE, width=0, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=693.0, y=0.0, child-count=0}
+|
++--------&gt;NavigationMenuItemView{id=-1, visibility=VISIBLE, width=735, height=126, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=631.0, child-count=2}
+|
++---------&gt;AppCompatCheckedTextView{id=2131689666, res-name=design_menu_item_text, visibility=VISIBLE, width=651, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=0.0, text=Explore, input-type=0, ime-target=false, has-links=false, is-checked=true}
+|
++---------&gt;FrameLayout{id=2131689668, res-name=design_menu_item_action_area, visibility=VISIBLE, width=0, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=693.0, y=0.0, child-count=0}
+|
++--------&gt;NavigationMenuItemView{id=-1, visibility=VISIBLE, width=735, height=126, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=757.0, child-count=2}
+|
++---------&gt;AppCompatCheckedTextView{id=2131689666, res-name=design_menu_item_text, visibility=VISIBLE, width=651, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=0.0, text=History, input-type=0, ime-target=false, has-links=false, is-checked=false}
+|
++---------&gt;FrameLayout{id=2131689668, res-name=design_menu_item_action_area, visibility=VISIBLE, width=0, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=693.0, y=0.0, child-count=0}
+|
++--------&gt;NavigationMenuItemView{id=-1, visibility=VISIBLE, width=735, height=126, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=883.0, child-count=2}
+|
++---------&gt;AppCompatCheckedTextView{id=2131689666, res-name=design_menu_item_text, visibility=VISIBLE, width=651, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=0.0, text=Reading lists, input-type=0, ime-target=false, has-links=false, is-checked=false}
+|
++---------&gt;FrameLayout{id=2131689668, res-name=design_menu_item_action_area, visibility=VISIBLE, width=0, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=693.0, y=0.0, child-count=0}
+|
++--------&gt;NavigationMenuItemView{id=-1, visibility=VISIBLE, width=735, height=126, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=1009.0, child-count=2}
+|
++---------&gt;AppCompatCheckedTextView{id=2131689666, res-name=design_menu_item_text, visibility=VISIBLE, width=651, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=0.0, text=Nearby, input-type=0, ime-target=false, has-links=false, is-checked=false}
+|
++---------&gt;FrameLayout{id=2131689668, res-name=design_menu_item_action_area, visibility=VISIBLE, width=0, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=693.0, y=0.0, child-count=0}
+|
++--------&gt;NavigationMenuItemView{id=-1, visibility=VISIBLE, width=735, height=126, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=1135.0, child-count=2}
+|
++---------&gt;AppCompatCheckedTextView{id=2131689666, res-name=design_menu_item_text, visibility=VISIBLE, width=651, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=0.0, text=Random, input-type=0, ime-target=false, has-links=false, is-checked=false}
+|
++---------&gt;FrameLayout{id=2131689668, res-name=design_menu_item_action_area, visibility=VISIBLE, width=0, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=693.0, y=0.0, child-count=0}
+|
++--------&gt;FrameLayout{id=-1, visibility=VISIBLE, width=735, height=45, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=1261.0, child-count=1}
+|
++---------&gt;View{id=-1, visibility=VISIBLE, width=735, height=3, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=21.0}
+|
++--------&gt;NavigationMenuItemView{id=-1, visibility=VISIBLE, width=735, height=126, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=1306.0, child-count=2}
+|
++---------&gt;AppCompatCheckedTextView{id=2131689666, res-name=design_menu_item_text, visibility=VISIBLE, width=651, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=0.0, text=Settings, input-type=0, ime-target=false, has-links=false, is-checked=false}
+|
++---------&gt;FrameLayout{id=2131689668, res-name=design_menu_item_action_area, visibility=VISIBLE, width=0, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=693.0, y=0.0, child-count=0}
+|
++--------&gt;NavigationMenuItemView{id=-1, visibility=VISIBLE, width=735, height=126, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=1432.0, child-count=2}
+|
++---------&gt;AppCompatCheckedTextView{id=2131689666, res-name=design_menu_item_text, visibility=VISIBLE, width=651, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=42.0, y=0.0, text=Support Wikipedia, input-type=0, ime-target=false, has-links=false, is-checked=false}
+|
++---------&gt;FrameLayout{id=2131689668, res-name=design_menu_item_action_area, visibility=VISIBLE, width=0, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=693.0, y=0.0, child-count=0}
+|
++----&gt;ActionBarContextView{id=2131689570, res-name=action_mode_bar, visibility=VISIBLE, width=1080, height=147, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=63.0, child-count=2}
+|
++-----&gt;AppCompatImageView{id=2131689542, res-name=action_mode_close_button, desc=Done, visibility=VISIBLE, width=147, height=126, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=10.0}
+|
++-----&gt;ActionMenuView{id=-1, visibility=VISIBLE, width=127, height=126, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=953.0, y=10.0, child-count=1}
+|
++------&gt;ActionMenuItemView{id=2131690016, res-name=menu_new_tab, desc=New tab, visibility=VISIBLE, width=127, height=126, has-focus=false, has-focusable=true, has-window-focus=true, is-clickable=true, is-enabled=true, is-focused=false, is-focusable=true, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, text=, input-type=0, ime-target=false, has-links=false}
+|
++----&gt;View{id=-1, visibility=VISIBLE, width=1080, height=63, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0}
+|
++-&gt;View{id=16908336, res-name=navigationBarBackground, visibility=VISIBLE, width=1080, height=126, has-focus=false, has-focusable=false, has-window-focus=true, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=1794.0}
+|
+at dalvik.system.VMStack.getThreadStackTrace(Native Method)
+at java.lang.Thread.getStackTrace(Thread.java:580)
+at android.support.test.espresso.base.DefaultFailureHandler.getUserFriendlyError(DefaultFailureHandler.java:92)
+at android.support.test.espresso.base.DefaultFailureHandler.handle(DefaultFailureHandler.java:56)
+at android.support.test.espresso.ViewInteraction.runSynchronouslyOnUiThread(ViewInteraction.java:184)
+at android.support.test.espresso.ViewInteraction.doPerform(ViewInteraction.java:115)
+at android.support.test.espresso.ViewInteraction.perform(ViewInteraction.java:87)
+at org.wikipedia.espresso_test.TabTests.testOpenMultipleTabs(TabTests.java:69)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at android.support.test.internal.statement.UiThreadStatement.evaluate(UiThreadStatement.java:55)
+at android.support.test.rule.ActivityTestRule$ActivityStatement.evaluate(ActivityTestRule.java:270)
+at org.junit.rules.RunRules.evaluate(RunRules.java:20)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:262)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</failure>
+  </testcase>
+</testsuite>

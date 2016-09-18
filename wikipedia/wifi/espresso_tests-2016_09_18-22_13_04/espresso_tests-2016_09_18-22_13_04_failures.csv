@@ -1,0 +1,3 @@
+runNumber;failingTestName
+10;ArticleSearchTests.testSearchArticle_checkRecentsShown
+13;TabTests.testOpenMultipleTabs
