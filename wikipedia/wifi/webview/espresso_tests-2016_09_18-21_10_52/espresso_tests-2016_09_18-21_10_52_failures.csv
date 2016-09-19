@@ -1,0 +1,4 @@
+runNumber;failingTestName
+1;ArticleSearchTests.testSearchArticle_checkRecentsShown
+11;ArticleSearchTests.testSearchArticle_checkRecentsShown
+12;ArticleSearchTests.testSearchArticle_checkRecentsShown
