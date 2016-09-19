@@ -167,7 +167,7 @@ function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [strin
   
   
 .EXAMPLE
-  bm-wikipedia-appium { gradle testAlphaDebugUnitTest } 1 appium_tests
+  bm-wikipedia-appium { gradle testAlphaDebugUnitTest } 1 appium_tests native
   
   Output files will be following:
 	-file_path
