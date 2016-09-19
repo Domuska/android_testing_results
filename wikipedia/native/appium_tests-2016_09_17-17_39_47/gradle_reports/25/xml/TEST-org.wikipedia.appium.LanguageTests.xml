@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="org.wikipedia.appium.LanguageTests" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-09-17T19:33:15" hostname="TOL025031" time="157.593">
-  <properties/>
-  <testcase name="testChangeLanguageInSearch" classname="org.wikipedia.appium.LanguageTests" time="84.355"/>
-  <testcase name="testChangeLanguageInArticle" classname="org.wikipedia.appium.LanguageTests" time="73.238"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
