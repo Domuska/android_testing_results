@@ -1,0 +1,6 @@
+runNumber;failingTestName
+1;ArticleTests.testClickLink_partialText_assertPreviewShown
+3;TabTests.testOpenArticleInNewTab
+4;TabTests.testOpenArticleInNewTab
+8;ArticleTests.testOpeningAndClosingReferences
+9;TabTests.testOpenArticleInNewTab
