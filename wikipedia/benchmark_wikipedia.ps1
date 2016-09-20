@@ -15,20 +15,21 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
   
   
 .EXAMPLE
-  bm-wikipedia-instrumentation { gradle connectedAlphaDebugAndroidTest --stacktrace } 1 espresso_tests wifi
+  bm-wikipedia-instrumentation { gradle connectedAlphaDebugAndroidTest --stacktrace } 1 espresso_webview  wifi\webview
   If the tests are not using webview, use native as last parameter
   
   Output files will be following:
 	-file_path
 		-network_type
-			-testName-run_start_time
-				-gradle_report_folder
-					-run_number_1
-					-run_number_2
-					...
-					-run_number_samples
-				-full_file_path.txt
-				-full_file_path.csv
+			-test_type(native/webview)
+				-testName-run_start_time
+					-gradle_report_folder
+						-run_number_1
+						-run_number_2
+						...
+						-run_number_samples
+					-full_file_path.txt
+					-full_file_path.csv
 #>
 
   echo "STARTING WIKIPEDIA TESTING, USING TEST SUITE $testName"
@@ -167,18 +168,20 @@ function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [strin
   
   
 .EXAMPLE
-  bm-wikipedia-appium { gradle testAlphaDebugUnitTest } 1 appium_tests native
+  bm-wikipedia-appium { gradle testAlphaDebugUnitTest } 1 appium_webview wifi\webview
   
   Output files will be following:
 	-file_path
-		-testName-run_start_time
-			-gradle_report_folder
-				-run_number_1
-				-run_number_2
-				...
-				-run_number_samples
-			-full_file_path.txt
-			-full_file_path.csv
+		-network_type
+			-test_type(native/webview)
+				-testName-run_start_time
+					-gradle_report_folder
+						-run_number_1
+						-run_number_2
+						...
+						-run_number_samples
+					-full_file_path.txt
+					-full_file_path.csv
 #>
 
   echo "STARTING WIKIPEDIA TESTING, USING TEST SUITE $testName"
