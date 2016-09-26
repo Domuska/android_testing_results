@@ -1,0 +1,182 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="org.wikipedia.uiautomator_tests.ArticleSearchTests" tests="9" failures="8" errors="0" skipped="0" time="409.52" timestamp="2016-09-26T21:43:50" hostname="localhost">
+  <properties>
+    <property name="device" value="Nexus 5X - 6.0" />
+    <property name="flavor" value="ALPHA" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="testSearchArticle_checkRecentsShown" classname="org.wikipedia.uiautomator_tests.ArticleSearchTests" time="52.736">
+    <failure>org.junit.runners.model.TestTimedOutException: test timed out after 50000 milliseconds
+at java.lang.Thread.sleep(Native Method)
+at java.lang.Thread.sleep(Thread.java:1031)
+at java.lang.Thread.sleep(Thread.java:985)
+at android.os.SystemClock.sleep(SystemClock.java:120)
+at android.support.test.uiautomator.WaitMixin.wait(WaitMixin.java:48)
+at android.support.test.uiautomator.WaitMixin.wait(WaitMixin.java:34)
+at android.support.test.uiautomator.UiDevice.wait(UiDevice.java:187)
+at org.wikipedia.uiautomator_tests.Utils.Utils.searchAndOpenArticleWithName(Utils.java:94)
+at org.wikipedia.uiautomator_tests.ArticleSearchTests.testSearchArticle_checkRecentsShown(ArticleSearchTests.java:49)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at java.lang.Thread.run(Thread.java:818)
+</failure>
+  </testcase>
+  <testcase name="testSearchArticle_checkTitleShown" classname="org.wikipedia.uiautomator_tests.ArticleSearchTests" time="25.805">
+    <failure>java.lang.AssertionError:
+Expected: is not null
+but: was null
+at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+at org.wikipedia.uiautomator_tests.Utils.Utils.searchAndOpenArticleWithName(Utils.java:97)
+at org.wikipedia.uiautomator_tests.ArticleSearchTests.testSearchArticle_checkTitleShown(ArticleSearchTests.java:38)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at java.lang.Thread.run(Thread.java:818)
+</failure>
+  </testcase>
+  <testcase name="testScrollingToC_clickSubHeading" classname="org.wikipedia.uiautomator_tests.ArticleTests" time="15.658" />
+  <testcase name="testHistory" classname="org.wikipedia.uiautomator_tests.HistoryTests" time="52.763">
+    <failure>org.junit.runners.model.TestTimedOutException: test timed out after 50000 milliseconds
+at java.lang.Thread.sleep(Native Method)
+at java.lang.Thread.sleep(Thread.java:1031)
+at java.lang.Thread.sleep(Thread.java:985)
+at android.os.SystemClock.sleep(SystemClock.java:120)
+at android.support.test.uiautomator.WaitMixin.wait(WaitMixin.java:48)
+at android.support.test.uiautomator.WaitMixin.wait(WaitMixin.java:34)
+at android.support.test.uiautomator.UiDevice.wait(UiDevice.java:187)
+at org.wikipedia.uiautomator_tests.Utils.Utils.searchAndOpenArticleWithName(Utils.java:94)
+at org.wikipedia.uiautomator_tests.HistoryTests.testHistory(HistoryTests.java:36)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at java.lang.Thread.run(Thread.java:818)
+</failure>
+  </testcase>
+  <testcase name="testChangeLanguageInSearch" classname="org.wikipedia.uiautomator_tests.LanguageTests" time="52.339">
+    <failure>org.junit.runners.model.TestTimedOutException: test timed out after 50000 milliseconds
+at java.lang.Thread.sleep(Native Method)
+at java.lang.Thread.sleep(Thread.java:1031)
+at java.lang.Thread.sleep(Thread.java:985)
+at android.os.SystemClock.sleep(SystemClock.java:120)
+at android.support.test.uiautomator.WaitMixin.wait(WaitMixin.java:48)
+at android.support.test.uiautomator.WaitMixin.wait(WaitMixin.java:34)
+at android.support.test.uiautomator.UiDevice.wait(UiDevice.java:187)
+at org.wikipedia.uiautomator_tests.Utils.Utils.searchAndOpenArticleWithName(Utils.java:94)
+at org.wikipedia.uiautomator_tests.LanguageTests.testChangeLanguageInSearch(LanguageTests.java:68)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at java.lang.Thread.run(Thread.java:818)
+</failure>
+  </testcase>
+  <testcase name="testChangeLanguageInArticle" classname="org.wikipedia.uiautomator_tests.LanguageTests" time="52.262">
+    <failure>org.junit.runners.model.TestTimedOutException: test timed out after 50000 milliseconds
+at android.os.BinderProxy.transactNative(Native Method)
+at android.os.BinderProxy.transact(Binder.java:503)
+at android.accessibilityservice.IAccessibilityServiceConnection$Stub$Proxy.findAccessibilityNodeInfoByAccessibilityId(IAccessibilityServiceConnection.java:301)
+at android.view.accessibility.AccessibilityInteractionClient.findAccessibilityNodeInfoByAccessibilityId(AccessibilityInteractionClient.java:290)
+at android.view.accessibility.AccessibilityWindowInfo.getRoot(AccessibilityWindowInfo.java:150)
+at android.support.test.uiautomator.UiDevice.getWindowRoots(UiDevice.java:1080)
+at android.support.test.uiautomator.UiDevice.findObject(UiDevice.java:164)
+at org.wikipedia.uiautomator_tests.Utils.Utils.searchAndOpenArticleWithName(Utils.java:63)
+at org.wikipedia.uiautomator_tests.LanguageTests.testChangeLanguageInArticle(LanguageTests.java:39)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at java.lang.Thread.run(Thread.java:818)
+</failure>
+  </testcase>
+  <testcase name="testAddArticleToReadingList" classname="org.wikipedia.uiautomator_tests.ReadingListTests" time="52.576">
+    <failure>org.junit.runners.model.TestTimedOutException: test timed out after 50000 milliseconds
+at java.lang.Thread.sleep(Native Method)
+at java.lang.Thread.sleep(Thread.java:1031)
+at java.lang.Thread.sleep(Thread.java:985)
+at android.os.SystemClock.sleep(SystemClock.java:120)
+at android.support.test.uiautomator.WaitMixin.wait(WaitMixin.java:48)
+at android.support.test.uiautomator.WaitMixin.wait(WaitMixin.java:34)
+at android.support.test.uiautomator.UiDevice.wait(UiDevice.java:187)
+at org.wikipedia.uiautomator_tests.Utils.Utils.searchAndOpenArticleWithName(Utils.java:94)
+at org.wikipedia.uiautomator_tests.ReadingListTests.testAddArticleToReadingList(ReadingListTests.java:36)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at java.lang.Thread.run(Thread.java:818)
+</failure>
+  </testcase>
+  <testcase name="testOpenToC_rotatePhone" classname="org.wikipedia.uiautomator_tests.RotationTests" time="52.556">
+    <failure>org.junit.runners.model.TestTimedOutException: test timed out after 50000 milliseconds
+at java.lang.Thread.sleep(Native Method)
+at java.lang.Thread.sleep(Thread.java:1031)
+at java.lang.Thread.sleep(Thread.java:985)
+at android.os.SystemClock.sleep(SystemClock.java:120)
+at android.support.test.uiautomator.WaitMixin.wait(WaitMixin.java:48)
+at android.support.test.uiautomator.WaitMixin.wait(WaitMixin.java:34)
+at android.support.test.uiautomator.UiDevice.wait(UiDevice.java:187)
+at org.wikipedia.uiautomator_tests.Utils.Utils.searchAndOpenArticleWithName(Utils.java:94)
+at org.wikipedia.uiautomator_tests.RotationTests.testOpenToC_rotatePhone(RotationTests.java:42)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at java.lang.Thread.run(Thread.java:818)
+</failure>
+  </testcase>
+  <testcase name="testOpenMultipleTabs" classname="org.wikipedia.uiautomator_tests.TabTests" time="52.447">
+    <failure>org.junit.runners.model.TestTimedOutException: test timed out after 50000 milliseconds
+at java.lang.Thread.sleep(Native Method)
+at java.lang.Thread.sleep(Thread.java:1031)
+at java.lang.Thread.sleep(Thread.java:985)
+at android.os.SystemClock.sleep(SystemClock.java:120)
+at android.support.test.uiautomator.WaitMixin.wait(WaitMixin.java:48)
+at android.support.test.uiautomator.WaitMixin.wait(WaitMixin.java:34)
+at android.support.test.uiautomator.UiDevice.wait(UiDevice.java:187)
+at org.wikipedia.uiautomator_tests.Utils.Utils.searchAndOpenArticleWithName(Utils.java:94)
+at org.wikipedia.uiautomator_tests.TabTests.testOpenMultipleTabs(TabTests.java:35)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at java.lang.Thread.run(Thread.java:818)
+</failure>
+  </testcase>
+</testsuite>
