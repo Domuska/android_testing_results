@@ -1,0 +1,6 @@
+runNumber;failingTestName
+1;EditBookmarkTests.testEditBookmark
+1;FileAndFolderManipulationTests.testCreateNewFileAndDeleteIt
+2;EditBookmarkTests.testEditBookmark
+5;FileAndFolderManipulationTests.testCreateNewFileAndDeleteIt
+7;FileAndFolderManipulationTests.testCreateNewFileAndDeleteIt
