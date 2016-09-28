@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.amaze.filemanager.test.TestClasses.BookMarkTests" tests="11" failures="0" errors="0" skipped="1" time="238.699" timestamp="2016-09-28T13:52:26" hostname="localhost">
+  <properties>
+    <property name="device" value="Nexus 5X - 6.0" />
+    <property name="flavor" value="PLAY" />
+    <property name="project" value="AmazeFileManager" />
+  </properties>
+  <testcase name="testBookmarking" classname="com.amaze.filemanager.test.TestClasses.BookMarkTests" time="16.803" />
+  <testcase name="testDrawerOpenRotateScreen" classname="com.amaze.filemanager.test.TestClasses.DrawerRotationTests" time="7.683" />
+  <testcase name="testEditBookmark" classname="com.amaze.filemanager.test.TestClasses.EditBookmarkTests" time="21.501" />
+  <testcase name="testCopyFileToAnotherFolder" classname="com.amaze.filemanager.test.TestClasses.FileAndFolderManipulationTests" time="40.618" />
+  <testcase name="testCreateNewFileAndDeleteIt" classname="com.amaze.filemanager.test.TestClasses.FileAndFolderManipulationTests" time="27.194" />
+  <testcase name="testCreateNewFolderAndDeleteIt" classname="com.amaze.filemanager.test.TestClasses.FileAndFolderManipulationTests" time="26.24" />
+  <testcase name="testRotateMainFragment" classname="com.amaze.filemanager.test.TestClasses.MainFragmentRotationTests" time="29.627" />
+  <testcase name="testSwipingBetweenFolders" classname="com.amaze.filemanager.test.TestClasses.NavigationTests" time="21.045" />
+  <testcase name="testGridView" classname="com.amaze.filemanager.test.TestClasses.NavigationTests" time="24.884" />
+  <testcase name="testOpenFileCheckRecents" classname="com.amaze.filemanager.test.TestClasses.QuickAccessFileTests" time="0.001">
+    <skipped />
+  </testcase>
+  <testcase name="testSetHome" classname="com.amaze.filemanager.test.TestClasses.SetHomeTest" time="22.823" />
+</testsuite>
