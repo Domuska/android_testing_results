@@ -1,0 +1,57 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.amaze.filemanager.test.TestClasses.BookMarkTests" tests="11" failures="1" errors="0" skipped="1" time="245.217" timestamp="2016-09-28T17:12:42" hostname="localhost">
+  <properties>
+    <property name="device" value="Nexus 5X - 6.0" />
+    <property name="flavor" value="PLAY" />
+    <property name="project" value="AmazeFileManager" />
+  </properties>
+  <testcase name="testBookmarking" classname="com.amaze.filemanager.test.TestClasses.BookMarkTests" time="15.829" />
+  <testcase name="testDrawerOpenRotateScreen" classname="com.amaze.filemanager.test.TestClasses.DrawerRotationTests" time="6.689" />
+  <testcase name="testEditBookmark" classname="com.amaze.filemanager.test.TestClasses.EditBookmarkTests" time="32.955">
+    <failure>android.support.test.uiautomator.UiObjectNotFoundException: UiSelector[RESOURCE_ID=com.amaze.filemanager:id/menu_drawer]
+at android.support.test.uiautomator.UiScrollable.scrollBackward(UiScrollable.java:496)
+at android.support.test.uiautomator.UiScrollable.scrollToBeginning(UiScrollable.java:544)
+at android.support.test.uiautomator.UiScrollable.scrollToBeginning(UiScrollable.java:563)
+at android.support.test.uiautomator.UiScrollable.scrollIntoView(UiScrollable.java:265)
+at android.support.test.uiautomator.UiScrollable.scrollTextIntoView(UiScrollable.java:336)
+at com.amaze.filemanager.test.TestClasses.EditBookmarkTests.tearDown(EditBookmarkTests.java:40)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:33)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:262)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</failure>
+  </testcase>
+  <testcase name="testCopyFileToAnotherFolder" classname="com.amaze.filemanager.test.TestClasses.FileAndFolderManipulationTests" time="40.24" />
+  <testcase name="testCreateNewFileAndDeleteIt" classname="com.amaze.filemanager.test.TestClasses.FileAndFolderManipulationTests" time="25.544" />
+  <testcase name="testCreateNewFolderAndDeleteIt" classname="com.amaze.filemanager.test.TestClasses.FileAndFolderManipulationTests" time="25.762" />
+  <testcase name="testRotateMainFragment" classname="com.amaze.filemanager.test.TestClasses.MainFragmentRotationTests" time="28.438" />
+  <testcase name="testSwipingBetweenFolders" classname="com.amaze.filemanager.test.TestClasses.NavigationTests" time="20.463" />
+  <testcase name="testGridView" classname="com.amaze.filemanager.test.TestClasses.NavigationTests" time="24.354" />
+  <testcase name="testOpenFileCheckRecents" classname="com.amaze.filemanager.test.TestClasses.QuickAccessFileTests" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testSetHome" classname="com.amaze.filemanager.test.TestClasses.SetHomeTest" time="24.636" />
+</testsuite>
