@@ -1,0 +1,10 @@
+runNumber;failingTestName
+1;BookMarkTests.testBookmarking
+2;EditBookmarkTests.testEditBookmark
+3;EditBookmarkTests.testEditBookmark
+9;EditBookmarkTests.testEditBookmark
+11;EditBookmarkTests.testEditBookmark
+12;EditBookmarkTests.testEditBookmark
+17;EditBookmarkTests.testEditBookmark
+20;EditBookmarkTests.testEditBookmark
+25;EditBookmarkTests.testEditBookmark
