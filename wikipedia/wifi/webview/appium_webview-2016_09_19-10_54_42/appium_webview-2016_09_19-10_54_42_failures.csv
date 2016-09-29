@@ -1,8 +1,0 @@
-runNumber;failingTestName
-4;TabTests.testOpenArticleInNewTab
-7;TabTests.testOpenArticleInNewTab
-8;ArticleTests.testTableOfContents_checkSubTitles
-10;ArticleTests.testOpeningAndClosingReferences
-12;ArticleTests.testClickLink_partialText_assertPreviewShown
-13;RotationTests.testOpenTab_rotatePhone
-15;ArticleTests.testOpeningAndClosingReferences

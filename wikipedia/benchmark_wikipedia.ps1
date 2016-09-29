@@ -168,7 +168,7 @@ function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [strin
   
   
 .EXAMPLE
-  bm-wikipedia-appium { gradle testAlphaDebugUnitTest } 1 appium_webview wifi\webview
+  bm-wikipedia-appium { gradle testAlphaDebugUnitTest --stacktrace} 1 appium_webview wifi\webview
   
   Output files will be following:
 	-file_path

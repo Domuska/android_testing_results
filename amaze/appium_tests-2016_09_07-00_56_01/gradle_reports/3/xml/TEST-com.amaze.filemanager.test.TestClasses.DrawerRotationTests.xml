@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.amaze.filemanager.test.TestClasses.DrawerRotationTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-09-06T22:11:45" hostname="TOL025031" time="19.702">
-  <properties/>
-  <testcase name="testDrawerOpenRotateScreen" classname="com.amaze.filemanager.test.TestClasses.DrawerRotationTests" time="19.702"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

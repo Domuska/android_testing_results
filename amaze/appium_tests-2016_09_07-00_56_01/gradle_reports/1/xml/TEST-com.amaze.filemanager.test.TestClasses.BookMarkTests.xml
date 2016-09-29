@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.amaze.filemanager.test.TestClasses.BookMarkTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-09-06T21:56:48" hostname="TOL025031" time="26.82">
-  <properties/>
-  <testcase name="testBookMarking" classname="com.amaze.filemanager.test.TestClasses.BookMarkTests" time="26.82"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

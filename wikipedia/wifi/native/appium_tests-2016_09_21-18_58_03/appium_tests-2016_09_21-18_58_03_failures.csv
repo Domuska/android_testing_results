@@ -1,5 +1,0 @@
-runNumber;failingTestName
-5;ArticleTests.testScrollingToC_clickSubHeading
-14;HistoryTests.testHistory
-15;TabTests.testOpenMultipleTabs
-17;ReadingListTests.testAddArticleToReadingList

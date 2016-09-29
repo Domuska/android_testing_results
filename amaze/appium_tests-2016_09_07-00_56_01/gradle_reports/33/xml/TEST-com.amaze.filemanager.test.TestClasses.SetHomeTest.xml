@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.amaze.filemanager.test.TestClasses.SetHomeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-09-07T02:01:05" hostname="TOL025031" time="31.992">
-  <properties/>
-  <testcase name="testSetHome" classname="com.amaze.filemanager.test.TestClasses.SetHomeTest" time="31.992"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>
