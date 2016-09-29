@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="org.wikipedia.espresso_test.ArticleSearchTests" tests="9" failures="0" errors="0" skipped="0" time="91.587" timestamp="2016-09-29T21:08:31" hostname="localhost">
+  <properties>
+    <property name="device" value="Nexus 5X - 6.0" />
+    <property name="flavor" value="ALPHA" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="testSearchArticle_checkRecentsShown" classname="org.wikipedia.espresso_test.ArticleSearchTests" time="16.765" />
+  <testcase name="testSearchArticle_checkTitleShown" classname="org.wikipedia.espresso_test.ArticleSearchTests" time="5.051" />
+  <testcase name="testScrollingToC_clickSubHeading" classname="org.wikipedia.espresso_test.ArticleTests" time="6.844" />
+  <testcase name="testHistory" classname="org.wikipedia.espresso_test.HistoryTests" time="12.689" />
+  <testcase name="testChangeLanguageInSearch" classname="org.wikipedia.espresso_test.LanguageTests" time="11.082" />
+  <testcase name="testChangeLanguageInArticle" classname="org.wikipedia.espresso_test.LanguageTests" time="10.073" />
+  <testcase name="testAddArticleToReadingList" classname="org.wikipedia.espresso_test.ReadingListTests" time="9.176" />
+  <testcase name="testOpenToC_rotatePhone" classname="org.wikipedia.espresso_test.RotationTests" time="5.843" />
+  <testcase name="testOpenMultipleTabs" classname="org.wikipedia.espresso_test.TabTests" time="13.756" />
+</testsuite>
