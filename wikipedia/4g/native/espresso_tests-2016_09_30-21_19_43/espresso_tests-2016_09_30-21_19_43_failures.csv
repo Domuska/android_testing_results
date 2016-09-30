@@ -1,0 +1,8 @@
+runNumber;failingTestName
+3;TabTests.testOpenMultipleTabs
+6;ArticleSearchTests.testSearchArticle_checkRecentsShown
+16;ArticleSearchTests.testSearchArticle_checkRecentsShown
+27;ArticleSearchTests.testSearchArticle_checkRecentsShown
+33;LanguageTests.testChangeLanguageInSearch
+38;LanguageTests.testChangeLanguageInSearch
+40;ArticleSearchTests.testSearchArticle_checkRecentsShown
