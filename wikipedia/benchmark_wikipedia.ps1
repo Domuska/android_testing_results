@@ -15,7 +15,7 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
   
   
 .EXAMPLE
-  bm-wikipedia-instrumentation { gradle connectedAlphaDebugAndroidTest --stacktrace } 1 espresso_webview  wifi\webview
+  bm-wikipedia-instrumentation { gradle connectedAlphaDebugAndroidTest --stacktrace } 1 espresso_webview wifi\webview
   If the tests are not using webview, use native as last parameter
   
   Output files will be following:
@@ -92,9 +92,13 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
 	
 	#convert runTime from m_ss_msms format to seconds
 	$mPosition = $runTime.IndexOf("m")
-	[int]$minutes = $runtime.Substring(0, $mPosition)
-	$seconds = $minutes*60
-	$runTime = $runTime -replace "$($minutes)m", ""
+	#if time does not have minutes (test run takes less than 1m), dont handle minutes
+	if($mPosition -ne -1){
+		[int]$minutes = $runtime.Substring(0, $mPosition)
+		$seconds = $minutes*60
+		$runTime = $runTime -replace "$($minutes)m", ""
+	}
+	#tidy up the runTime string, convert it to double
 	$runTime = $runTime -replace "s", ""
 	$runTime = [double]$runTime
 	$runTime += $seconds
