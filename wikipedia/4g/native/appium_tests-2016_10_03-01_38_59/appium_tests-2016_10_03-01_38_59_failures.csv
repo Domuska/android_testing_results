@@ -1,0 +1,12 @@
+runNumber;failingTestName
+1;HistoryTests.testHistory
+1;LanguageTests.testChangeLanguageInSearch
+4;ArticleTests.testScrollingToC_clickSubHeading
+5;HistoryTests.testHistory
+7;LanguageTests.testChangeLanguageInArticle
+8;LanguageTests.testChangeLanguageInSearch
+9;LanguageTests.testChangeLanguageInSearch
+10;LanguageTests.testChangeLanguageInSearch
+12;ArticleSearchTests.testSearchArticle_checkRecentsShown
+18;ArticleSearchTests.testSearchArticle_checkRecentsShown
+19;ReadingListTests.testAddArticleToReadingList
