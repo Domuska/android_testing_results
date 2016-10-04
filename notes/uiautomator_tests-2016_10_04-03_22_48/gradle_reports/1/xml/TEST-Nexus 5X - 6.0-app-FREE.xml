@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.nononsenseapps.notepad.test.uiautomator_faulty_tests.uiautomator_FaultyTests" tests="18" failures="0" errors="0" skipped="7" time="306.716" timestamp="2016-10-04T00:29:15" hostname="localhost">
+  <properties>
+    <property name="device" value="Nexus 5X - 6.0" />
+    <property name="flavor" value="FREE" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="testSearchForElementWithFaultyID" classname="com.nononsenseapps.notepad.test.uiautomator_faulty_tests.uiautomator_FaultyTests" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testAddNewNoteSearchForFaultyNoteName" classname="com.nononsenseapps.notepad.test.uiautomator_faulty_tests.uiautomator_FaultyTests" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testSearchForElementWithIDShouldFailOnView" classname="com.nononsenseapps.notepad.test.uiautomator_faulty_tests.uiautomator_FaultyTests" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testSearchForElementWithTextShouldFailOnView" classname="com.nononsenseapps.notepad.test.uiautomator_faulty_tests.uiautomator_FaultyTests" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testSearchForElementWithAmbiguousIdentifier" classname="com.nononsenseapps.notepad.test.uiautomator_faulty_tests.uiautomator_FaultyTests" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testAddBigNumberOfNotesScrollDownAndDeleteOne" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestAddBigNumberOfNotesScrollDownAndDeleteOne" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testAddNewNoteShouldShowNameInNotesScreen" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestAddNewNoteShouldShowNameInNotesScreen" time="16.246" />
+  <testcase name="testAddNewNoteWithDueDateCheckDateIsVisible" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestAddNewNoteWithDueDateCheckDateIsVisible" time="29.779" />
+  <testcase name="testAddNewNoteWithReminderDateAndTime" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestAddNewNoteWithReminderDateAndTime" time="31.812" />
+  <testcase name="testAddNoteToTaskList" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestAddNoteToTaskList" time="19.427" />
+  <testcase name="testAddNotesAndRotateScreen" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestAddNotesAndRotateScreen" time="48.591" />
+  <testcase name="testAddNotesOrderByDueDate" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestAddNotesOrderByDueDate" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testAddTaskListAndRotateScreen" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestAddTaskListAndRotateScreen" time="6.91" />
+  <testcase name="testAddTaskListCheckItIsAddedToDrawer" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestAddTaskListCheckItIsAddedToDrawer" time="7.628" />
+  <testcase name="testAddTaskListsScrollNavigationDrawer" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestAddTaskListsScrollNavigationDrawer" time="64.184" />
+  <testcase name="testCompletedTasksAreCleared" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestCompletedTasksAreCleared" time="55.031" />
+  <testcase name="testCreateNoteAndDeleteIt" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestCreateNoteAndDeleteIt" time="17.732" />
+  <testcase name="testCreateTaskListAndDeleteIt" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestCreateTaskListAndDeleteIt" time="8.756" />
+</testsuite>
