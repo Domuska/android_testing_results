@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestAddNewNoteShouldShowNameInNotesScreen" tests="11" failures="2" errors="0" skipped="0" time="223.107" timestamp="2016-10-04T17:54:27" hostname="localhost">
+  <properties>
+    <property name="device" value="Nexus 5X - 6.0" />
+    <property name="flavor" value="FREE" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="testAddNewNoteShouldShowNameInNotesScreen" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestAddNewNoteShouldShowNameInNotesScreen" time="6.654" />
+  <testcase name="testAddNewNoteWithDueDateCheckDateIsVisible" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestAddNewNoteWithDueDateCheckDateIsVisible" time="7.209" />
+  <testcase name="testAddNewNoteWithReminderDateAndTime" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestAddNewNoteWithReminderDateAndTime" time="11.228" />
+  <testcase name="testAddNoteToTaskList" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestAddNoteToTaskList" time="9.089" />
+  <testcase name="testAddNotesAndRotateScreen" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestAddNotesAndRotateScreen" time="16.155" />
+  <testcase name="testAddTaskListAndRotateScreen" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestAddTaskListAndRotateScreen" time="6.693" />
+  <testcase name="testAddTaskListCheckItIsAddedToDrawer" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestAddTaskListCheckItIsAddedToDrawer" time="5.474" />
+  <testcase name="testAddTaskListsScrollNavigationDrawer" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestAddTaskListsScrollNavigationDrawer" time="54.39" />
+  <testcase name="testCompletedTasksAreCleared" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestCompletedTasksAreCleared" time="45.042">
+    <failure>java.lang.RuntimeException: Could not launch intent Intent { act=android.intent.action.MAIN flg=0x10000000 cmp=com.nononsenseapps.notepad/.activities.ActivityList } within 45 seconds. Perhaps the main thread has not gone idle within a reasonable amount of time? There could be an animation or something constantly repainting the screen. Or the activity is doing network calls on creation? See the threaddump logs. For your reference the last time the event queue was idle before your activity launch request was 1475603560790 and now the last time the queue went idle was: 1475603588062. If these numbers are the same your activity might be hogging the event queue.
+at android.support.test.runner.MonitoringInstrumentation.startActivitySync(MonitoringInstrumentation.java:362)
+at android.test.InstrumentationTestCase.launchActivityWithIntent(InstrumentationTestCase.java:119)
+at android.test.InstrumentationTestCase.launchActivity(InstrumentationTestCase.java:97)
+at android.test.ActivityInstrumentationTestCase2.getActivity(ActivityInstrumentationTestCase2.java:104)
+at com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestCompletedTasksAreCleared.setUp(Robotium_TestCompletedTasksAreCleared.java:36)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</failure>
+  </testcase>
+  <testcase name="testCreateNoteAndDeleteIt" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestCreateNoteAndDeleteIt" time="45.05">
+    <failure>java.lang.RuntimeException: Could not launch intent Intent { act=android.intent.action.MAIN flg=0x10000000 cmp=com.nononsenseapps.notepad/.activities.ActivityList } within 45 seconds. Perhaps the main thread has not gone idle within a reasonable amount of time? There could be an animation or something constantly repainting the screen. Or the activity is doing network calls on creation? See the threaddump logs. For your reference the last time the event queue was idle before your activity launch request was 1475603588062 and now the last time the queue went idle was: 1475603607798. If these numbers are the same your activity might be hogging the event queue.
+at android.support.test.runner.MonitoringInstrumentation.startActivitySync(MonitoringInstrumentation.java:362)
+at android.test.InstrumentationTestCase.launchActivityWithIntent(InstrumentationTestCase.java:119)
+at android.test.InstrumentationTestCase.launchActivity(InstrumentationTestCase.java:97)
+at android.test.ActivityInstrumentationTestCase2.getActivity(ActivityInstrumentationTestCase2.java:104)
+at com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestCreateNoteAndDeleteIt.setUp(Robotium_TestCreateNoteAndDeleteIt.java:28)
+at junit.framework.TestCase.runBare(TestCase.java:132)
+at junit.framework.TestResult$1.protect(TestResult.java:115)
+at android.support.test.internal.runner.junit3.AndroidTestResult.runProtected(AndroidTestResult.java:77)
+at junit.framework.TestResult.run(TestResult.java:118)
+at android.support.test.internal.runner.junit3.AndroidTestResult.run(AndroidTestResult.java:55)
+at junit.framework.TestCase.run(TestCase.java:124)
+at android.support.test.internal.runner.junit3.NonLeakyTestSuite$NonLeakyTest.run(NonLeakyTestSuite.java:63)
+at junit.framework.TestSuite.runTest(TestSuite.java:243)
+at junit.framework.TestSuite.run(TestSuite.java:238)
+at android.support.test.internal.runner.junit3.DelegatingTestSuite.run(DelegatingTestSuite.java:103)
+at android.support.test.internal.runner.junit3.AndroidTestSuite.run(AndroidTestSuite.java:69)
+at android.support.test.internal.runner.junit3.JUnit38ClassRunner.run(JUnit38ClassRunner.java:90)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:54)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:240)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</failure>
+  </testcase>
+  <testcase name="testCreateTaskListAndDeleteIt" classname="com.nononsenseapps.notepad.test.robotium_tests.Robotium_TestCreateTaskListAndDeleteIt" time="16.08" />
+</testsuite>
