@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.nononsenseapps.appium.NotesTest" tests="13" skipped="2" failures="0" errors="0" timestamp="2016-10-05T08:39:49" hostname="TOL025031" time="493.213">
+  <properties/>
+  <testcase name="testAddBigNumberOfNotesScrollDownAndDeleteOne" classname="com.nononsenseapps.appium.NotesTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testCreateNoteAndDeleteIt" classname="com.nononsenseapps.appium.NotesTest" time="29.568"/>
+  <testcase name="testAddTaskListAndRotateScreen" classname="com.nononsenseapps.appium.NotesTest" time="25.869"/>
+  <testcase name="testCreateTaskListAndDeleteIt" classname="com.nononsenseapps.appium.NotesTest" time="28.68"/>
+  <testcase name="testAddNotesOrderByDueDate" classname="com.nononsenseapps.appium.NotesTest" time="0.0">
+    <skipped/>
+  </testcase>
+  <testcase name="testAddTaskListCheckItIsAddedToDrawer" classname="com.nononsenseapps.appium.NotesTest" time="25.134"/>
+  <testcase name="testAddNewNoteShouldShowNameInNotesScreen" classname="com.nononsenseapps.appium.NotesTest" time="26.02"/>
+  <testcase name="testAddNotesAndRotateScreen" classname="com.nononsenseapps.appium.NotesTest" time="50.871"/>
+  <testcase name="testAddNoteToTaskList" classname="com.nononsenseapps.appium.NotesTest" time="35.317"/>
+  <testcase name="testCompletedTasksAreCleared" classname="com.nononsenseapps.appium.NotesTest" time="54.457"/>
+  <testcase name="testAddTaskListsScrollNavigationDrawer" classname="com.nononsenseapps.appium.NotesTest" time="150.167"/>
+  <testcase name="testAddNewNoteWithDueDateCheckDateIsVisible" classname="com.nononsenseapps.appium.NotesTest" time="31.605"/>
+  <testcase name="testAddNewNoteWithReminderDateAndTime" classname="com.nononsenseapps.appium.NotesTest" time="35.508"/>
+  <system-out><![CDATA[Problem with closing keyboard
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
