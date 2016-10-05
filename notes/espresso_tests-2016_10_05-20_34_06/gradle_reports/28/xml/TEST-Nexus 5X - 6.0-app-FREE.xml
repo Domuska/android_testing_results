@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.nononsenseapps.notepad.test.espresso_faulty_tests.Espresso_FaultyTests" tests="18" failures="0" errors="0" skipped="7" time="79.37" timestamp="2016-10-05T18:27:50" hostname="localhost">
+  <properties>
+    <property name="device" value="Nexus 5X - 6.0" />
+    <property name="flavor" value="FREE" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="testSearchForElementWithFaultyID" classname="com.nononsenseapps.notepad.test.espresso_faulty_tests.Espresso_FaultyTests" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testAddNewNoteSearchForFaultyNoteName" classname="com.nononsenseapps.notepad.test.espresso_faulty_tests.Espresso_FaultyTests" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testSearchForElementWithIDShouldFailOnView" classname="com.nononsenseapps.notepad.test.espresso_faulty_tests.Espresso_FaultyTests" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testSearchForElementWithTextShouldFailOnView" classname="com.nononsenseapps.notepad.test.espresso_faulty_tests.Espresso_FaultyTests" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testSearchForElementWithAmbiguousIdentifier" classname="com.nononsenseapps.notepad.test.espresso_faulty_tests.Espresso_FaultyTests" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testAddBigNumberOfNotesScrollDownAndDeleteOne" classname="com.nononsenseapps.notepad.test.espresso_tests.Espresso_TestAddBigNumberOfNotesScrollDownAndDeleteOne" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testAddNewNoteShouldShowNameInNotesScreen" classname="com.nononsenseapps.notepad.test.espresso_tests.Espresso_TestAddNewNoteShouldShowNameInNotesScreen" time="2.789" />
+  <testcase name="testAddNewNoteWithDueDateCheckDateIsVisible" classname="com.nononsenseapps.notepad.test.espresso_tests.Espresso_TestAddNewNoteWithDueDateCheckDateIsVisible" time="3.729" />
+  <testcase name="testAddNewNoteWithReminderDateAndTime" classname="com.nononsenseapps.notepad.test.espresso_tests.Espresso_TestAddNewNoteWithReminderDateAndTime" time="5.24" />
+  <testcase name="testAddNoteToTaskList" classname="com.nononsenseapps.notepad.test.espresso_tests.Espresso_TestAddNoteToTaskList" time="5.188" />
+  <testcase name="testAddNotesAndRotateScreen" classname="com.nononsenseapps.notepad.test.espresso_tests.Espresso_TestAddNotesAndRotateScreen" time="6.51" />
+  <testcase name="testAddNotesOrderByDueDate" classname="com.nononsenseapps.notepad.test.espresso_tests.Espresso_TestAddNotesOrderByDueDate" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testAddTaskListAndRotateScreen" classname="com.nononsenseapps.notepad.test.espresso_tests.Espresso_TestAddTaskListAndRotateScreen" time="2.763" />
+  <testcase name="testAddTaskListCheckItIsAddedToDrawer" classname="com.nononsenseapps.notepad.test.espresso_tests.Espresso_TestAddTaskListCheckItIsAddedToDrawer" time="2.965" />
+  <testcase name="testAddTaskListsScrollNavigationDrawer" classname="com.nononsenseapps.notepad.test.espresso_tests.Espresso_TestAddTaskListsScrollNavigationDrawer" time="33.875" />
+  <testcase name="testCompletedTasksAreCleared" classname="com.nononsenseapps.notepad.test.espresso_tests.Espresso_TestCompletedTasksAreCleared" time="7.669" />
+  <testcase name="testCreateNoteAndDeleteIt" classname="com.nononsenseapps.notepad.test.espresso_tests.Espresso_TestCreateNoteAndDeleteIt" time="3.448" />
+  <testcase name="testCreateTaskListAndDeleteIt" classname="com.nononsenseapps.notepad.test.espresso_tests.Espresso_TestCreateTaskListAndDeleteIt" time="4.491" />
+</testsuite>
