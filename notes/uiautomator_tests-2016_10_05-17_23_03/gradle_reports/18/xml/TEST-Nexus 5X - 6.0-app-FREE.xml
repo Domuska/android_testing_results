@@ -1,0 +1,79 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="com.nononsenseapps.notepad.test.uiautomator_faulty_tests.uiautomator_FaultyTests" tests="18" failures="1" errors="0" skipped="7" time="271.447" timestamp="2016-10-05T16:01:33" hostname="localhost">
+  <properties>
+    <property name="device" value="Nexus 5X - 6.0" />
+    <property name="flavor" value="FREE" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="testSearchForElementWithFaultyID" classname="com.nononsenseapps.notepad.test.uiautomator_faulty_tests.uiautomator_FaultyTests" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testAddNewNoteSearchForFaultyNoteName" classname="com.nononsenseapps.notepad.test.uiautomator_faulty_tests.uiautomator_FaultyTests" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testSearchForElementWithIDShouldFailOnView" classname="com.nononsenseapps.notepad.test.uiautomator_faulty_tests.uiautomator_FaultyTests" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testSearchForElementWithTextShouldFailOnView" classname="com.nononsenseapps.notepad.test.uiautomator_faulty_tests.uiautomator_FaultyTests" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testSearchForElementWithAmbiguousIdentifier" classname="com.nononsenseapps.notepad.test.uiautomator_faulty_tests.uiautomator_FaultyTests" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testAddBigNumberOfNotesScrollDownAndDeleteOne" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestAddBigNumberOfNotesScrollDownAndDeleteOne" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testAddNewNoteShouldShowNameInNotesScreen" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestAddNewNoteShouldShowNameInNotesScreen" time="15.058" />
+  <testcase name="testAddNewNoteWithDueDateCheckDateIsVisible" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestAddNewNoteWithDueDateCheckDateIsVisible" time="29.656" />
+  <testcase name="testAddNewNoteWithReminderDateAndTime" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestAddNewNoteWithReminderDateAndTime" time="24.664" />
+  <testcase name="testAddNoteToTaskList" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestAddNoteToTaskList" time="19.343" />
+  <testcase name="testAddNotesAndRotateScreen" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestAddNotesAndRotateScreen" time="47.874" />
+  <testcase name="testAddNotesOrderByDueDate" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestAddNotesOrderByDueDate" time="0.0">
+    <skipped />
+  </testcase>
+  <testcase name="testAddTaskListAndRotateScreen" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestAddTaskListAndRotateScreen" time="6.848" />
+  <testcase name="testAddTaskListCheckItIsAddedToDrawer" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestAddTaskListCheckItIsAddedToDrawer" time="6.33" />
+  <testcase name="testAddTaskListsScrollNavigationDrawer" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestAddTaskListsScrollNavigationDrawer" time="46.382">
+    <failure>android.support.test.uiautomator.UiObjectNotFoundException: UiSelector[RESOURCE_ID=com.nononsenseapps.notepad:id/navigation_drawer]
+at android.support.test.uiautomator.UiScrollable.scrollBackward(UiScrollable.java:496)
+at android.support.test.uiautomator.UiScrollable.scrollToBeginning(UiScrollable.java:544)
+at android.support.test.uiautomator.UiScrollable.scrollToBeginning(UiScrollable.java:563)
+at android.support.test.uiautomator.UiScrollable.scrollIntoView(UiScrollable.java:265)
+at android.support.test.uiautomator.UiScrollable.scrollTextIntoView(UiScrollable.java:336)
+at com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_helper.createTaskList(uiautomator_helper.java:94)
+at com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestAddTaskListsScrollNavigationDrawer.testAddTaskListsScrollNavigationDrawer(uiautomator_TestAddTaskListsScrollNavigationDrawer.java:24)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
+at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runners.Suite.runChild(Suite.java:128)
+at org.junit.runners.Suite.runChild(Suite.java:27)
+at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:137)
+at org.junit.runner.JUnitCore.run(JUnitCore.java:115)
+at android.support.test.internal.runner.TestExecutor.execute(TestExecutor.java:59)
+at android.support.test.runner.AndroidJUnitRunner.onStart(AndroidJUnitRunner.java:262)
+at android.app.Instrumentation$InstrumentationThread.run(Instrumentation.java:1879)
+</failure>
+  </testcase>
+  <testcase name="testCompletedTasksAreCleared" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestCompletedTasksAreCleared" time="50.234" />
+  <testcase name="testCreateNoteAndDeleteIt" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestCreateNoteAndDeleteIt" time="16.746" />
+  <testcase name="testCreateTaskListAndDeleteIt" classname="com.nononsenseapps.notepad.test.uiautomator_tests.uiautomator_TestCreateTaskListAndDeleteIt" time="8.073" />
+</testsuite>
