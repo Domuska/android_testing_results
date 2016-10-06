@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="org.wikipedia.uiautomator_tests.ArticleSearchTests" tests="9" failures="2" errors="0" skipped="0" time="303.146" timestamp="2016-10-06T22:27:46" hostname="localhost">
+  <properties>
+    <property name="device" value="Nexus 5X - 6.0" />
+    <property name="flavor" value="ALPHA" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="testSearchArticle_checkRecentsShown" classname="org.wikipedia.uiautomator_tests.ArticleSearchTests" time="53.203">
+    <failure>org.junit.runners.model.TestTimedOutException: test timed out after 50000 milliseconds
+at java.lang.Object.wait(Native Method)
+at java.lang.Object.wait(Object.java:423)
+at android.app.UiAutomation.waitForIdle(UiAutomation.java:602)
+at android.support.test.uiautomator.UiAutomatorBridge.waitForIdle(UiAutomatorBridge.java:112)
+at android.support.test.uiautomator.UiDevice.waitForIdle(UiDevice.java:639)
+at android.support.test.uiautomator.UiDevice.waitForIdle(UiDevice.java:629)
+at android.support.test.uiautomator.UiObject2.getAccessibilityNodeInfo(UiObject2.java:624)
+at android.support.test.uiautomator.UiObject2.getVisibleBounds(UiObject2.java:210)
+at android.support.test.uiautomator.UiObject2.getVisibleCenter(UiObject2.java:251)
+at android.support.test.uiautomator.UiObject2.click(UiObject2.java:343)
+at org.wikipedia.uiautomator_tests.Utils.Utils.openSearchFromArticle(Utils.java:48)
+at org.wikipedia.uiautomator_tests.ArticleSearchTests.testSearchArticle_checkRecentsShown(ArticleSearchTests.java:59)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at java.lang.Thread.run(Thread.java:818)
+</failure>
+  </testcase>
+  <testcase name="testSearchArticle_checkTitleShown" classname="org.wikipedia.uiautomator_tests.ArticleSearchTests" time="13.453" />
+  <testcase name="testScrollingToC_clickSubHeading" classname="org.wikipedia.uiautomator_tests.ArticleTests" time="21.146" />
+  <testcase name="testHistory" classname="org.wikipedia.uiautomator_tests.HistoryTests" time="52.839">
+    <failure>org.junit.runners.model.TestTimedOutException: test timed out after 50000 milliseconds
+at java.lang.Object.wait(Native Method)
+at java.lang.Object.wait(Object.java:423)
+at android.view.accessibility.AccessibilityInteractionClient.waitForResultTimedLocked(AccessibilityInteractionClient.java:689)
+at android.view.accessibility.AccessibilityInteractionClient.getFindAccessibilityNodeInfosResultAndClear(AccessibilityInteractionClient.java:584)
+at android.view.accessibility.AccessibilityInteractionClient.findAccessibilityNodeInfoByAccessibilityId(AccessibilityInteractionClient.java:296)
+at android.view.accessibility.AccessibilityNodeInfo.getChild(AccessibilityNodeInfo.java:831)
+at android.support.test.uiautomator.ByMatcher.findMatches(ByMatcher.java:161)
+at android.support.test.uiautomator.ByMatcher.findMatches(ByMatcher.java:172)
+at android.support.test.uiautomator.ByMatcher.findMatches(ByMatcher.java:172)
+at android.support.test.uiautomator.ByMatcher.findMatches(ByMatcher.java:172)
+at android.support.test.uiautomator.ByMatcher.findMatches(ByMatcher.java:172)
+at android.support.test.uiautomator.ByMatcher.findMatches(ByMatcher.java:172)
+at android.support.test.uiautomator.ByMatcher.findMatches(ByMatcher.java:172)
+at android.support.test.uiautomator.ByMatcher.findMatches(ByMatcher.java:172)
+at android.support.test.uiautomator.ByMatcher.findMatches(ByMatcher.java:172)
+at android.support.test.uiautomator.ByMatcher.findMatches(ByMatcher.java:172)
+at android.support.test.uiautomator.ByMatcher.findMatches(ByMatcher.java:172)
+at android.support.test.uiautomator.ByMatcher.findMatches(ByMatcher.java:172)
+at android.support.test.uiautomator.ByMatcher.findMatches(ByMatcher.java:172)
+at android.support.test.uiautomator.ByMatcher.findMatches(ByMatcher.java:172)
+at android.support.test.uiautomator.ByMatcher.findMatches(ByMatcher.java:111)
+at android.support.test.uiautomator.ByMatcher.findMatch(ByMatcher.java:72)
+at android.support.test.uiautomator.UiDevice.findObject(UiDevice.java:164)
+at android.support.test.uiautomator.Until$3.apply(Until.java:68)
+at android.support.test.uiautomator.Until$3.apply(Until.java:65)
+at android.support.test.uiautomator.WaitMixin.wait(WaitMixin.java:40)
+at android.support.test.uiautomator.WaitMixin.wait(WaitMixin.java:34)
+at android.support.test.uiautomator.UiDevice.wait(UiDevice.java:187)
+at org.wikipedia.uiautomator_tests.HistoryTests.testHistory(HistoryTests.java:43)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at java.lang.Thread.run(Thread.java:818)
+</failure>
+  </testcase>
+  <testcase name="testChangeLanguageInSearch" classname="org.wikipedia.uiautomator_tests.LanguageTests" time="40.973" />
+  <testcase name="testChangeLanguageInArticle" classname="org.wikipedia.uiautomator_tests.LanguageTests" time="35.404" />
+  <testcase name="testAddArticleToReadingList" classname="org.wikipedia.uiautomator_tests.ReadingListTests" time="24.496" />
+  <testcase name="testOpenToC_rotatePhone" classname="org.wikipedia.uiautomator_tests.RotationTests" time="19.128" />
+  <testcase name="testOpenMultipleTabs" classname="org.wikipedia.uiautomator_tests.TabTests" time="42.221" />
+</testsuite>
