@@ -1,0 +1,4 @@
+runNumber;failingTestName
+5;RotationTests.testOpenTab_rotatePhone
+11;ArticleTests.testClickLink_fullText_assertPreviewShown
+18;RotationTests.testOpenTab_rotatePhone
