@@ -1,0 +1,13 @@
+runNumber;failingTestName
+2;ReadingListTests.testAddArticleToReadingList
+4;ReadingListTests.testAddArticleToReadingList
+5;ReadingListTests.testAddArticleToReadingList
+7;ReadingListTests.testAddArticleToReadingList
+8;ReadingListTests.testAddArticleToReadingList
+15;ReadingListTests.testAddArticleToReadingList
+16;ArticleSearchTests.testSearchArticle_checkRecentsShown
+16;ReadingListTests.testAddArticleToReadingList
+20;HistoryTests.testHistory
+21;ReadingListTests.testAddArticleToReadingList
+24;ReadingListTests.testAddArticleToReadingList
+25;ReadingListTests.testAddArticleToReadingList
