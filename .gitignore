@@ -1,0 +1,12 @@
+# Generated temporary files
+*.class
+target
+bin
+gen
+local.properties
+default.properties
+gen-external-apklibs
+
+#R files
+*.RData
+*.RHistory

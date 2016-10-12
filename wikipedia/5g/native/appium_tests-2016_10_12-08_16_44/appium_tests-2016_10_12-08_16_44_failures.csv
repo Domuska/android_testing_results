@@ -1,0 +1,3 @@
+runNumber;failingTestName
+2;ArticleSearchTests.testSearchArticle_checkRecentsShown
+9;ReadingListTests.testAddArticleToReadingList
