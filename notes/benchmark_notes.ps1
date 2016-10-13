@@ -23,6 +23,7 @@ function bm-notes-instrumentation ([ScriptBlock]$Expression, [int]$Samples = 1, 
 				...
 				-run_number_samples
 			-full_file_path.txt
+			-full_file_path.txt
 			-full_file_path.csv
 #>
 
@@ -131,9 +132,9 @@ function bm-notes-instrumentation ([ScriptBlock]$Expression, [int]$Samples = 1, 
 	}
 	
 	echo "copying gradle output file"
-	xcopy "$($project_path)$($test_report_path)" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
+	xcopy "$($project_path)$($test_report_path)" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /Y /i
 	#copy the xml output
-	xcopy "$($project_path)app\build\outputs\androidTest-results\connected\flavors\FREE" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)\xml" /E /C /H /R /K /O /Y /i
+	xcopy "$($project_path)app\build\outputs\androidTest-results\connected\flavors\FREE" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)\xml" /E /C /H /R /K /Y /i
 	
     $sw.Reset()
     $Samples--
@@ -260,9 +261,9 @@ function bm-notes-appium([ScriptBlock]$Expression, [int]$Samples = 1, [string]$t
 	}
 
 	echo "copying gradle output file"
-	xcopy "$($project_path)$($test_report_path)" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
+	xcopy "$($project_path)$($test_report_path)" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /Y /i
 	#copy the xml output
-	xcopy "$($project_path)app\build\test-results\freeDebug" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)\xml" /E /C /H /R /K /O /Y /i
+	xcopy "$($project_path)app\build\test-results\freeDebug" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)\xml" /E /C /H /R /K /Y /i
 	
     $sw.Reset()
     $Samples--

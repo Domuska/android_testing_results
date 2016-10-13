@@ -137,9 +137,12 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
 	}
 	
 	echo "copying gradle output file"
-	xcopy "$($project_path)$($test_report_path)" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
+	#xcopy "$($project_path)$($test_report_path)" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
+	xcopy "$($project_path)$($test_report_path)" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K  /Y /i
 	#copy the xml output
-	xcopy "$($project_path)app\build\outputs\androidTest-results\connected\flavors\ALPHA" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)\xml" /E /C /H /R /K /O /Y /i
+	#xcopy "$($project_path)app\build\outputs\androidTest-results\connected\flavors\ALPHA" #"$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)\xml" /E /C /H /R /K /O /Y /i
+	xcopy "$($project_path)app\build\outputs\androidTest-results\connected\flavors\ALPHA"
+	"$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)\xml" /E /C /H /R /K /Y /i
 	
 	
     $sw.Reset()
@@ -272,9 +275,9 @@ function bm-wikipedia-appium([ScriptBlock]$Expression, [int]$Samples = 1, [strin
 	}
 
 	echo "copying gradle output file"
-	xcopy "$($project_path)$($test_report_path)" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
+	xcopy "$($project_path)$($test_report_path)" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /Y /i
 	#copy the xml output
-	xcopy "$($project_path)app\build\test-results\alphaDebug" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)\xml" /E /C /H /R /K /O /Y /i
+	xcopy "$($project_path)app\build\test-results\alphaDebug" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)\xml" /E /C /H /R /K /Y /i
 	
     $sw.Reset()
     $Samples--

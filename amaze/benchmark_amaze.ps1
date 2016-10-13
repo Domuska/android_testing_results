@@ -137,9 +137,9 @@ function bm-amaze-instrumentation ([ScriptBlock]$Expression, [int]$Samples = 1, 
 	
 	echo "copying gradle output file"
 	#copy the html document
-	xcopy "$($project_path)$($test_report_path)" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
+	xcopy "$($project_path)$($test_report_path)" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /Y /i
 	#copy the xml output
-	xcopy "$($project_path)\build\outputs\androidTest-results\connected\flavors\PLAY" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)\xml" /E /C /H /R /K /O /Y /i
+	xcopy "$($project_path)\build\outputs\androidTest-results\connected\flavors\PLAY" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)\xml" /E /C /H /R /K /Y /i
 	
     $sw.Reset()
     $Samples--
@@ -279,9 +279,9 @@ function bm-amaze-appium ([ScriptBlock]$Expression, [int]$Samples = 1, [string]$
 	}
 	
 	echo "copying gradle output file"
-	xcopy "$($project_path)$($test_report_path)" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /O /Y /i
+	xcopy "$($project_path)$($test_report_path)" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)" /E /C /H /R /K /Y /i
 	#copy the xml output
-	xcopy "$($project_path)\build\test-results\playDebug" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)\xml" /E /C /H /R /K /O /Y /i
+	xcopy "$($project_path)\build\test-results\playDebug" "$($file_path)\$($filename)\$($gradle_report_folder)\$($Run)\xml" /E /C /H /R /K /Y /i
 	
 	#C:\Users\Tomi\Projects\amazeFileManager\AmazeFileManager\build\test-results\playDebug
 	
