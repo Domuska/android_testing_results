@@ -1,0 +1,17 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="org.wikipedia.uiautomator_tests.ArticleSearchTests" tests="9" failures="0" errors="0" skipped="0" time="223.156" timestamp="2016-10-14T13:27:35" hostname="localhost">
+  <properties>
+    <property name="device" value="Nexus 5X - 6.0" />
+    <property name="flavor" value="ALPHA" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="testSearchArticle_checkRecentsShown" classname="org.wikipedia.uiautomator_tests.ArticleSearchTests" time="42.031" />
+  <testcase name="testSearchArticle_checkTitleShown" classname="org.wikipedia.uiautomator_tests.ArticleSearchTests" time="9.632" />
+  <testcase name="testScrollingToC_clickSubHeading" classname="org.wikipedia.uiautomator_tests.ArticleTests" time="17.482" />
+  <testcase name="testHistory" classname="org.wikipedia.uiautomator_tests.HistoryTests" time="41.299" />
+  <testcase name="testChangeLanguageInSearch" classname="org.wikipedia.uiautomator_tests.LanguageTests" time="29.966" />
+  <testcase name="testChangeLanguageInArticle" classname="org.wikipedia.uiautomator_tests.LanguageTests" time="17.967" />
+  <testcase name="testAddArticleToReadingList" classname="org.wikipedia.uiautomator_tests.ReadingListTests" time="21.029" />
+  <testcase name="testOpenToC_rotatePhone" classname="org.wikipedia.uiautomator_tests.RotationTests" time="13.293" />
+  <testcase name="testOpenMultipleTabs" classname="org.wikipedia.uiautomator_tests.TabTests" time="29.868" />
+</testsuite>

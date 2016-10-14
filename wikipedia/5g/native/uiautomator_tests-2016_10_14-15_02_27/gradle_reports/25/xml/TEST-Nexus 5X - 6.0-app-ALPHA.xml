@@ -1,0 +1,34 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="org.wikipedia.uiautomator_tests.ArticleSearchTests" tests="9" failures="1" errors="0" skipped="0" time="229.637" timestamp="2016-10-14T14:00:24" hostname="localhost">
+  <properties>
+    <property name="device" value="Nexus 5X - 6.0" />
+    <property name="flavor" value="ALPHA" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="testSearchArticle_checkRecentsShown" classname="org.wikipedia.uiautomator_tests.ArticleSearchTests" time="41.697" />
+  <testcase name="testSearchArticle_checkTitleShown" classname="org.wikipedia.uiautomator_tests.ArticleSearchTests" time="8.376" />
+  <testcase name="testScrollingToC_clickSubHeading" classname="org.wikipedia.uiautomator_tests.ArticleTests" time="16.705">
+    <failure>java.lang.AssertionError:
+Expected: is &lt;0&gt;
+but: was &lt;1&gt;
+at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:20)
+at org.hamcrest.MatcherAssert.assertThat(MatcherAssert.java:8)
+at org.wikipedia.uiautomator_tests.ArticleTests.testScrollingToC_clickSubHeading(ArticleTests.java:54)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at java.lang.Thread.run(Thread.java:818)
+</failure>
+  </testcase>
+  <testcase name="testHistory" classname="org.wikipedia.uiautomator_tests.HistoryTests" time="41.756" />
+  <testcase name="testChangeLanguageInSearch" classname="org.wikipedia.uiautomator_tests.LanguageTests" time="30.262" />
+  <testcase name="testChangeLanguageInArticle" classname="org.wikipedia.uiautomator_tests.LanguageTests" time="28.394" />
+  <testcase name="testAddArticleToReadingList" classname="org.wikipedia.uiautomator_tests.ReadingListTests" time="20.846" />
+  <testcase name="testOpenToC_rotatePhone" classname="org.wikipedia.uiautomator_tests.RotationTests" time="12.122" />
+  <testcase name="testOpenMultipleTabs" classname="org.wikipedia.uiautomator_tests.TabTests" time="29.196" />
+</testsuite>
