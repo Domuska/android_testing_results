@@ -1,0 +1,4 @@
+runNumber;failingTestName
+4;FileAndFolderManipulationTests.testCreateNewFileAndDeleteIt
+8;NavigationTests.testGridView
+11;NavigationTests.testGridView
