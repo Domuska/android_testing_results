@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="org.wikipedia.espresso_test.ArticleTests" tests="6" failures="2" errors="0" skipped="0" time="57.446" timestamp="2016-10-17T22:06:42" hostname="localhost">
+  <properties>
+    <property name="device" value="Nexus 5X - 6.0" />
+    <property name="flavor" value="ALPHA" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="testClickLink_partialText_assertPreviewShown" classname="org.wikipedia.espresso_test.ArticleTests" time="7.583" />
+  <testcase name="testOpeningAndClosingReferences" classname="org.wikipedia.espresso_test.ArticleTests" time="7.08" />
+  <testcase name="testClickLink_fullText_assertPreviewShown" classname="org.wikipedia.espresso_test.ArticleTests" time="5.268" />
+  <testcase name="testTableOfContents_checkSubTitles" classname="org.wikipedia.espresso_test.ArticleTests" time="13.079">
+    <failure>java.lang.RuntimeException: Waited for the root of the view hierarchy to have window focus and not be requesting layout for over 10 seconds. If you specified a non default root matcher, it may be picking a root that never takes focus. Otherwise, something is seriously wrong. Selected Root:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;6b2a88c, window-token=android.view.ViewRootImpl$W&#64;6b2a88c, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#2 ty=1 fl=#85810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=1080, height=1920, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}}
+. All Roots:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;6b2a88c, window-token=android.view.ViewRootImpl$W&#64;6b2a88c, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#2 ty=1 fl=#85810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=1080, height=1920, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}}
+at android.support.test.espresso.base.RootViewPicker.get(RootViewPicker.java:99)
+at android.support.test.espresso.ViewInteractionModule.provideRootView(ViewInteractionModule.java:69)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:23)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:9)
+at android.support.test.espresso.base.ViewFinderImpl.getView(ViewFinderImpl.java:68)
+at android.support.test.espresso.ViewInteraction$1.run(ViewInteraction.java:120)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at android.os.Handler.handleCallback(Handler.java:739)
+at android.os.Handler.dispatchMessage(Handler.java:95)
+at android.os.Looper.loop(Looper.java:148)
+at android.app.ActivityThread.main(ActivityThread.java:5417)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)
+</failure>
+  </testcase>
+  <testcase name="testOpenTab_rotatePhone" classname="org.wikipedia.espresso_test.RotationTests" time="12.846">
+    <failure>java.lang.RuntimeException: Waited for the root of the view hierarchy to have window focus and not be requesting layout for over 10 seconds. If you specified a non default root matcher, it may be picking a root that never takes focus. Otherwise, something is seriously wrong. Selected Root:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;879a0c, window-token=android.view.ViewRootImpl$W&#64;879a0c, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#102 ty=1 fl=#85810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=1080, height=1920, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}}
+. All Roots:
+Root{application-window-token=android.view.ViewRootImpl$W&#64;879a0c, window-token=android.view.ViewRootImpl$W&#64;879a0c, has-window-focus=false, layout-params-type=1, layout-params-string=WM.LayoutParams{(0,0)(fillxfill) sim=#102 ty=1 fl=#85810100 wanim=0x103045b needsMenuKey=2}, decor-view-string=DecorView{id=-1, visibility=VISIBLE, width=1080, height=1920, has-focus=true, has-focusable=true, has-window-focus=false, is-clickable=false, is-enabled=true, is-focused=false, is-focusable=false, is-layout-requested=false, is-selected=false, root-is-layout-requested=false, has-input-connection=false, x=0.0, y=0.0, child-count=2}}
+at android.support.test.espresso.base.RootViewPicker.get(RootViewPicker.java:99)
+at android.support.test.espresso.ViewInteractionModule.provideRootView(ViewInteractionModule.java:69)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:23)
+at android.support.test.espresso.ViewInteractionModule_ProvideRootViewFactory.get(ViewInteractionModule_ProvideRootViewFactory.java:9)
+at android.support.test.espresso.base.ViewFinderImpl.getView(ViewFinderImpl.java:68)
+at android.support.test.espresso.ViewInteraction$1.run(ViewInteraction.java:120)
+at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:423)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at android.os.Handler.handleCallback(Handler.java:739)
+at android.os.Handler.dispatchMessage(Handler.java:95)
+at android.os.Looper.loop(Looper.java:148)
+at android.app.ActivityThread.main(ActivityThread.java:5417)
+at java.lang.reflect.Method.invoke(Native Method)
+at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:726)
+at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:616)
+</failure>
+  </testcase>
+  <testcase name="testOpenArticleInNewTab" classname="org.wikipedia.espresso_test.TabTests" time="11.488" />
+</testsuite>

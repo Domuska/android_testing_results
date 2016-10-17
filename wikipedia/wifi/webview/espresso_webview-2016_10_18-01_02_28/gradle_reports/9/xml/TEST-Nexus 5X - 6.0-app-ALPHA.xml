@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="org.wikipedia.espresso_test.ArticleTests" tests="6" failures="0" errors="0" skipped="0" time="40.589" timestamp="2016-10-17T22:17:17" hostname="localhost">
+  <properties>
+    <property name="device" value="Nexus 5X - 6.0" />
+    <property name="flavor" value="ALPHA" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="testClickLink_partialText_assertPreviewShown" classname="org.wikipedia.espresso_test.ArticleTests" time="7.628" />
+  <testcase name="testOpeningAndClosingReferences" classname="org.wikipedia.espresso_test.ArticleTests" time="7.657" />
+  <testcase name="testClickLink_fullText_assertPreviewShown" classname="org.wikipedia.espresso_test.ArticleTests" time="4.886" />
+  <testcase name="testTableOfContents_checkSubTitles" classname="org.wikipedia.espresso_test.ArticleTests" time="5.829" />
+  <testcase name="testOpenTab_rotatePhone" classname="org.wikipedia.espresso_test.RotationTests" time="7.157" />
+  <testcase name="testOpenArticleInNewTab" classname="org.wikipedia.espresso_test.TabTests" time="7.288" />
+</testsuite>
