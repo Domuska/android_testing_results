@@ -1,0 +1,8 @@
+runNumber;failingTestName
+5;LanguageTests.testChangeLanguageInSearch
+7;ArticleTests.testScrollingToC_clickSubHeading
+8;LanguageTests.testChangeLanguageInSearch
+10;LanguageTests.testChangeLanguageInSearch
+12;ArticleTests.testScrollingToC_clickSubHeading
+12;LanguageTests.testChangeLanguageInSearch
+16;LanguageTests.testChangeLanguageInSearch
