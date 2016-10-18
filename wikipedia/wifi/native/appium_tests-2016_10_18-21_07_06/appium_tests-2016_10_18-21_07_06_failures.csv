@@ -1,0 +1,14 @@
+runNumber;failingTestName
+1;ReadingListTests.testAddArticleToReadingList
+1;TabTests.testOpenMultipleTabs
+2;RotationTests.testOpenToC_rotatePhone
+5;TabTests.testOpenMultipleTabs
+7;ArticleTests.testScrollingToC_clickSubHeading
+7;ReadingListTests.testAddArticleToReadingList
+9;ArticleTests.testScrollingToC_clickSubHeading
+10;ArticleTests.testScrollingToC_clickSubHeading
+11;LanguageTests.testChangeLanguageInSearch
+12;TabTests.testOpenMultipleTabs
+13;ReadingListTests.testAddArticleToReadingList
+14;ArticleTests.testScrollingToC_clickSubHeading
+14;ReadingListTests.testAddArticleToReadingList
