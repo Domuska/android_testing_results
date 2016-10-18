@@ -1,0 +1,16 @@
+runNumber;failingTestName
+1;LanguageTests.testChangeLanguageInSearch
+1;ReadingListTests.testAddArticleToReadingList
+2;LanguageTests.testChangeLanguageInSearch
+2;ReadingListTests.testAddArticleToReadingList
+7;LanguageTests.testChangeLanguageInSearch
+9;ArticleTests.testScrollingToC_clickSubHeading
+9;LanguageTests.testChangeLanguageInArticle
+9;ReadingListTests.testAddArticleToReadingList
+11;ArticleTests.testScrollingToC_clickSubHeading
+12;ArticleTests.testScrollingToC_clickSubHeading
+13;TabTests.testOpenMultipleTabs
+15;ArticleTests.testScrollingToC_clickSubHeading
+17;LanguageTests.testChangeLanguageInSearch
+17;RotationTests.testOpenToC_rotatePhone
+19;ArticleSearchTests.testSearchArticle_checkTitleShown
