@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<testsuite name="org.wikipedia.uiautomator_tests.ArticleSearchTests" tests="6" failures="3" errors="0" skipped="0" time="151.507" timestamp="2016-10-20T22:15:05" hostname="localhost">
+  <properties>
+    <property name="device" value="Nexus 5X - 6.0" />
+    <property name="flavor" value="ALPHA" />
+    <property name="project" value="app" />
+  </properties>
+  <testcase name="testSearchArticle_checkRecentsShown" classname="org.wikipedia.uiautomator_tests.ArticleSearchTests" time="37.669">
+    <failure>java.lang.NullPointerException: Attempt to invoke virtual method 'void android.support.test.uiautomator.UiObject2.click()' on a null object reference
+at org.wikipedia.uiautomator_tests.Utils.Utils.openSearchFromArticle(Utils.java:48)
+at org.wikipedia.uiautomator_tests.ArticleSearchTests.testSearchArticle_checkRecentsShown(ArticleSearchTests.java:52)
+at java.lang.reflect.Method.invoke(Native Method)
+at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
+at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
+at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:298)
+at org.junit.internal.runners.statements.FailOnTimeout$CallableStatement.call(FailOnTimeout.java:292)
+at java.util.concurrent.FutureTask.run(FutureTask.java:237)
+at java.lang.Thread.run(Thread.java:818)
+</failure>
+  </testcase>
+  <testcase name="testSearchArticle_checkTitleShown" classname="org.wikipedia.uiautomator_tests.ArticleSearchTests" time="9.084" />
+  <testcase name="testScrollingToC_clickSubHeading" classname="org.wikipedia.uiautomator_tests.ArticleTests" time="14.881" />
+  <testcase name="testHistory" classname="org.wikipedia.uiautomator_tests.HistoryTests" time="36.095" />
+  <testcase name="testChangeLanguageInSearch" classname="org.wikipedia.uiautomator_tests.LanguageTests" time="14.493">
+    <failure>Test failed to run to completion. Reason: 'java.io.IOException: An existing connection was forcibly closed by the remote host'. Check device logcat for details</failure>
+  </testcase>
+  <testcase name="runTests" classname="com.android.builder.testing.ConnectedDevice" time="0.0">
+    <failure>java.io.IOException: An existing connection was forcibly closed by the remote host
+	at sun.nio.ch.SocketDispatcher.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:197)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:380)
+	at com.android.ddmlib.AdbHelper.executeRemoteCommand(AdbHelper.java:492)
+	at com.android.ddmlib.AdbHelper.executeRemoteCommand(AdbHelper.java:382)
+	at com.android.ddmlib.Device.executeShellCommand(Device.java:615)
+	at com.android.builder.testing.ConnectedDevice.executeShellCommand(ConnectedDevice.java:148)
+	at com.android.ddmlib.testrunner.RemoteAndroidTestRunner.run(RemoteAndroidTestRunner.java:259)
+	at com.android.ddmlib.testrunner.RemoteAndroidTestRunner.run(RemoteAndroidTestRunner.java:245)
+	at com.android.builder.internal.testing.SimpleTestCallable.call(SimpleTestCallable.java:157)
+	at com.android.builder.internal.testing.SimpleTestCallable.call(SimpleTestCallable.java:48)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+</failure>
+  </testcase>
+</testsuite>
