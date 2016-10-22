@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.wikipedia.appium.ArticleTests" tests="1" skipped="0" failures="0" errors="0" timestamp="2016-10-22T00:44:59" hostname="TOL025031" time="50.891">
+  <properties/>
+  <testcase name="testScrollingToC_clickSubHeading" classname="org.wikipedia.appium.ArticleTests" time="50.891"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
