@@ -16,6 +16,7 @@ function bm-wikipedia-instrumentation ([ScriptBlock]$Expression, [int]$Samples =
   
 .EXAMPLE
   bm-wikipedia-instrumentation { gradle connectedAlphaDebugAndroidTest --stacktrace } 1 espresso_webview wifi\webview
+  bm-wikipedia-instrumentation { gradle connectedAlphaDebugAndroidTest --stacktrace } 20 uiautomator_tests wifi\native
   If the tests are not using webview, use native as last parameter
   
   Output files will be following:
