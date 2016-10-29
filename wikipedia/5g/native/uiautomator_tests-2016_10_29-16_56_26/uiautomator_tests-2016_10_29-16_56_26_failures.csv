@@ -1,0 +1,4 @@
+runNumber;failingTestName
+1;ReadingListTests.testAddArticleToReadingList
+4;HistoryTests.testHistory
+5;ArticleSearchTests.testSearchArticle_checkRecentsShown
