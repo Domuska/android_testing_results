@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="org.wikipedia.appium.ArticleTests" tests="4" skipped="0" failures="0" errors="0" timestamp="2016-10-29T14:42:43" hostname="TOL025031" time="178.229">
+  <properties/>
+  <testcase name="testClickLink_partialText_assertPreviewShown" classname="org.wikipedia.appium.ArticleTests" time="36.95"/>
+  <testcase name="testOpeningAndClosingReferences" classname="org.wikipedia.appium.ArticleTests" time="52.839"/>
+  <testcase name="testClickLink_fullText_assertPreviewShown" classname="org.wikipedia.appium.ArticleTests" time="41.868"/>
+  <testcase name="testTableOfContents_checkSubTitles" classname="org.wikipedia.appium.ArticleTests" time="46.57"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
